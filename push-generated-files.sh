@@ -1,4 +1,6 @@
 cd ../nickknw.github.com/
+echo "GENERATED FILES:"
 git push
 cd ../nickknowlson.com
-echo "generated files pushed"
+echo "SOURCE FILES"
+git push
