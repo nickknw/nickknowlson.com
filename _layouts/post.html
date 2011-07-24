@@ -1,0 +1,19 @@
+---
+layout: base
+blog: selected
+---
+<a href="/blog/">&laquo; Back to posts</a>
+<h1 style="margin:0px;;">{{ page.title }}</h1>
+<div class="faded" style="font-size:14px; margin-bottom:5px;">{{ page.date | date_to_string }}</div>
+<div id="post" style="margin-bottom:20px">
+{{ content }}
+</div>
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

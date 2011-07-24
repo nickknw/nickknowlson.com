@@ -1,0 +1,21 @@
+---
+layout: base
+blog: selected
+---
+<div style="text-align:center; margin-bottom:1em;"><a href="/blog/">Latest Posts</a> | <b>Archive</b></div>
+<div class="blockylist archiveblockylist">
+<ul style="margin: 0px;">
+{% for post in site.posts %}
+    <li>
+        <a href="{{ post.url }}"> 
+            <time datetime="{{ post.date | date: "%Y" }}-{{ post.date | date: "%m" }}-{{ post.date | date: "%d" }}T00:00:00-7:00">
+                <span class="month">{{ post.date | date: "%b" }}</span> 
+                <span class="day">{{ post.date | date: "%d" }}</span> 
+                <span class="year">{{ post.date | date: "%Y" }}</span> 
+            </time>
+            <h2>{{ post.title }}</h2>
+            <div>{{ post.content | strip_html | truncatewords:15 }}</div>
+        </a>
+    </li>
+{% endfor %}
+</ul>

@@ -1,0 +1,306 @@
+/* {{{ override inuit.css 
+ * (to make upgrading inuit.css easier, I want to try to use it more or less unmodified)*/
+
+a:visited {
+        opacity: 1
+}
+
+#nav {
+    margin-bottom: 0px;
+}
+
+pre {
+    line-height: 18px;
+}
+
+h1 {
+    margin-bottom: .25em;
+}
+
+ul, ol {
+    margin-bottom: 1em;
+}
+
+/* }}} */
+
+
+body {
+    background: none;
+    background-color: #448855;
+}
+
+#content {
+    background-color: #FFF2CF;
+    min-height: 400px;
+}
+
+
+a {
+    color: #279F9D;
+}
+
+a:hover {
+    color: #1D7774;
+    text-decoration: underline;
+}
+
+h1 a {
+    color:#333;
+}
+
+#nav {
+    height:45px; /* 25px height + 2 * 10px padding */
+    background-color:#6B563F;
+}
+
+#nav ul
+{
+    margin:0px;
+}
+
+#nav li
+{
+    display: inline;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+#nav a
+{
+    letter-spacing: 2px;
+    display: block;
+    float: left;
+    height:25px;
+    background-color: #6B563F;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+#nav a:hover 
+{
+    text-decoration:none;
+    background-color: #A9C78C;
+    color: #000000;
+}
+
+#nav a.selected
+{
+        /*background-color: #FFF2CF;*/
+        background-color: white;
+        color: #000000;
+}
+
+/*.highlight
+{
+    color: #279F9D;
+}*/
+
+.faded
+{
+    color: #888888;
+    font-family:Calibri, "Helvetica Neue", Arial, sans-serif; 
+    font-size: 12px;
+}
+
+.indent {
+    padding-left:7px;   
+}
+
+.big_square_link
+{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.big_square_link a
+{
+    padding:20px 30px 0px;
+    text-decoration: none;
+    display: block;
+    color: #333333
+}
+
+.big_square_link a:hover
+{
+    background-color: #a9c78c;
+    color: #333333
+}
+
+.blockylist h1, .blockylist h2, .blockylist h3, .blockylist h4, .blockylist h5
+{
+    margin: 0px;
+}
+
+.blockylist ul
+{
+    margin: 10px 0px 10px 0px;
+}
+
+.blockylist li
+{
+    list-style-type: none;
+}
+
+.blockylist ul div
+{
+    margin: 0px;
+}
+
+.blockylist img
+{
+    width: 90px;
+    height:90px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 9px;
+    border: 1px solid black;
+    -moz-box-shadow: 0px 0px 10px #888;
+    -webkit-box-shadow: 0px 0px 10px 2px #888;
+    box-shadow: 0px 0px 10px 2px #888;
+}
+
+.blockylist a
+{
+    text-decoration: none;
+    display: block;
+    color: #333333;
+    padding: 10px;
+}
+
+.blockylist a:hover
+{
+    background-color: #a9c78c;
+    color: #333333
+}
+
+.bigblockylist > ul > li
+{
+    height:110px;
+    margin-bottom:10px;
+}
+
+.bigblockylist a 
+{
+    height: 110px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.bigblockylist h1 {
+    padding-top:4px;
+}
+
+.mediumblockylist > ul > li
+{
+    height:65px;
+    margin-bottom:10px;
+}
+
+.mediumblockylist a 
+{
+    height: 45px;
+}
+
+.archiveblockylist > ul > li
+{
+    height:65px;
+    margin-bottom:10px;
+}
+
+.archiveblockylist a 
+{
+    height: 65px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.archiveblockylist a h2
+{
+    padding-top:8px;
+}
+
+.archiveblockylist a div
+{
+    padding-top:2px;
+}
+
+.compact_list > li
+{
+    padding: 0px;
+    margin: 5px 0px;
+    list-style-type: none;
+}
+
+p, h2 { margin-bottom:.5em;}
+
+.last_paragraph { margin-bottom: 1.5em }
+
+.big_text { 
+	font-size:138.5%;  
+}
+.medium_text { 
+	font-size:123.1%; 
+}
+.tiny_text { 
+	font-size:.75em; 
+}
+
+td { 
+    background: white; 
+    vertical-align: middle;
+}
+
+td a { display: block;}
+
+.blockylist time {
+    display: block;
+    float: left;
+    padding: 0em .75em 0 0;
+}
+
+.blockylist time span {
+    color: #999999;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family:Calibri, "Helvetica Neue", Arial, sans-serif; /* Swap these two lines around to switch between serif and sans */
+}
+
+.blockylist time span.month {
+    font-size: 1em;
+}
+
+.blockylist time span.day {
+    font-size: 1.6em;
+    line-height: 0.8em;
+}
+
+.blockylist time span.year {
+    font-size: 0.8em;
+}
+
+.blockylist a:hover time span {
+    color: #333;
+}
+
+#blurb {
+    font-size:1.25em; 
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom:1em;
+}
+
+#profile_image {
+    float:left; 
+    margin-right:20px; 
+    margin-bottom:10px;
+    -moz-box-shadow: 0px 0px 10px 2px #888;
+    -webkit-box-shadow: 0px 0px 10px 2px #888;
+    box-shadow: 0px 0px 10px 2px #888;
+}
+
+

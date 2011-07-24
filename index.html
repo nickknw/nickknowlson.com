@@ -1,0 +1,55 @@
+---
+layout: base
+home: selected
+---
+
+<h1>Hi, my name is <span style="font-weight:bold;">Nick Knowlson</span>, and I like coding.</h1>
+<div id="blurb" style="">Welcome to my online portfolio! This is where I share what I have been <a href="/projects/">working on</a> and <a href="/blog/">thinking about</a>. It serves as a brief <a href="/about/">introduction to me</a> as well as listing a few ways I can be <a href="/contact/">contacted</a>.</div>
+
+<h1>Latest:</h1>
+
+<div class="blockylist mediumblockylist">
+    <ul style="margin: 0px;">
+        {% assign found_latest_project = 'false' %}
+        {% for page in site.pages %}
+            {% if page.is_project and found_latest_project == 'false' %}
+                {% assign found_latest_project = 'true' %}
+                <li>
+                    <a href="/projects/"> 
+                        <h2>project</h2>
+                        <div><strong>{{ page.title }}: </strong>{{ page.content | strip_html | truncatewords:8 }}<span class="faded indent">{{ page.date | date_to_string }}</span></div>
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        {% for post in site.posts limit:1 %}
+	<li>
+            <a href="{{ post.url }}"> 
+                <h2>blog post</h2>
+                <div><strong>{{ post.title }}: </strong> {{ post.content | strip_html | truncatewords:8 }}<span class="indent faded">{{ post.date | date_to_string }}</span></div>
+            </a>
+	</li>
+        {% endfor %}
+	<li>
+            <a id="git_url" href="https://github.com/nickknw"> 
+                <h2>github commit</h2>
+                <div id="github_commit_message" style="display:none;">&nbsp;</div>
+            </a>
+	</li>
+	<li>
+            <a id="so_url" href="/projects/show/3"> 
+                <h2>stack overflow activity</h2>
+                <div id="stack_overflow_activity" style="display:none;">&nbsp;</div>
+            </a>
+	</li>
+	<li>
+            <a href="http://twitter.com/#!/nickknw"> 
+                <h2>tweet</h2>
+                <div id="twitter_text" style="display:none;">&nbsp;</div>
+            </a>
+	</li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="/js/front_page_statuses.js"></script>

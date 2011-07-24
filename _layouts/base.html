@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+    <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="description" content="Personal web site of Nick Knowlson: projects, blog,
+        contact information">
+
+        <title>{{page.title}} Nick Knowlson</title>
+
+        <link rel="stylesheet" type="text/css" href="/css/inuit.css" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="favicon.ico" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
+        {% if page.lightbox %}
+        <link rel="stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" />
+        <script src="/js/jquery.lightbox-0.5.pack.js"></script>
+   	<style type="text/css">
+	/* jQuery lightBox plugin - Gallery style */
+	#gallery {
+		background-color: #fff;
+		padding: 10px;
+	}
+	#gallery ul { list-style: none; margin: 0px; }
+	#gallery ul li { display: inline; }
+	#gallery ul img {
+		border: 5px solid #6e6e6e;
+		border-width: 5px 5px 20px;
+	}
+	#gallery ul a:hover img {
+		border: 5px solid #2e2e2e;
+		border-width: 5px 5px 20px;
+		color: #2e2e2e;
+	}
+	#gallery ul a:hover { color: #2e2e2e; }
+	</style>
+        <script type="text/javascript">
+            $(function() { 
+                $('#gallery a').lightBox({
+                    fixedNavigation:true,
+                    imageLoading: '/img/lightbox-ico-loading.gif',
+                    imageBlank: '/img/lightbox-blank.gif',
+                    imageBtnClose: '/img/lightbox-btn-close.gif',
+                    imageBtnPrev: '/img/lightbox-btn-prev.gif',
+                    imageBtnNext: '/img/lightbox-btn-next.gif'
+                });
+            });
+        </script>
+        {% endif %}
+    </head>
+    <body>
+	<div id="header" class="grid grid-16">
+            <a href="/"><img src="/img/logo3.png" alt="logo" /></a>
+            <ul id="nav">
+                <li><a class="{{page.home}}" href="/">Home</a></li>
+                <li><a class="{{page.about}}" href="/about/">About</a></li>
+                <li><a class="{{page.projects}}" href="/projects/">Projects</a></li>
+                <li><a class="{{page.blog}}" href="/blog/">Blog</a></li>
+                <li><a class="{{page.contact}}" href="/contact/">Contact</a></li>
+            </ul>
+	</div>
+
+        <div id="content" class="grid grid-16" style="background-color:white; clear:both;">
+            <div style="padding:25px">
+                {{ content }}
+            </div>
+        </div>
+    </body>
+</html>

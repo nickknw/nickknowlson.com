@@ -1,0 +1,31 @@
+---
+layout: base
+projects: selected
+lightbox: true
+---
+<p> <a href="/projects/">&laquo; Back to projects</a></p>
+
+<h1 style="">{{ page.title }}</h1>
+<div><strong>Languages: </strong>{{ page.languages }}</div>
+<div style="margin-bottom:.75em;"><strong>Summary: </strong>{{ page.summary }}</div>
+
+<h2>Details</h2>
+<p>{{ content }}</p>
+
+{% if page.screenshots == empty %}
+<div id="gallery">
+    <ul>
+        {% for screenshot in page.screenshots %}
+        <li>
+            <a href="{{ screenshot[0] }}" title="{{ screenshot[2] }}">
+                <img src="{{ screenshot[1] }}" width="144" height="144" alt="{{ screenshot[2] }}" />
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% for video in page.videos %}
+    <div>video URL: {{ video[0] }} - CAPTION: {{ video[1] }}</div>
+{% endfor %}
