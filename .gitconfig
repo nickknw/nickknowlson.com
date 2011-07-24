@@ -1,2 +1,0 @@
-[alias]
-	pushlive = !git push && ./push-generated-files.sh
