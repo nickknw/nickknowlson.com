@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://nickknowlson.com/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/about/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/projects/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/blog/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/contact/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/blog/2011/07/23/hello-world/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/projects/proofreading-scripts/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/projects/seven-languages-in-seven-weeks/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/projects/word_frequency/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/projects/vbnet-signature-survey/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/projects/craigslist-highlighter/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/projects/robot-controller-simulator/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/blog/archive/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/blog/2009/02/05/command-line-file-transfer/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/blog/2009/01/14/haskell-for-great-good/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+<url>
+  <loc>http://nickknowlson.com/blog/2008/12/16/vim-as-an-ide/</loc>
+  <lastmod>2011-07-24T21:59:21+00:00</lastmod>
+</url>
+</urlset>
