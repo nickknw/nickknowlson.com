@@ -5,3 +5,4 @@ git add .
 git commit -m "`date`"
 cd ../nickknowlson.com/
 echo "site copied"
+
