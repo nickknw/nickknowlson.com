@@ -1,0 +1,36 @@
+---
+layout: base
+title: Page not found (404)
+---
+<h1>Page not found (404)</h1>
+
+<div id="blurb">Sorry, I couldn't find the page you're looking for. You may have followed a link which is outdated or incorrect. Or I may have moved the page on you (oops!).</div>
+
+<div style="font-size:1.25em">You've got a couple of options at this point:</div>
+
+<ul style="font-size:1.25em; margin-bottom: 0px;">
+<li>Go to <a href="/">nickknowlson.com</a></li>
+<li><span>Search this site:</span></li>
+</ul>
+
+<div id="cse" style="width: 75%; margin-left: 50px;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1', {language : 'en'});
+  google.setOnLoadCallback(function() {
+    var customSearchControl = new google.search.CustomSearchControl('000935940439583811359:-2bvdxdjmci');
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    customSearchControl.draw('cse');
+  }, true);
+</script>
+<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+
+<style type="text/css">
+    #cse input {
+      font-size: 1.25em;
+    }
+
+    .gsc-control-cse {
+      padding-top: 5px; 
+    }
+</style>

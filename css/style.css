@@ -21,7 +21,13 @@ ul, ol {
     margin-bottom: 1em;
 }
 
-/* }}} */
+th, td {
+    border: none;
+    padding: 0px;
+}
+
+/* end overriding inuit.css - really gotta trim inuit.css down
+ * }}} */
 
 
 body {
