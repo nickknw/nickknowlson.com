@@ -2,7 +2,7 @@
  * (to make upgrading inuit.css easier, I want to try to use it more or less unmodified)*/
 
 a:visited {
-        opacity: 1
+        opacity: 1;
 }
 
 #nav {
