@@ -312,3 +312,33 @@ td a { display: block;}
 #related {
     margin-top:30px;
 }
+
+#post {
+    margin-bottom: 20px;
+}
+
+hr.fancyrule {
+    border: none;
+    height: 2px;
+    background-color: #cccccc;
+    color: #cccccc;
+    margin: 30px 0px;
+}
+
+/* jQuery lightBox plugin - Gallery style */
+#gallery {
+        background-color: #fff;
+        padding: 10px;
+}
+#gallery ul { list-style: none; margin: 0px; }
+#gallery ul li { display: inline; }
+#gallery ul img {
+        border: 5px solid #6e6e6e;
+        border-width: 5px 5px 20px;
+}
+#gallery ul a:hover img {
+        border: 5px solid #2e2e2e;
+        border-width: 5px 5px 20px;
+        color: #2e2e2e;
+}
+#gallery ul a:hover { color: #2e2e2e; }
