@@ -1,6 +1,10 @@
 /* {{{ override inuit.css 
  * (to make upgrading inuit.css easier, I want to try to use it more or less unmodified)*/
 
+a:active, a:hover {
+    top: 0px;
+}
+
 a:visited {
         opacity: 1;
 }
