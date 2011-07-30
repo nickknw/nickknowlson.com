@@ -329,7 +329,7 @@ hr.fancyrule {
     margin: 30px 0px;
 }
 
-/* jQuery lightBox plugin - Gallery style */
+/* jQuery lightBox plugin - Gallery style {{{ */
 #gallery {
         background-color: #fff;
         padding: 10px;
@@ -346,3 +346,11 @@ hr.fancyrule {
         color: #2e2e2e;
 }
 #gallery ul a:hover { color: #2e2e2e; }
+/* }}} */
+
+#footer {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    clear: both;
+}
