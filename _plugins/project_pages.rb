@@ -1,10 +1,12 @@
 module Jekyll
 
+
     class ProjectPage < Page
+
         def initialize(site, base, dir, name)
             @site = site
             @base = base
-            @dir = File.join(dir, name.sub(/\..*/, ''))
+            @dir = '/' + File.join(dir, name.sub(/\..*/, ''))
             @name = name
 
             self.ext = File.extname(name)
@@ -23,6 +25,10 @@ module Jekyll
             end
 
             @url
+        end
+
+        def full_path_to_source
+            File.join(File.join(@base, '_projects'), @name)
         end
     end
 
