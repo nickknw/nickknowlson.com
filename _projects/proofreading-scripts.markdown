@@ -32,7 +32,7 @@ Example Output
 
 For a fun example, I ran this on Matt's original blog post. It acts as a pretty decent test because the blog post itself must contain examples of suspect phrases in order to explain them.
  
-**Weasel words results:**
+    Weasel words results:
 
      73: various - My favorite salt and pepper words/phrases are >various<, a number of, fairly, and 
      73: fairly - My favorite salt and pepper words/phrases are various, a number of, >fairly<, and 
