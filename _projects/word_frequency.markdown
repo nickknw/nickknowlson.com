@@ -4,11 +4,9 @@ date: 2010-12-16
 title: Word Frequency
 languages: Ruby
 summary: Scripts to conveniently do word and string frequency analysis on source code.
+github: word_frequency
 thumbnail: /img/mockscreenshot.png
 screenshots: 
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption for"]
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption 2"]
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption 2"]
 videos:
 ---
 

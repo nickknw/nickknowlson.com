@@ -4,11 +4,9 @@ date: 2010-12-14
 title: Craigslist Highlighter
 languages: Javascript
 summary: Helps find and highlight specific traits of apartments on craigslist
+github: craigslist_highlighter
 thumbnail: /img/mockscreenshot.png
 screenshots: 
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption for"]
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption 2"]
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption 2"]
 videos:
 ---
 

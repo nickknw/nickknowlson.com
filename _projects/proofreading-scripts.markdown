@@ -4,11 +4,8 @@ date: 2011-04-04
 title: Proofreading Scripts
 languages: Ruby
 summary: An implementation of Matt Might's proofreading scripts
+github: proofreading_scripts 
 thumbnail: /img/mockscreenshot.png
-screenshots: 
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption for"]
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption 2"]
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption 2"]
 videos:
 ---
 

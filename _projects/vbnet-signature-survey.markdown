@@ -4,11 +4,9 @@ date: 2010-12-16
 title: VB.Net Signature Survey
 languages: Ruby
 summary: Ward Cunninham's Signature Survey, adapted for vb.net, with some enhancements of my own.
+github: vbnet_signature_survey
 thumbnail: /img/mockscreenshot.png
 screenshots: 
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption for"]
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption 2"]
- - ["/img/test_screenshot.png", "/img/mockscreenshot.png", "caption 2"]
 videos:
 ---
 
