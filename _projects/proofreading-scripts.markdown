@@ -5,7 +5,7 @@ title: Proofreading Scripts
 languages: Ruby
 summary: An implementation of Matt Might's proofreading scripts
 github: proofreading_scripts 
-thumbnail: /img/mockscreenshot.png
+thumbnail: /img/thumb_proofreading.png
 videos:
 ---
 
