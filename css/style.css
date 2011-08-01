@@ -1,7 +1,8 @@
 /* {{{ override inuit.css 
  * (to make upgrading inuit.css easier, I want to try to use it more or less unmodified)*/
 
-a:active, a:hover {
+a:focus, a:hover {
+    position:static
     top: 0px;
 }
 
