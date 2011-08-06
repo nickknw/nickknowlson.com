@@ -358,3 +358,20 @@ hr.fancyrule {
     -webkit-box-shadow: 0px 0px 10px 0px #888;
     box-shadow: 0px 0px 10px 0px #888;
 }
+
+pre {
+    background-color: #EEEEEE;
+    padding: 0.4em;
+}
+
+code {
+    font-size:12px;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+    background-color: #EEEEEE;
+    padding: 3px;
+}
+
+pre code {
+    padding: 0;   
+}
+
