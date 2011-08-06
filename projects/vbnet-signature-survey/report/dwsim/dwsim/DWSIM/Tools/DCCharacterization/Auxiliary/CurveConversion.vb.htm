@@ -1,0 +1,35 @@
+<html><head><title>./dwsim/dwsim/DWSIM/Tools/DCCharacterization/Auxiliary/CurveConversion</title> 
+	<style type="text/css">
+	    body { font-family: georgia, serif; }
+	    h1 { color: #111111 }
+	    li { font-family: Consolas, monospace; font-size: 14px; margin-bottom:20px; list-style-type: none; word-wrap:break-word; }
+	    .line_count { color: #000080; font-family: Consolas, monospace;}
+	    .method_count { color: #008080; font-family: Consolas, monospace;}
+	    .signature { font-size: 12px; }
+	    .inside_method { background-color: #eeeeee; }
+	    .detail_page { font-family: Consolas, monospace; font-size: 14px; word-wrap: break-word}
+	    .method_name { background-color: #ccccee ; font-weight: bold; }
+	    .type { background-color: aaffbb; font-weight: bold; }
+	    .inside_if { background-color:#CCEECC; }
+	    .inside_loop { background-color:#EECCCC; }
+	    .inside_loop .inside_if { background-color:#BBBBAA; }
+	    .inside_if .inside_loop { background-color:#CCAAAA; }
+	    .comment { color: #777777; }
+	    p { display: inline; margin: 0px; padding: 0px; }
+	    div { display: inline; margin: 0px; padding: 0px; }
+	    #legend { font-family: Consolas, monospace; font-size: 14px; margin-bottom:10px; }
+	    #legend td { padding-right: 15px; }
+	</style></head><body>
+<h2>./dwsim/dwsim/DWSIM/Tools/DCCharacterization/Auxiliary/CurveConversion: <span class='method_count'>&nbsp;6m</span> <span class='line_count'>&nbsp;293L&nbsp;&nbsp;&nbsp;</span></h2><div class='detail_page'>
+
+    <table id="legend">
+	<tr><td style="padding-bottom:10px;"><span style="font-size:18px; font-family: georgia, serif; font-weight: bold;">Legend</span></td></tr>
+	<tr><td><span class="method_count">14m</span> means 14 methods</td> <td><span class="line_count">294L</span> means 294 lines</td> </tr>
+	<tr><td>a space is a blank line</td><td>. is a (non-blank) line</td> </tr>
+	<tr><td><span class='inside_if'>?</span> is a single line If statement</td><td>' is a commented line</td></tr>
+        <tr><td><span class='inside_if'>|</span> is an Else or Case statement</td><td><div class='inside_method'>{Inside a method}</div></td></tr>
+	<tr><td><span class='inside_if'>(Inside an if block)</span></td><td><p class='inside_loop'>[Inside a loop]</p></td></tr>
+	<tr><td><p class='inside_loop'><span class='inside_if'>[(An if block inside a loop)]</span></p></td><td> <span class='inside_if'><p class='inside_loop'>([A loop inside an if block])</p></span></td></tr>
+    </table>
+.....<span class='inside_if'>?</span>..........<span class='inside_if'>?</span> . . . <span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><br>Public Shared Function <span class='method_name'>ASTMD86ToPEV_Riazi</span>&#40;ByVal Tastmd86<span class='inside_if'>(&#41; <span class='type'>As Double</span>&#41; <span class='type'>As Double</span><span class='inside_if'>()</span><br> .. ....... ....... <p class='inside_loop'>[.]</p> . <br>End Function<br> <span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><br>Public Shared Function <span class='method_name'>ASTMD2887ToPEV_Daubert</span>&#40;ByVal Tastmd2887<span class='inside_if'>(&#41; <span class='type'>As Double</span>&#41; <span class='type'>As Double</span><span class='inside_if'>()</span><br> .. . <p class='inside_loop'>[.]</p> ....... ....... <p class='inside_loop'>[.]</p> ........ <p class='inside_loop'>[.]</p> . <br>End Function<br> <span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><br>Public Shared Function <span class='method_name'>PEVsubToPEV_MaxwellBonnel</span>&#40;ByVal T <span class='type'>As Double</span>, ByVal P <span class='type'>As Double</span>, ByVal Kw <span class='type'>As Double</span>&#41; <span class='type'>As Double</span><br> .. ... ... .. <span class='inside_if'>(.|.|.)</span> . .. . <br>End Function<br> <span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><span class='comment'>'</span><br>Public Shared Function <span class='method_name'>ASTMD1160ToPEVsub_Wauquier</span>&#40;ByVal Tastm<span class='inside_if'>(&#41; <span class='type'>As Double</span>&#41; <span class='type'>As Double</span><span class='inside_if'>()</span><br> ... ....... ...................... <p class='inside_loop'>[.<span class='inside_if'>(.|..<p class='inside_loop'>[<span class='inside_if'>?</span>..]</p>)</span>]</p> . <br>End Function<br> . ... <br>Public Function <span class='method_name'>GetCoeffs</span>&#40;ByVal x <span class='type'>As Double</span><span class='inside_if'>()</span>, ByVal y <span class='type'>As Double</span><span class='inside_if'>()</span>, ByVal inest<span class='inside_if'>(&#41; <span class='type'>As Double</span>, ByVal epsg <span class='type'>As Double</span>, ByVal epsf <span class='type'>As Double</span>, ByVal epsx <span class='type'>As Double</span>, ByVal maxits <span class='type'>As Integer</span>&#41; <span class='type'>As Object</span><br> .. ...... .. . .. . ..... . <br>End Function<br> <br>Public Sub <span class='method_name'>fv</span>&#40;ByRef x <span class='type'>As Double</span><span class='inside_if'>()</span>, ByRef fvec <span class='type'>As Double</span><span class='inside_if'>()</span>, ByRef fjac <span class='type'>As Double</span><span class='inside_if'>(,)</span>, ByRef iflag <span class='type'>As Integer</span>)</span><br> <span class='inside_if'>?</span><span class='inside_if'>?</span> <span class='comment'>'</span>..<span class='inside_if'>(......|..<span class='comment'>'</span>.........)</span> . <br>End Sub<br> . . .
+</div></body></html>

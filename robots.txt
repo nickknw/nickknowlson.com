@@ -1,4 +1,5 @@
 User-Agent: *
 Allow: /
+Disallow: /projects/vbnet-signature-survey/report/
 
 Sitemap: http://www.nickknowlson.com/sitemap.xml
