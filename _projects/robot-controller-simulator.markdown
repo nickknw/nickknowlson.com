@@ -5,7 +5,7 @@ title: Robot Controller Simulator
 languages: Java
 summary: A multi-threaded Java application (server & client) that controls a simulated Lego MindStorms robot
 github: Robot-Controller-Simulator
-thumbnail: /img/thumb_robot.png
+thumbnail: /img/projects/robot/thumb.png
 screenshots: 
 videos:
 ---
