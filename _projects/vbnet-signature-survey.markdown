@@ -7,11 +7,11 @@ summary: Ward Cunninham's Signature Survey, adapted for vb.net, with some enhanc
 github: vbnet_signature_survey
 thumbnail: /img/projects/vbnet-signature-survey/thumb.png
 screenshots: 
- - ["/img/projects/vbnet-signature-survey/5.png", "/img/projects/vbnet-signature-survey/5.png", "Sample VB.NET signature survey page"]
- - ["/img/projects/vbnet-signature-survey/4.png", "/img/projects/vbnet-signature-survey/4.png", ""]
- - ["/img/projects/vbnet-signature-survey/3.png", "/img/projects/vbnet-signature-survey/3.png", ""]
- - ["/img/projects/vbnet-signature-survey/2.png", "/img/projects/vbnet-signature-survey/2.png", ""]
- - ["/img/projects/vbnet-signature-survey/1.png", "/img/projects/vbnet-signature-survey/1.png", ""]
+ - ["/img/projects/vbnet-signature-survey/5.png", "/img/projects/vbnet-signature-survey/5thumb.jpg", "Sample VB.NET signature survey page"]
+ - ["/img/projects/vbnet-signature-survey/4.png", "/img/projects/vbnet-signature-survey/4thumb.jpg", ""]
+ - ["/img/projects/vbnet-signature-survey/3.png", "/img/projects/vbnet-signature-survey/3thumb.jpg", ""]
+ - ["/img/projects/vbnet-signature-survey/2.png", "/img/projects/vbnet-signature-survey/2thumb.jpg", ""]
+ - ["/img/projects/vbnet-signature-survey/1.png", "/img/projects/vbnet-signature-survey/1thumb.jpg", ""]
 
 videos:
 ---
