@@ -362,14 +362,16 @@ hr.fancyrule {
 
 pre {
     background-color: #EEEEEE;
-    padding: 0.4em;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 1em;
 }
 
 code {
     font-size:12px;
     font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
     background-color: #EEEEEE;
-    padding: 3px;
+    padding: 4px;
 }
 
 pre code {
