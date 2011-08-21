@@ -15,6 +15,7 @@ lightbox: true
 
 {% if page.screenshots != nil %}
 <div id="gallery">
+    <div style="font-size:.85em;color:#888;font-style:italic;">{{ page.screenshots | size }} Screenshots</div>
     <ul>
         {% for screenshot in page.screenshots %}
         <li>
