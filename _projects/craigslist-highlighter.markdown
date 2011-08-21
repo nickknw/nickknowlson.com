@@ -18,7 +18,9 @@ videos:
 ---
 
 This script helps highlight things you're looking for when searching for apartments or
-housing on craigslist. This script will follow each link on the search page and
+housing on craigslist. 
+
+It will follow each link on the search page and
 scan the individual listing's body page for the keywords you enter. When it
 finds them, it will retrieve them, append them to the end of the individual
 listing, and highlight them green or red for positive or negative.  You can pick
