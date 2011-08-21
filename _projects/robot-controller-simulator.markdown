@@ -7,6 +7,18 @@ summary: A multi-threaded Java application (server & client) that controls a sim
 github: Robot-Controller-Simulator
 thumbnail: /img/projects/robot/thumb.png
 screenshots: 
+ - ["/img/projects/robot/1.png", "/img/projects/robot/1thumb.jpg", "Before
+   starting the simulator"]
+ - ["/img/projects/robot/2.png", "/img/projects/robot/2thumb.jpg",
+   "Simulator running"]
+ - ["/img/projects/robot/3.png", "/img/projects/robot/3thumb.jpg",
+   "Simulator running"]
+ - ["/img/projects/robot/4.png", "/img/projects/robot/4thumb.jpg",
+   "The UI scales smoothly, even the graphs"]
+ - ["/img/projects/robot/5.png", "/img/projects/robot/5thumb.jpg",
+   "Simulator paused"]
+ - ["/img/projects/robot/6.png", "/img/projects/robot/6thumb.jpg", "Robot ran
+   out of batteries"]
 videos:
 ---
 
