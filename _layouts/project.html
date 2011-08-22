@@ -31,6 +31,9 @@ lightbox: true
 <h2>Details</h2>
 <p>{{ content }}</p>
 
+
+{% include social.html %}
+
 {% for video in page.videos %}
     <div>video URL: {{ video[0] }} - CAPTION: {{ video[1] }}</div>
 {% endfor %}

@@ -381,3 +381,23 @@ pre code {
     padding: 0;   
 }
 
+#socialbuttons {
+    margin-left:20px;
+    vertical-align: bottom;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#socialbuttons div {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#socialbuttons iframe { vertical-align: bottom; }
+
+#facebook_button { margin-left: 30px; }
+#reddit_button { margin-left: 30px; }
+#reddit_button iframe { margin-bottom: -3px; }
+
+/*#facebook_button, #google_button, #reddit_button, #twitter_button {
+}*/
