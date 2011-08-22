@@ -17,7 +17,7 @@ description: Nick Knowlson's personal web site. Bio, projects, blog, contact inf
             {% if page.is_project and found_latest_project == 'false' %}
                 {% assign found_latest_project = 'true' %}
                 <li>
-                    <a href="/projects/"> 
+                    <a href="{{ page.url }}"> 
                         <h2>project</h2>
                         <div><strong>{{ page.title }}: </strong>{{ page.content | strip_html | truncatewords:8 }}<span class="faded indent">{{ page.date | date_to_string }}</span></div>
                     </a>
