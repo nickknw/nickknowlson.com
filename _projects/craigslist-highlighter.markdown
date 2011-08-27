@@ -38,6 +38,9 @@ This script is only supported for Firefox and Greasemonkey at the moment.
  2. Go to the [userscripts page](http://userscripts.org/scripts/show/110921) for
     Craigslist Highlighter and click the Install button in the top right corner.
 
+_(note: The script is still pending being listed, so for now just click
+[here](/projects/craigslist-highlighter/craigslist_highlighter.user.js) to install it)_
+
 Features
 ---
 
