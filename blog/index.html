@@ -13,5 +13,6 @@ description: The latest blog posts by Nick Knowlson.
   <div class="faded" style="font-size:14px; margin-bottom:5px;">{{ post.date | date_to_string }}</div>
   {{ post.content }}
   </div>
+  <div style="font-size: 14px; text-align: left; margin-top:20px;"><a class="dsq-comment-count" href="{{ post.url }}#disqus_thread">Comments</a></div>
   <hr class="fancyrule" />
 {% endfor %}
