@@ -6,13 +6,34 @@ description: The latest blog posts by Nick Knowlson.
 ---
 <div style="text-align:center;"><b>Latest Posts</b> | <a href="/blog/archive/">Archive</a></div>
 {% for post in site.posts limit:5 %}
-  <div style="">
+  <div>
   <h1 style="margin:0px"><a href="{{ post.url }}">
   {{ post.title }}
   </a></h1>
   <div class="faded" style="font-size:14px; margin-bottom:5px;">{{ post.date | date_to_string }}</div>
   {{ post.content }}
   </div>
-  <div style="font-size: 14px; text-align: left; margin-top:20px;"><a class="dsq-comment-count" href="{{ post.url }}#disqus_thread">Comments</a></div>
-  <hr class="fancyrule" />
+
+  <div style="margin-top:20px; font-size:14px;">
+    <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
+  </div>
+
+  {% if forloop.last %}
+    <div style="margin-top:20px;">&nbsp;</div>
+  {% else %}
+    <hr class="fancyrule" />
+  {% endif %}
 {% endfor %}
+
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'nickknowlson'; // required: replace example with your forum shortname
+  
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+  </script>
