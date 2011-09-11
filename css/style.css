@@ -41,7 +41,7 @@ blockquote {
 
 body {
     background: none;
-    background: url(/img/green_squares3.png);
+    background: url(/img/green_squares3.png) repeat scroll 0 0 #376A44;
 }
 
 #content {
@@ -243,7 +243,9 @@ h1 a {
     list-style-type: none;
 }
 
-p, h2 { margin-bottom:.5em;}
+p { margin-bottom:.5em;}
+
+h2, h3, h4, h5 { margin-bottom:.75em; margin-top:1.5em; }
 
 .last_paragraph { margin-bottom: 1.5em }
 
@@ -403,12 +405,12 @@ pre code {
 #reddit_button { margin-left: 30px; }
 #reddit_button iframe { margin-bottom: -3px; }
 
-blockquote p { margin: 0 }
+blockquote p { margin-bottom: .5em }
 blockquote {
     background-color: #EEEEEE;
     border-top: 1px solid #CCCCCC;
     border-bottom: 1px solid #CCCCCC;
-    padding: .5em;
+    padding: .5em .5em 0 .5em;
     margin: 20px;
 }
 
