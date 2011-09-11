@@ -5,7 +5,7 @@ title: Blog
 description: The latest blog posts by Nick Knowlson.
 ---
 <div style="text-align:center;"><b>Latest Posts</b> | <a href="/blog/archive/">Archive</a></div>
-{% for post in site.posts limit:5 %}
+{% for post in site.posts limit:3 %}
   <div>
   <h1 style="margin:0px"><a href="{{ post.url }}">
   {{ post.title }}
@@ -18,12 +18,10 @@ description: The latest blog posts by Nick Knowlson.
     <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
   </div>
 
-  {% if forloop.last %}
-    <div style="margin-top:20px;">&nbsp;</div>
-  {% else %}
     <hr class="fancyrule" />
-  {% endif %}
 {% endfor %}
+
+<a href="/blog/archives/">← Older posts</a>
 
   <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
