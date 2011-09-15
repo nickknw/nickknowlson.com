@@ -272,7 +272,7 @@ Some people mentioned a problem with OS X Snow Leopard as well.
 <h3>Language and Laziness</h3>
 
 The feedback on the **language** itself is going to be harder for me to sum up.
-There are a few obvious trends (no parameterized modules, module system, stack traces, record syntax), and a lot of detailed feedback that I can't understand. :) I'll try to pick out a couple of replies that looked especially well-thought out. 
+There are a few obvious trends (no parameterized modules, module system, stack traces, record syntax), and then there's a lot of detailed feedback that I can't understand. :) I'll try to pick out a couple of replies that looked especially well-thought out. 
 
 > Too many string-like types. Abstraction over them that would provide stable and practical API would be nice. Change String from type to class?
 > 
@@ -288,7 +288,18 @@ There are a few obvious trends (no parameterized modules, module system, stack t
 > 
 > (Haskell is also missing PHP’s excellent Magic Quotes functionality.)
 
-I like that last person's sense of humour.
+I like that last person's sense of humour. 
+
+I'd like to also link to a very relevant Yesod blog
+post: ["The Limitations of Haskell"](http://www.yesodweb.com/blog/2011/09/limitations-of-haskell) by Greg
+Weber. He brings the perspective of an expert Haskell-user solving practical
+problems, and writes clearly about it to boot. He singles out error messages,
+stack traces, code reloading (not mentioned by a single survey respondent as
+far as I can remember), dependency hell, and the record syntax issue.
+
+The stack traces issue may actually be resolved [sometime in the near future](https://plus.google.com/u/0/107890464054636586545/posts/XE4T6hHm3tK), from the sound of it.
+
+
 
 **Laziness** by default was such a common item of contention (almost equaling
 the rest of the language feedback combined!) that I split it out into its own
@@ -360,6 +371,9 @@ most glaring weakness was not being able to **run on the CLR or JVM**.
 
 
 > Another problem for adopting Haskell at work would be that it doesn't run on JVM/CLR. So there is no option for polyglotting
+
+Fortunately, there are a couple a like-minded people working on mitigating this
+issue right now with [Frege](http://code.google.com/p/frege/) ([discussion](http://www.reddit.com/r/haskell/comments/kadx6/frege_haskell_like_language_on_jvm_tries_to/)).
 
 There were also some less ambitious requests for a better **FFI** to C++,
 Objective-C and Python. 
