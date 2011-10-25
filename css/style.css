@@ -182,18 +182,17 @@ h1 a {
 .blockylist a:hover
 {
     background-color: #a9c78c;
-    color: #333333
+    color: #000000
 }
 
 .bigblockylist > ul > li
 {
-    height:110px;
     margin-bottom:10px;
 }
 
 .bigblockylist a 
 {
-    height: 110px;
+    min-height: 110px;
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -202,26 +201,35 @@ h1 a {
     padding-top:4px;
 }
 
+.bigblockylist div {
+    padding-left:120px;
+}
+
 .mediumblockylist > ul > li
 {
-    height:65px;
     margin-bottom:10px;
 }
 
 .mediumblockylist a 
 {
-    height: 45px;
+    min-height: 45px;
 }
+
+div.mediumblockylist div 
+{
+    margin-left: 1em;
+    margin-top:.5em
+}
+
 
 .archiveblockylist > ul > li
 {
-    height:65px;
     margin-bottom:10px;
 }
 
 .archiveblockylist a 
 {
-    height: 65px;
+    min-height: 65px;
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -294,7 +302,7 @@ td a { display: block;}
     font-size: 0.8em;
 }
 
-.blockylist a:hover time span {
+.blockylist a:hover time span, .blockylist a:hover .faded {
     color: #333;
 }
 
