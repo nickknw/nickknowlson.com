@@ -12,4 +12,10 @@ videos:
 
 As I work through the exercises in the book [*Seven Languages in Seven
 Weeks*](http://www.pragprog.com/titles/btlang/seven-languages-in-seven-weeks) by
-Bruce Tate, I will keep this page updated with my progress.
+Bruce Tate, I will keep this page updated with my progress. Each day will be
+represented by a separate blog post, 
+
+Week 1: Ruby
+--
+
+ * [Day 1](/blog/2011/11/27/seven-languages-week-1-day-1/)
