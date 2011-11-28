@@ -404,13 +404,15 @@ pre code {
 
 #socialbuttons div {
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: top;
+    margin-top:10px; /* for when it wraps on smaller screens, make it look a little less awful */
 }
 
 #socialbuttons iframe { vertical-align: bottom; }
 
-#facebook_button { margin-left: 30px; }
-#reddit_button { margin-left: 30px; }
+#rss_button { margin-right: 30px; }
+#twitter_button { margin-right: 30px; }
+#reddit_button { margin-right: 30px; }
 #reddit_button iframe { margin-bottom: -3px; }
 
 blockquote p { margin-bottom: .5em }
