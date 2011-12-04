@@ -8,6 +8,10 @@ with previously. It made for an easy start, and gave me a bit of momentum before
 I started to tackle languages like Prolog. I'm appreciative of that, because
 Prolog sure was a struggle for a while.
 
+<div class="interjection"><p>
+(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. This article is the first one in the series. For an overview see the <a href="http://localhost:4000/projects/seven-languages-in-seven-weeks/">project page</a>.)
+</p></div>
+
 Day 1 of Week 1 was pretty basic - a bit of string manipulation and looping.
 Ruby makes things like this very short and pretty. 
 
@@ -118,3 +122,5 @@ Too high!
 Pick a number between 1 and 1000: 129
 Got it! It was 129
 {% endhighlight %}
+
+Next in this series: [Day 2 of Ruby](/blog/2011/12/04/seven-languages-week-1-day-2/)

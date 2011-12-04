@@ -251,7 +251,7 @@ div.mediumblockylist div
     list-style-type: none;
 }
 
-p { margin-bottom:.5em;}
+p { margin-bottom:1em;}
 
 h2, h3, h4, h5 { margin-bottom:.75em; margin-top:1.5em; }
 
@@ -424,3 +424,6 @@ blockquote {
     margin: 20px;
 }
 
+.interjection {
+    font-size: 88%;
+}
