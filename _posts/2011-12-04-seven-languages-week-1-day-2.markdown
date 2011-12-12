@@ -4,10 +4,9 @@ title: "Seven Languages In Seven Weeks: Week 1 (Ruby) - Day 2"
 ---
 
 Day 2 of Ruby covers collections, code blocks, classes and modules. I'm familiar
-enough with these already in Ruby, so it was mostly just a refresher. So in this
-case it will be hard to provide a 'learning the language' perspective. Instead I
-will try to highlight a few of the parts of Ruby in this chapter that I
-particularly like.
+enough with these already in Ruby so in this case it will be hard to provide a
+'learning the language' perspective. Instead I will try to highlight a few of
+the parts of Ruby in this chapter that I particularly like.
 
 <div class="interjection"><p>
 (This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2011/11/27/seven-languages-week-1-day-1/">Week 1 (Ruby) - Day 1</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">project page</a>.)
@@ -25,7 +24,7 @@ can be used as queues, stacks, sets, and matrices.
 Its syntax is consistent and pretty. Arrays are very rich, you can do ranges
 (`[1..10]`), negative indexes (`"string"[1..-2]`), and there are convenience
 methods for operations like push, pop, transpose, and set intersection. You have
-the standard high order functions equivalents (map, filter, fold/reduce).
+the three basic list manipulating higher order function equivalents: map, filter, reduce (fold).
 
 There are many useful methods you can call right off of number literals. One
 common example is `times`, which takes a code block as a parameter and executes
