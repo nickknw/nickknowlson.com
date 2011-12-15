@@ -74,7 +74,7 @@ The implementation is fairly short: they create a basic XML class in only 53
 well-commented lines. If you're interested, the code examples are available for
 inspection from 
 [David Flanagan's website](http://www.davidflanagan.com/rpl/). For convenience, 
-here is a link [directly to this snippet of code](/files/RPL_XML.txt).
+here is a link [directly to this snippet of code](/RPL_XML.txt).
 
 <h3>Mixins</h3>
 Mixins are a way for a class to include code from a module inside itself.
