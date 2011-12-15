@@ -236,7 +236,8 @@ div.mediumblockylist div
 
 .archiveblockylist a h2
 {
-    padding-top:8px;
+    padding-top: 8px;
+    font-family: Cambria, Georgia, "Times New Roman", serif;; 
 }
 
 .archiveblockylist a div
@@ -253,7 +254,11 @@ div.mediumblockylist div
 
 p { margin-bottom:1em;}
 
-h2, h3, h4, h5 { margin-bottom:.75em; margin-top:1.5em; }
+h2, h3, h4, h5 { 
+    margin-bottom:.75em; 
+    margin-top:1.5em; 
+    font-family:Calibri, "Helvetica Neue", Arial, sans-serif; 
+}
 
 .last_paragraph { margin-bottom: 1.5em }
 
@@ -286,7 +291,7 @@ td a { display: block;}
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family:Calibri, "Helvetica Neue", Arial, sans-serif; /* Swap these two lines around to switch between serif and sans */
+    font-family:Calibri, "Helvetica Neue", Arial, sans-serif; 
 }
 
 .blockylist time span.month {
