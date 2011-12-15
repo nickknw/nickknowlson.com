@@ -20,3 +20,4 @@ Week 1: Ruby
 
  * [Day 1](/blog/2011/11/27/seven-languages-week-1-day-1/)
  * [Day 2](/blog/2011/12/04/seven-languages-week-1-day-2/)
+ * [Day 3](/blog/2011/12/15/seven-languages-week-1-day-3/)
