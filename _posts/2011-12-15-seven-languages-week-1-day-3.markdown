@@ -198,6 +198,7 @@ csv.each {|row| puts row.one}
 And the output (given the sample file in my github repo):
 
 {% highlight bash %}
+$ ruby day3.rb
 lions
 han
 chewbacca
@@ -212,4 +213,4 @@ bail organa
 vader
 {% endhighlight %}
 
-Next in this series: Day 1 of Io
+Next in this series: [Day 1 of Io](/blog/2011/12/18/seven-languages-week-2-day-1/)
