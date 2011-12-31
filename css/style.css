@@ -432,3 +432,9 @@ blockquote {
 .interjection {
     font-size: 88%;
 }
+
+.super {
+    vertical-align: super;
+    font-size:80%;
+    font-family:sans-serif;
+}

@@ -26,3 +26,4 @@ Week 2: Io
 ---
 
  * [Day 1](/blog/2011/12/18/seven-languages-week-2-day-1/)
+ * [Transposing a matrix in Io](/blog/2011/12/30/transposing-a-matrix-in-io/)
