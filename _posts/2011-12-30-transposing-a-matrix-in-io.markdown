@@ -17,15 +17,15 @@ methods so that they interpret the `x` parameter as `y`, and vice versa. To my
 dismay, I later found that [this isn't a new approach](http://en.wikipedia.org/wiki/Transpose#Implementation_of_matrix_transposition_on_computers) to solving this 
 problem. 
 
-My implementation in Io still has something going for it, however. Because of Io's
+However, my implementation in Io still has something going for it. Because of Io's
 extreme malleability, I can write my `transpose` method such that calling it
 permanently swaps the argument order in the `get` and `set` methods of that
 individual matrix object. In most other languages
 <a href="#footnote-1" id="footnote-1-link" class="super">[1]</a>
 , writing
 this kind of fake transpose would require keeping track of state with if
-statements to check if a given matrix is currently 'transposed' or not. Which
-is, conceptually, nonsense. Transposing is something you *do to* matrices, not
+statements to check if a given matrix is currently 'transposed' or not. This
+is, conceptually, nonsense: transposing is something you *do to* matrices, not
 a *property* of them.
 
 Io lets you write this in a way that is fun, short, and elegant.
@@ -38,7 +38,8 @@ Here is the problem statement from the book:
 > Write a transpose method so that (new\_matrix get(y, x)) == matrix get(x,y) on the original list
 
 Before we get started, this is what the final solution looks like. Try and
-become a little familiar with this before we move on.
+become a little familiar with this before we move on (it will all be explained
+in detail below, don't worry).
 
 {% highlight io %}
 flipFirstTwoArgs := method(slotName,
