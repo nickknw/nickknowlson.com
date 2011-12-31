@@ -106,7 +106,7 @@ THEN execute the method.
 
 Ola Bini has a great [post about metaprogramming in Ruby](http://ola-bini.blogspot.com/2006/09/ruby-metaprogramming-techniques.html) that talks about these techniques and more. I recommend it if you have been at all interested this post so far, it is well worth reading.
 
-Highlights from exercise
+Highlights from exercises
 ---
 There was not very much to do for the homework questions this week,
 unfortunately, just one fairly short exercise. This day in particular was one
