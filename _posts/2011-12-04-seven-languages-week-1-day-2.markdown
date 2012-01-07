@@ -262,4 +262,4 @@ And the output:
     87: Blind Guardian's music features the staccato guitars and double bass drumming
     90: the guitar and vocal tracks, creates the impression of a vast army of musicians
 
-Next in this series: [Day 3 of Ruby](/blog/2011/12/15/seven-languages-week-1-day-2/).
+Next in this series: [Day 3 of Ruby](/blog/2011/12/15/seven-languages-week-1-day-3/).
