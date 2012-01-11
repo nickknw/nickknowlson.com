@@ -820,7 +820,7 @@ pre code {
 #reddit_button { margin-right: 30px; }
 #reddit_button iframe { margin-bottom: -3px; }
 
-blockquote p { margin-bottom: .5em }
+blockquote p, ul, ol { margin-bottom: .5em }
 blockquote {
     background-color: #EEEEEE;
     border-top: 1px solid #CCCCCC;

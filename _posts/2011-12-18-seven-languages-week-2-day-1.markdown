@@ -145,3 +145,5 @@ Injecting larvae now!
 Spreading creep now!
 Done!
 {% endhighlight %}
+
+Next in this series: [Day 2 of Io](/blog/2012/01/11/seven-languages-week-2-day-2/)
