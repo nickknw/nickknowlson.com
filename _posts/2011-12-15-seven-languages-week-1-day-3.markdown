@@ -126,6 +126,8 @@ def method_missing name, *args
 end
 {% endhighlight %}
 
+Full Code Listing
+---
 Here is my full code listing for the exercises from Day 3 of Ruby. The home of this piece of code is with the other exercises [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-1-ruby/day3.rb).  
 
 {% highlight ruby %}

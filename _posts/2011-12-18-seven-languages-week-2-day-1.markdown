@@ -41,6 +41,12 @@ The homework this week is short but well-constructed. It points out a couple of
 things that are important to remember for a newbie to Io. In particular, you
 will need `slotNames` a lot, so remember that one!
 
+Other than that, there isn't much to say about the homework this week. Remember
+`slotNames` and read the code listing.
+
+Full Code Listing
+---
+
 Here is my full code listing for the exercises from Day 1 of Io. The home of this piece of code is with the other exercises [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-2-io/day1.io).  
 
 {% highlight io %}
