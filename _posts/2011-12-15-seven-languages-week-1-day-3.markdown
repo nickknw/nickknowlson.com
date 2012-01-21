@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seven Languages In Seven Weeks: Week 1 (Ruby) - Day 3"
+title: "Seven Languages: Week 1 (Ruby) - Day 3"
 ---
 
 Day 3 is about metaprogramming: writing code that writes code. Now we are really

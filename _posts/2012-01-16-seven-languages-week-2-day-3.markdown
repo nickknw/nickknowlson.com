@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seven Languages In Seven Weeks: Week 2 (Io) - Day 3"
+title: "Seven Languages: Week 2 (Io) - Day 3"
 ---
 
 Since this is the last day of Io, I am going to reflect a bit on what I liked about it.

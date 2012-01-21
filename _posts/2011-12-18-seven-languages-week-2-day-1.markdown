@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seven Languages In Seven Weeks: Week 2 (Io) - Day 1"
+title: "Seven Languages: Week 2 (Io) - Day 1"
 ---
 
 Day 1 of Io is the first of many chapters that will give me that 'new at

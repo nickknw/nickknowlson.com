@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seven Languages In Seven Weeks: Week 1 (Ruby) - Day 2"
+title: "Seven Languages: Week 1 (Ruby) - Day 2"
 ---
 
 Day 2 of Ruby covers collections, code blocks, classes and modules. I'm familiar

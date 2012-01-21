@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seven Languages In Seven Weeks: Week 1 (Ruby) - Day 1"
+title: "Seven Languages: Week 1 (Ruby) - Day 1"
 ---
 
 Out of the seven languages in this book, Ruby is the one I was most familiar

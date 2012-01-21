@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seven Languages In Seven Weeks: Week 2 (Io) - Day 2"
+title: "Seven Languages: Week 2 (Io) - Day 2"
 ---
 
 Day 2 of Io was the most difficult (as well as the most fun) day yet. It took me
