@@ -28,7 +28,7 @@ statements to check if a given matrix is currently 'transposed' or not. This
 is, conceptually, nonsense: transposing is something you *do to* matrices, not
 a *property* of them.
 
-Io lets you write this in a way that is fun, short, and elegant.
+Io lets you write this fake transpose in a way that is fun, short, and elegant.
 
 The Solution
 ---
@@ -82,7 +82,9 @@ The following line of code gets the method we are going to modify and sets the n
 For a concrete example, if I just wanted to change the argument names for my "get" method from get(x, y) to get(y, x) I could hardcode in some values and call it like this:
 
 {% highlight io %}
-    self getSlot("get") setArgumentNames(list("y", "x"))
+    self getSlot("get") setArgumentNames(
+        list("y", "x")
+    )
 {% endhighlight %}
 
 But that wouldn't quite be fancy enough. I'd rather write a method that would let me swap the first two arguments of **any** method. So, going back to the snippet above, that's what the next two lines do:
@@ -93,18 +95,18 @@ But that wouldn't quite be fancy enough. I'd rather write a method that would le
     self getSlot(slotName) argumentNames at(0),
 {% endhighlight %}
 
-If I wanted to keep the arguments in the same order I would have put the 0 in the first line, then the 1 in the second line. Make sense so far?
+If I wanted to keep the arguments in the same order I would have put the `0` in the first line, then the `1` in the second line. Make sense so far?
 
-I could have left it here, but then what would happen if I told it to change a method that looked like `doSomething(x, y, z)`? The z would get discarded and that method wouldn't be very useful anymore. Hence the next line:
+I could have left it here, but then what would happen if I told it to change a method that looked like `doSomething(x, y, z)`? It would take the argument at position `1`, then the argument at position `0`. The `z` would get discarded and that method wouldn't be very useful anymore. Hence the next line:
 
 **Line 4:**
 {% highlight io %}
     self getSlot(slotName) argumentNames rest rest
 {% endhighlight %}
 
-`rest` is Io's version of `cdr` or `tail`. It is a method that returns everything except for the first element of a list. So if you call `rest` on the result of `rest` you get a list that has all its elements except for the first two. It is like saying `drop 2` in Haskell.
+`rest` is Io's version of `cdr` or `tail`. It is a method that returns everything except for the first element of a list. So if you call `rest` on the result of `rest` you get a list that has all its elements except for the first two.
 
-Let's recap. If I had called flipFirstTwoArgs with my fictitious `doSomething(x, y, z)` method, these previous lines would resolve into:
+Let's recap. If I call this method we're defining with my fictitious `doSomething(x, y, z)` method as the argument, these previous lines would resolve into:
 
 {% highlight io %}
     self getSlot("doSomething") setArgumentNames( list(
@@ -134,7 +136,9 @@ If we apply it to the `doSomething` example, the code now looks like this:
 Which would end up resolving into:
 
 {% highlight io %}
-    self getSlot("doSomething") setArgumentNames( list("y", "x", "z") )
+    self getSlot("doSomething") setArgumentNames(
+        list("y", "x", "z") 
+    )
 {% endhighlight %}
 
 There, much better. And that explains the last line!

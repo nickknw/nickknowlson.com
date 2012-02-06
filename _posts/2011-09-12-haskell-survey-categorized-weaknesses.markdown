@@ -447,7 +447,7 @@ Raw Data
 
 My list that is split up by categories is currently in a [spreadsheet on Google
 Docs](https://docs.google.com/spreadsheet/ccc?key=0Aq8X8wb4SdlWdG1XM3NoLXhnWl9VR3d6OURYMTA2ZXc&hl=en_US).
-From there you have a bunch of different formats available download or export it in.
+From there you have a bunch of different formats available to download or export it in.
 
 Summary
 ---
