@@ -119,22 +119,19 @@ body{
 /*--- TYPE AND SPACING ---*/
 h1{
 	font-size:2em;			/* 32px */
-	margin-bottom:0.25em;           /* I had some good reason for this.. TODO: FIND IT */
+	margin-bottom:0.25em;           /* I tend to want an image or a date close underneath my main headings */
 	line-height:1.5;		/* 48px */
 }
 h2{
 	font-size:1.5em;		/* 24px */
-	margin-bottom:1em;		/* 24px */
 	line-height:1;			/* 24px */
 }
 h3{
 	font-size:1.25em;		/* 20px */
-	margin-bottom:1.2em;	/* 24px */
 	line-height:1.2;		/* 24px */
 }
 h4{
-	font-size:1.125em;		/* 18px */
-	margin-bottom:1.333em;	/* 24px */
+	font-size:1em;		        /* 16px */
 	line-height:1.333;		/* 24px */
 }
 h5{
@@ -142,8 +139,7 @@ h5{
 }
 h5,
 h6{
-    font-size:1em;			/* 16px */
-    margin-bottom:1.5em;	/* 24px */
+    font-size:.85em;		/* 12px */
     line-height:1.5;		/* 24px */
 }
 
