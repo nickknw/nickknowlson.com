@@ -333,4 +333,4 @@ doString(s)
 
 </div>
 
-Next in this series: Day 1 of Prolog
+Next in this series: [Day 1 of Prolog](/blog/2012/02/05/seven-languages-week-3-day-1/)
