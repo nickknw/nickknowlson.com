@@ -19,42 +19,90 @@ For example, being able to
 repeat a string like: `"Nick " * 10` or loop like: 
 `(1..10).each { |num| do_stuff(num) }` is great.
 
-Here is my full code listing for the exercises from Day 1 of Ruby. The home of this piece of code is with the other exercises [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-1-ruby/day1.rb).
+Here is a nicely formatted version of my solutions to the exercises from Day 1 of Ruby. The home of the following code is [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-1-ruby/day1.rb) with the other exercises.  
+
+<div id="formatted_solutions">
+
+<h3>Find:</h3>
+
+<h4><b>1.</b> A method that substitutes a part of a string</h4>
 
 {% highlight ruby %}
-# Find:
-# 1. A method that substitutes a part of a string
-puts "\nFind:"
-puts "\n1."
 puts "BAM".gsub "M", "TMAN"
+{% endhighlight %}
 
+<h5>Output:</h5>
 
-# Do:
-# 1. Print the string "Hello World"
-puts "\nDo:"
-puts "\n1."
+{% highlight bash %}
+BATMAN
+{% endhighlight %}
+
+<h3>Do:</h3>
+
+<h4><b>1.</b> Print the string "Hello World"</h4>
+
+{% highlight ruby %}
 puts "Hello World"
+{% endhighlight %}
 
-# 2. For the string "Hello, Ruby," find the index of the word "Ruby."
-puts "\n2."
+<h5>Output:</h5>
+
+{% highlight bash %}
+Hello World
+{% endhighlight %}
+
+<h4><b>2.</b> For the string "Hello, Ruby," find the index of the word "Ruby."</h4>
+
+{% highlight ruby %}
 # literally:
 p "Hello, Ruby,".index "Ruby."
 # realistically:
 puts "Hello, Ruby".index "Ruby"
+{% endhighlight %}
 
-# 3. Print your name ten times
-puts "\n3."
+<h5>Output:</h5>
+
+{% highlight bash %}
+nil
+7
+{% endhighlight %}
+
+<h4><b>3.</b> Print your name ten times</h4>
+
+{% highlight ruby %}
 puts "Nick " * 10
+{% endhighlight %}
 
-# 4. Print the string "This is sentence number 1," where the number 1 changes
-# from 1 to 10
-puts "\n4."
+<h5>Output:</h5>
+
+{% highlight bash %}
+Nick Nick Nick Nick Nick Nick Nick Nick Nick Nick 
+{% endhighlight %}
+
+<h4><b>4.</b> Print the string "This is sentence number 1," where the number 1 changes from 1 to 10</h4>
+
+{% highlight ruby %}
 (1..10).each { |num| puts "This is sentence number #{num}" }
+{% endhighlight %}
 
-# Bonus: Write a program that picks a random number. Let a player guess the
-# number, telling the player whether the guess is too low or too high.
-puts "\nBonus:"
+<h5>Output:</h5>
 
+{% highlight bash %}
+This is sentence number 1
+This is sentence number 2
+This is sentence number 3
+This is sentence number 4
+This is sentence number 5
+This is sentence number 6
+This is sentence number 7
+This is sentence number 8
+This is sentence number 9
+This is sentence number 10
+{% endhighlight %}
+
+<h4><b>Bonus:</b> Write a program that picks a random number. Let a player guess the number, telling the player whether the guess is too low or too high.</h4>
+
+{% highlight ruby %}
 random_number = rand(1000) + 1
 guess = 0
 
@@ -68,43 +116,9 @@ end
 puts "Got it! It was #{random_number}"
 {% endhighlight %}
 
-
-And the output:
-
+<h5>Output:</h5>
 
 {% highlight bash %}
-$ ruby day1.rb
-
-Find:
-
-1.
-BATMAN
-
-Do:
-
-1.
-Hello World
-
-2.
-nil
-7
-
-3.
-Nick Nick Nick Nick Nick Nick Nick Nick Nick Nick 
-
-4.
-This is sentence number 1
-This is sentence number 2
-This is sentence number 3
-This is sentence number 4
-This is sentence number 5
-This is sentence number 6
-This is sentence number 7
-This is sentence number 8
-This is sentence number 9
-This is sentence number 10
-
-Bonus:
 Pick a number between 1 and 1000: 500
 Too high!
 Pick a number between 1 and 1000: 250
@@ -122,5 +136,7 @@ Too high!
 Pick a number between 1 and 1000: 129
 Got it! It was 129
 {% endhighlight %}
+
+</div>
 
 Next in this series: [Day 2 of Ruby](/blog/2011/12/04/seven-languages-week-1-day-2/)

@@ -47,71 +47,105 @@ Other than that, there isn't much to say about the homework this week. Remember
 Full Code Listing
 ---
 
-Here is my full code listing for the exercises from Day 1 of Io. The home of this piece of code is with the other exercises [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-2-io/day1.io).  
+Here is a nicely formatted version of my solutions to the exercises from Day 1 of Io. The home of the following code is [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-2-io/day1.io) with the other exercises.  
+
+<div id="formatted_solutions">
+
+<h3>Find:</h3>
+
+<h4>Some Io example problems</h4>
+
+<ul>
+<li><a href="http://www.iolanguage.com/about/samplecode/">http://www.iolanguage.com/about/samplecode/</a></li>
+</ul>
+
+<h4>An Io community that will answer questions</h4>
+
+<ul>
+<li><a href="http://tech.groups.yahoo.com/group/iolanguage/messages">http://tech.groups.yahoo.com/group/iolanguage/messages</a></li>
+<li><a href="http://stackoverflow.com/questions/tagged/iolanguage">http://stackoverflow.com/questions/tagged/iolanguage</a></li>
+<li>#io on freenode</li>
+<li><a href="http://www.reddit.com/r/iolanguage">http://www.reddit.com/r/iolanguage</a></li>
+</ul>
+
+<h4>A style guide with Io idioms</h4>
+
+<ul>
+<li><a href="http://en.wikibooks.org/wiki/Io_Programming/Io_Style_Guide">http://en.wikibooks.org/wiki/Io_Programming/Io_Style_Guide</a></li>
+</ul>
+
+<h3>Answer:</h3>
+
+<h4><b>1.</b> Evaluate 1 + 1 and then 1 + "one". Is Io strongly typed or weakly
+typed?</h4>
+
+<p>
+Strongly typed. Trying to run <code>1 + "one"</code> throws an exception that says:
+<code>"Exception: argument 0 to method '+' must be a Number, not a 'Sequence'"</code>
+</p>
+  
+<h4><b>2.</b> Is 0 true or false? What about the empty string? Is nil true or
+false?</h4>
 
 {% highlight io %}
-# Find:
-#   Some Io example problems
-#       http://www.iolanguage.com/about/samplecode/
-#
-#   An Io community that will answer questions
-#       http://tech.groups.yahoo.com/group/iolanguage/messages
-#       http://stackoverflow.com/questions/tagged/iolanguage
-#       #io on freenode
-#       http://www.reddit.com/r/iolanguage
-#
-#   A style guide with Io idioms
-#       http://en.wikibooks.org/wiki/Io_Programming/Io_Style_Guide
-#
-# Answer:
-#
-# 1. Evaluate 1 + 1 and then 1 + "one". Is Io strongly typed or weakly typed?
-#
-#   Strongly typed. Trying to run `1 + "one"` throws an exception that says:
-#       "Exception: argument 0 to method '+' must be a Number, not a 'Sequence'"
-#   
-# 2. Is 0 true or false? What about the empty string? Is nil true or false?
+if(0) println   
+if("") println  
+if(nil) println 
+{% endhighlight %}
 
-if(0) println   # true
-if("") println  # true
-if(nil) println # false
+<h5>Output</h5>
 
-# 3. How can you tell what slots a prototype supports?
+{% highlight bash %}
+true
+true
+false
+{% endhighlight %}
+
+<h4><b>3.</b> How can you tell what slots a prototype supports?</h4>
+
+{% highlight io %}
 # <prototype> slotNames
 
 Zerg := Object clone
 Zerg sixPool := "Zergling rush!"
-Zerg slotNames println  # will print list(type, sixPool)
+Zerg slotNames println 
+{% endhighlight %}
 
-# 4. What is the difference between = (equals), := (colon equals), and ::=
-# (colon colon equals)? When would you use each one?
-#
-# =     is used to assign something to an existing slot
-# :=    is used to assign something to a previously non-existent slot
-# ::=   is used to assign something to a previously non-existent slot as well as
-#       create a setter for that slot
-#   
-#   iolanguage.com's guide puts this much much better than I did:
-#
-# ::= 	Creates slot, creates setter, assigns value
-# := 	Creates slot, assigns value
-# = 	Assigns value to slot if it exists, otherwise raises exception 
-#
-#
-# Do:
-#
-# 1. Run an Io program from a file.
-#
-# From the command line run: io day1.io
-#
+<h5>Output</h5>
 
-"successfully ran day1" println
+{% highlight bash %}
+list(type, sixPool)
+{% endhighlight %}
 
-# 2.Execute the code in a slot given its name.
-#
+<h4><b>4.</b> What is the difference between = (equals), := (colon equals), and ::= (colon colon equals)? When would you use each one?</h4>
+
+<ul>
+<li>=     is used to assign something to an existing slot</li>
+<li>:=    is used to assign something to a previously non-existent slot</li>
+<li>::=   is used to assign something to a previously non-existent slot as well as create a setter for that slot</li>
+</ul>
+  
+  <p>iolanguage.com's guide puts this much much better than I did:</p>
+
+<ul>
+<li>::= 	Creates slot, creates setter, assigns value</li>
+<li>:= 	Creates slot, assigns value</li>
+<li>= 	Assigns value to slot if it exists, otherwise raises exception </li>
+</ul>
+
+
+<h3>Do:</h3>
+
+<h4><b>1.</b> Run an Io program from a file.</h4>
+
+<p> From the command line run: io day1.io</p>
+
+<h4><b>2.</b> Execute the code in a slot given its name.</h4>
+
+{% highlight io %}
 # I'm not quite sure I understood this question. I'll answer the two
 # interpretations I could come up with.
-#
+
 # If the code in a slot is stored as a method then just invoking the slot is
 # enough:
 
@@ -134,15 +168,9 @@ Zerg specifyMacro("macroHarder")
 "Done!" println
 {% endhighlight %}
 
-And the output:
+<h5>Output</h5>
 
 {% highlight bash %}
-$ io day1.io
-true
-true
-false
-list(type, sixPool)
-successfully ran day1
 Injecting larvae now!
 Spreading creep now!
 
@@ -151,5 +179,7 @@ Injecting larvae now!
 Spreading creep now!
 Done!
 {% endhighlight %}
+
+</div>
 
 Next in this series: [Day 2 of Io](/blog/2012/01/11/seven-languages-week-2-day-2/)

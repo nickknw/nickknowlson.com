@@ -126,16 +126,18 @@ def method_missing name, *args
 end
 {% endhighlight %}
 
-Full Code Listing
+Full solution
 ---
-Here is my full code listing for the exercises from Day 3 of Ruby. The home of this piece of code is with the other exercises [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-1-ruby/day3.rb).  
+
+Here is a nicely formatted version of my solution to the exercise from Day 3 of Ruby. The home of the following code is [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-1-ruby/day3.rb) with the other exercises.
+
+<div id="formatted_solutions">
+
+<h3>Do:</h3>
+
+<h4><b>1.</b> Modify the CSV application to support an each method to return a CsvRow object. Use method_missing on that CsvRow to return the value for the column for a given heading.</h4>
 
 {% highlight ruby %}
-#Do:
-# 1. Modify the CSV application to support an each method to return a CsvRow
-# object. Use method_missing on that CsvRow to return the value for the column
-# for a given heading.
-
 module ActsAsCsv
 
     def self.included(base)
@@ -197,10 +199,9 @@ csv = RubyCsv.new
 csv.each {|row| puts row.one}
 {% endhighlight %}
 
-And the output (given the sample file in my github repo):
+<h5>Output (given the sample file in my github repo)</h5> 
 
 {% highlight bash %}
-$ ruby day3.rb
 lions
 han
 chewbacca
@@ -214,5 +215,7 @@ darth sidious
 bail organa
 vader
 {% endhighlight %}
+
+</div>
 
 Next in this series: [Day 1 of Io](/blog/2011/12/18/seven-languages-week-2-day-1/)

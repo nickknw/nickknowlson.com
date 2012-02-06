@@ -41,7 +41,7 @@ Before we get started, this is what the final solution looks like. Try and
 become a little familiar with this before we move on (it will all be explained
 in detail below, don't worry).
 
-{% highlight io %}
+{% highlight io linenos %}
 flipFirstTwoArgs := method(slotName,
     self getSlot(slotName) setArgumentNames( list(
         self getSlot(slotName) argumentNames at(1),
@@ -72,7 +72,7 @@ The Explanation
 
 The following line of code gets the method we are going to modify and sets the names of its arguments.
 
-**Line 1:**
+**Line 2:**
 {% highlight io %}
     self getSlot(slotName) setArgumentNames( 
         #list of argument names goes here 
@@ -89,7 +89,7 @@ For a concrete example, if I just wanted to change the argument names for my "ge
 
 But that wouldn't quite be fancy enough. I'd rather write a method that would let me swap the first two arguments of **any** method. So, going back to the snippet above, that's what the next two lines do:
 
-**Lines 2-3:**
+**Lines 3-4:**
 {% highlight io %}
     self getSlot(slotName) argumentNames at(1),
     self getSlot(slotName) argumentNames at(0),
@@ -99,7 +99,7 @@ If I wanted to keep the arguments in the same order I would have put the `0` in 
 
 I could have left it here, but then what would happen if I told it to change a method that looked like `doSomething(x, y, z)`? It would take the argument at position `1`, then the argument at position `0`. The `z` would get discarded and that method wouldn't be very useful anymore. Hence the next line:
 
-**Line 4:**
+**Line 5:**
 {% highlight io %}
     self getSlot(slotName) argumentNames rest rest
 {% endhighlight %}
@@ -118,7 +118,7 @@ Let's recap. If I call this method we're defining with my fictitious `doSomethin
 
 That's not quite right, `setArgumentNames` is expecting a simple flat list, none of this nested list stuff. So let's flatten the list of argument names before giving it to `setArgumentNames`.
 
-**Line 5:**
+**Line 6:**
 {% highlight io %}
     ) flatten )
 {% endhighlight %}
@@ -146,15 +146,22 @@ There, much better. And that explains the last line!
 Wrap-up
 ---
 
-Now, putting back together all the lines I've explained, here is the body of the
-`flipFirstTwoArgs` method again:
+Now, putting back together all the lines I've explained, here is the full
+solution again:
 
-{% highlight io %}
+{% highlight io linenos %}
+flipFirstTwoArgs := method(slotName,
     self getSlot(slotName) setArgumentNames( list(
         self getSlot(slotName) argumentNames at(1),
         self getSlot(slotName) argumentNames at(0),
         self getSlot(slotName) argumentNames rest rest
     ) flatten)
+)
+
+List2D transpose := method(
+    self get = flipFirstTwoArgs("get")
+    self set = flipFirstTwoArgs("set")
+)
 {% endhighlight %}
 
 If I've done my job right, it should make a lot more sense this time.

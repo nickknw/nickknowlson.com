@@ -64,8 +64,8 @@ off! The question was:
 The answer was only two short lines of code:
 
 {% highlight io %}
-    Number origDiv := Number getSlot("/")
-    Number / = method(denom, if(denom == 0, 0, self origDiv(denom)))
+Number origDiv := Number getSlot("/")
+Number / = method(denom, if(denom == 0, 0, self origDiv(denom)))
 {% endhighlight %}
 
 The tricky part at first was figuring out how to save a reference to the
@@ -82,21 +82,22 @@ No loops needed here - Io has `map`, `filter`, `reduce`, and they mix **well** w
 Io's syntax:
 
 {% highlight io %}
-    addUp2DArray := method(array, array flatten reduce(+))
+addUp2DArray := method(array, array flatten reduce(+))
 {% endhighlight %}
 
-Full Code Listing
+Full solutions
 ---
 
 That's it for the highlights, but as I mentioned earlier, all of the exercises today were
-pretty interesting.  Here is my full code listing for the exercises from Day 2 of Io. The home of this piece of code is with the other exercises [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-2-io/day2.io).  These exercises this week are really worth taking a look at, I hope you read through some of the following.
+pretty interesting. Here is a nicely formatted version of my solutions to the exercises from Day 2 of Io. The home of the following code is [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-2-io/day2.io) with the other exercises. The exercises this week are really worth taking a look at, I encourage you to follow along closely through the rest with me.
+
+<div id="formatted_solutions">
+
+<h3>Do:</h3>
+
+<h4><b>1.</b> Write a program to find the nth Fibonacci number. Fib(1) is 1, and fib(4) is 3. As a bonus, solve the problem with recursion and with loops.</h4>
 
 {% highlight io %}
-# Do:
-#
-# 1. Write a program to find the nth Fibonacci number. Fib(1) is 1, and fib(4)
-# is 3. As a bonus, solve the problem with recursion and with loops.
-
 fib_recur := method(num,
     if(num <= 1, num, fib_recur(num - 1) + fib_recur(num - 2) )
 )
@@ -112,6 +113,7 @@ fib_loop := method(num,
     )
     old
 )
+
 "Fib 0" println
 fib_recur(0) println
 fib_loop(0) println
@@ -123,30 +125,62 @@ fib_loop(4) println
 "Fib 8" println
 fib_recur(8) println
 fib_loop(8) println
+{% endhighlight %}
 
-# 2. How would you change / to return 0 if the denominator is zero?
-#
+<h5>Output</h5>
+
+{% highlight bash %}
+Fib 0
+0
+0
+Fib 4
+3
+3
+Fib 8
+21
+21
+{% endhighlight %}
+
+<h4><b>2.</b> How would you change / to return 0 if the denominator is zero?</h4>
+
+{% highlight io %}
 # The tricky bit is saving a reference to the old method:
 Number origDiv := Number getSlot("/")
 
 # Overriding the / method is surprisingly straightforward
 Number / = method(denom, if(denom == 0, 0, self origDiv(denom)))
 
-"Testing division" println
 4 / 2 println
 4 / 0 println
+{% endhighlight %}
 
-# 3. Write a program to add up all of the numbers in a two-dimensional array.
+<h5>Output</h5>
+
+{% highlight bash %}
+2
+0
+{% endhighlight %}
+
+<h4><b>3.</b> Write a program to add up all of the numbers in a two-dimensional
+array.</h4>
+
+{% highlight io %}
 addUp2DArray := method(array, array flatten reduce(+))
 
-"add up 2d array" println
 addUp2DArray(list(2,3,4,5)) println
 addUp2DArray(list(2,3, list(1,1,1), 4,5)) println
+{% endhighlight %}
 
-# 4. Add a slot called myAverage to a list that computes the average of all the
-# numbers in a list. What happens if there are no numbers in a list? (Bonus:
-# Raise an Io exception if any item in the list is not a number.)
+<h5>Output</h5>
 
+{% highlight bash %}
+14
+17
+{% endhighlight %}
+
+<h4><b>4.</b> Add a slot called myAverage to a list that computes the average of all the numbers in a list. What happens if there are no numbers in a list? (<b>Bonus:</b> Raise an Io exception if any item in the list is not a number.)</h4>
+
+{% highlight io %}
 # Easy way:
 List myAverage := method(self average)
 
@@ -162,11 +196,17 @@ List myAverage2 := method(
 "Averaging the numbers in a list" println
 list(1,2,3,4) myAverage2 println
 #list(1,2,3,4,"a") myAverage2 println
+{% endhighlight %}
 
-# 5. Write a prototype for a two-dimensional list. The dim(x,y) method should
-# allocate a list of y lists that are x elements long, set(x, y, value) should
-# set a value, and get(x, y) should return that value.
-#
+<h5>Output</h5>
+
+{% highlight bash %}
+2.5
+{% endhighlight %}
+
+<h4><b>5.</b> Write a prototype for a two-dimensional list. The dim(x,y) method should allocate a list of y lists that are x elements long, set(x, y, value) should set a value, and get(x, y) should return that value.</h4>
+
+{% highlight io %}
 List2D := List clone
 List2D transposed := false
 
@@ -186,7 +226,6 @@ List2D dim2 := method(x, y,
     y repeat(self append(Range 0 to(x) asList() map(nil)))
 )
 
-"Creating matrices" println
 firstMatrix := List2D clone
 firstMatrix dim(6,7) println
 "" println
@@ -216,10 +255,25 @@ firstMatrix println
 
 firstMatrix get(2,4) println
 firstMatrix get(1,2) println
+{% endhighlight %}
 
-# 6. Bonus: Write a transpose method so that (new_matrix get(y, x)) ==
-# matrix get(x,y) on the original list
+<h5>Output</h5>
 
+{% highlight bash %}
+list(list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil))
+
+list(list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil))
+
+Setting and getting a matrix
+list(list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, asdfad, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil))
+
+asdfad
+nil
+{% endhighlight %}
+
+<h4><b>6. Bonus:</b> Write a transpose method so that (new_matrix get(y, x)) == matrix get(x,y) on the original list</h4>
+
+{% highlight io %}
 flipFirstTwoArgs := method(slotName,
     self getSlot(slotName) setArgumentNames( list(
         self getSlot(slotName) argumentNames at(1),
@@ -233,7 +287,6 @@ List2D transpose := method(
     self set = flipFirstTwoArgs("set")
 )
 
-"Transposing a matrix" println
 "2, 4: " print; firstMatrix get(2,4) println
 "4, 2: " print; firstMatrix get(4,2) println
 
@@ -253,10 +306,29 @@ firstMatrix transpose
 "4, 2: " print; firstMatrix get(4,2) println
 "5, 3: " print; firstMatrix get(5,3) println
 "3, 5: " print; firstMatrix get(3,5) println
+{% endhighlight %}
 
-# 7. Write the matrix to a file, and read a matrix from a file.
+<h5>Output</h5>
 
-"Writing and reading a matrix from a file" println
+{% highlight bash %}
+2, 4: asdfad
+4, 2: nil
+transpose!
+2, 4: nil
+4, 2: asdfad
+Set 5, 3 to NEW
+5, 3: NEW
+3, 5: nil
+transpose again!
+2, 4: asdfad
+4, 2: nil
+5, 3: nil
+3, 5: NEW
+{% endhighlight %}
+
+<h4><b>7.</b> Write the matrix to a file, and read a matrix from a file.</h4>
+
+{% highlight io %}
 file := File with("matrix.txt")
 file remove
 file openForUpdating
@@ -271,12 +343,19 @@ lines at(0) type println
 matrixFromFile := lines at(0) split(", ")
 matrixFromFile type println
 matrixFromFile println
+{% endhighlight %}
 
-# 8. Write a program that gives you ten tries to guess a random number from
-# 1-100. If you would like, give a hint of "hotter" or "colder" after the first
-# guess.
+<h5>Output</h5>
 
-"Random number guesser" println
+{% highlight bash %}
+Sequence
+List
+list(list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, asdfad, nil), list(nil, nil, nil, nil, nil, NEW), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil))
+{% endhighlight %}
+
+<h4><b>8.</b> Write a program that gives you ten tries to guess a random number from 1-100. If you would like, give a hint of "hotter" or "colder" after the first guess.</h4>
+
+{% highlight io %}
 randomNumber := ((Random value) * 100 + 1) floor
 
 i := 0
@@ -295,56 +374,9 @@ if(guess == randomNumber,
     "Too bad, maybe next time" println)
 {% endhighlight %}
 
-And the output:
+<h5>Output</h5>
 
 {% highlight bash %}
-$ io day2.io
-Fib 0
-0
-0
-Fib 4
-3
-3
-Fib 8
-21
-21
-Testing division
-2
-0
-add up 2d array
-14
-17
-Averaging the numbers in a list
-2.5
-Creating matrices
-list(list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil))
-
-list(list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil, nil))
-
-Setting and getting a matrix
-list(list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, asdfad, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil))
-
-asdfad
-nil
-Transposing a matrix
-2, 4: asdfad
-4, 2: nil
-transpose!
-2, 4: nil
-4, 2: asdfad
-Set 5, 3 to NEW
-5, 3: NEW
-3, 5: nil
-transpose again!
-2, 4: asdfad
-4, 2: nil
-5, 3: nil
-3, 5: NEW
-Writing and reading a matrix from a file
-Sequence
-List
-list(list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, asdfad, nil), list(nil, nil, nil, nil, nil, NEW), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil))
-Random number guesser
 Guess a number between 1 and 100: (guess 1 of 10): 50
 Too high
 Guess a number between 1 and 100: (guess 2 of 10): 25
@@ -358,5 +390,7 @@ Too low
 Guess a number between 1 and 100: (guess 6 of 10): 43
 Congrats, you did it!
 {% endhighlight %}
+
+</div>
 
 Next in this series: [Day 3 of Io](/blog/2012/01/16/seven-languages-week-2-day-3/)

@@ -81,7 +81,7 @@ implementation that could be smoothed out.
 
 Io's `forward` method, reflection abilities, and ability to redefine operators
 all played key roles in making a problem like this possible to solve with an
-internal (as opposed to [external]()) DSL. This saved a ton of time and effort
+internal ([as opposed to external](http://martinfowler.com/bliki/DomainSpecificLanguage.html)) DSL. This saved a ton of time and effort
 on my part.
 
 <h3>Forward</h3>
@@ -92,12 +92,12 @@ lets you make a rudimentary XML DSL. The following section of code will turn
 span` into `<div></div>`!
 
 {% highlight io %}
-    Builder := Object clone
+Builder := Object clone
 
-    Builder forward := method(
-        write("<div>")
-        write("</div>")
-    )
+Builder forward := method(
+    write("<div>")
+    write("</div>")
+)
 {% endhighlight %}
 
 <h3>Reflection</h3>
@@ -110,15 +110,15 @@ that we can do `Builder ul(li("One"), li("Two"), li("Three"))` and it will
 correctly print out `<ul><li>One</li><li>Two</li><li>Three</li></ul>`.
 
 {% highlight io %}
-    Builder := Object clone
+Builder := Object clone
 
-    Builder forward := method(
-        write("<", call message name, ">")
-        call message arguments foreach(
-            arg,
-            content := self doMessage(arg);
-            if(content type == "Sequence", write(content)))
-        write("</", call message name, ">"))
+Builder forward := method(
+    write("<", call message name, ">")
+    call message arguments foreach(
+        arg,
+        content := self doMessage(arg);
+        if(content type == "Sequence", write(content)))
+    write("</", call message name, ">"))
 {% endhighlight %}
 
 Let's go over that middle chunk that begins with `call message arguments`. Just
@@ -150,10 +150,10 @@ If you were paying attention before, you'll realize that we already know how to
 turn the message arguments into a list:
 
 {% highlight io %}
-    # 2. Create a list syntax that uses brackets
-    curlyBrackets := method(
-        call message arguments
-    )
+# 2. Create a list syntax that uses brackets
+curlyBrackets := method(
+    call message arguments
+)
 {% endhighlight %}
 
 So that's all that is required to solve that! But that isn't the typical way to
@@ -162,17 +162,21 @@ to tell Io "when I use the `:` operator, I really want you to call the
 `atPutNumber` method instead".
 
 {% highlight io %}
-    OperatorTable addAssignOperator(":", "atPutNumber")
+OperatorTable addAssignOperator(":", "atPutNumber")
 
-    Map atPutNumber := method(
-        # your code goes here
-    )
+Map atPutNumber := method(
+    # your code goes here
+)
 {% endhighlight %}
 
-Full Code Listing
+Full solutions
 ---
 
-Here is my full code listing for the exercises from Day 3 of Io. The home of this piece of code is with the other exercises [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-2-io/day3.io).  
+Here is a nicely formatted version of my solutions to the exercises from Day 3 of Io. The home of the following code is [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-2-io/day3.io) with the other exercises. 
+
+<div id="formatted_solutions">
+
+<h3>Code Given</h3>
 
 {% highlight io %}
 Builder := Object clone
@@ -185,11 +189,14 @@ Builder forward := method(
         if(content type == "Sequence", writeln(content)))
     writeln("</", call message name, ">")
 )
+{% endhighlight %}
 
-# Do: 
-#
-# 1. Enhance the XML program to add spaces to show the indentation structure
+<h3>Do: </h3>
 
+<h4><b>1.</b> Enhance the XML program to add spaces to show the indentation
+structure</h4>
+
+{% highlight io %}
 Builder indentLevel := 0
 
 Builder forward = method(
@@ -210,32 +217,53 @@ Builder makeIndent := method(
     return spaces
 )
 
-"\nIndented builder syntax:" println
 Builder ul(
-            li("Io"),
-            li("Lua"),
-            li("JavaScript")
-        )
+    li("Io"),
+    li("Lua"),
+    li("JavaScript")
+)
+{% endhighlight %}
 
-# 2. Create a list syntax that uses brackets
+<h5>Output</h5>
 
+{% highlight html %}
+<ul>
+  <li>
+    Io
+  </li>
+  <li>
+    Lua
+  </li>
+  <li>
+    JavaScript
+  </li>
+</ul>
+{% endhighlight %}
+
+<h4><b>2.</b> Create a list syntax that uses brackets</h4>
+
+{% highlight io %}
 curlyBrackets := method(
     call message arguments
 )
 
-"\nBracket list syntax:" println
-"{1,2,3,4,5} println" println
 {1,2,3,4,5} println
-"{\"a\", \"b\", \"c\", \"d\", \"e\"} println" println
 {"a", "b", "c", "d", "e"} println
 
 # that was unexpectedly easy and elegant. I almost feel like I've missed something
+{% endhighlight %}
+
+<h5>Output</h5>
+
+{% highlight io %}
+list(1, 2, 3, 4, 5)
+list("a", "b", "c", "d", "e")
+{% endhighlight %}
 
 
-# 3. Enhance the XML program to handle attributes: if the first argument is a
-# map (use the curly brackets syntax), add attributes to the XML program. For
-# example: book({"author": "Tate"}...) would print <book author="Tate">
+<h4><b>3.</b> Enhance the XML program to handle attributes: if the first argument is a map (use the curly brackets syntax), add attributes to the XML program. For example: book({"author": "Tate"}...) would print &lt;book author="Tate"&gt;</h4>
 
+{% highlight io %}
 OperatorTable addAssignOperator(":", "atPutNumber")
 
 Map atPutNumber := method(
@@ -281,45 +309,28 @@ Builder forward = method(
     writeln(makeIndent() .. "</", call message name, ">")
 )
 
-"\nBuilder syntax with attributes:" println
 s := File with("builderSyntax.txt") openForReading contents
-html := doString(s)
-html println
+doString(s)
 {% endhighlight %}
 
-And the output:
+<h5>Output</h5>
 
-    Indented builder syntax:
-    <ul>
-      <li>
-        Io
-      </li>
-      <li>
-        Lua
-      </li>
-      <li>
-        JavaScript
-      </li>
-    </ul>
+{% highlight html %}
+<ul>
+  <li>
+    Io
+  </li>
+  <li display="none">
+    Lua
+  </li>
+  <li>
+    JavaScript
+  </li>
+  <book author="Tate">
+  </book>
+</ul>
+{% endhighlight %}
 
-    Bracket list syntax:
-    {1,2,3,4,5} println
-    list(1, 2, 3, 4, 5)
-    {"a", "b", "c", "d", "e"} println
-    list("a", "b", "c", "d", "e")
+</div>
 
-    Builder syntax with attributes:
-    <ul>
-      <li>
-        Io
-      </li>
-      <li display="none">
-        Lua
-      </li>
-      <li>
-        JavaScript
-      </li>
-      <book author="Tate">
-      </book>
-    </ul>
-    nil
+Next in this series: Day 1 of Prolog
