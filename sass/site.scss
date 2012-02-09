@@ -203,6 +203,7 @@ pre,
 code{
 	font-family:monospace;
 	font-size:1em;
+        font-style: normal;
 }
 pre{
 	overflow:auto;
@@ -827,13 +828,24 @@ pre code {
 #reddit_button { margin-right: 30px; }
 #reddit_button iframe { margin-bottom: -3px; }
 
-blockquote p, ul, ol { margin-bottom: .5em }
+blockquote p, blockquote ul, blockquote ol, blockquote .highlight {
+    margin-bottom: 1em;
+}
+blockquote p:last-child, blockquote ul:last-child, blockquote ol:last-child, blockquote .highlight:last-child {
+    margin-bottom: 0;
+}
+blockquote pre {
+    margin-bottom: 0;
+}
 blockquote {
-    background-color: #EEEEEE;
-    border-top: 1px solid #CCCCCC;
-    border-bottom: 1px solid #CCCCCC;
-    padding: .5em .5em 0 .5em;
-    margin: 20px;
+    border-left: 3px solid #BBBBBB;
+    padding: .5em 1em 0.5em 1em;
+    margin: 1em 1em 1.5em 1em;
+    background-color: #F5F5F5;
+    font-style: italic;
+}
+blockquote .highlight {
+    background-color: #F5F5F5;
 }
 
 .interjection {
