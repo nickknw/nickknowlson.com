@@ -43,7 +43,7 @@ the problems are.
 <h3>Libraries, Documentation, Hackage and Cabal</h3>
 
 The category for libraries absolutely overwhelmed the rest. I ended up
-splitting it into three: Libraries / Packages, Documentation / Library
+splitting it into four: Libraries / Packages, Documentation / Library
 Documentation, Cabal, and Hackage. The feedback in the general 'Libraries / Packages' category ranged from requests for specific kinds of libraries to pointing out dependency problems to problems with library stability and maturity. Here's a few samples:
 
 > Most libraries are not ready for production use because they   
