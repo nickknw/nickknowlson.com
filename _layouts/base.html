@@ -31,7 +31,21 @@
         </script>
         {% endif %}
         <script type="text/javascript">
-
+        // TODO: convert to css hover sometime
+        $(document).ready(function () {
+            $("#rss-nav-icon img").hover(function () {
+                $(this).attr("src","/img/rss-icon-lit.png");
+            }, function() {
+                $(this).attr("src","/img/rss-icon-dim.png");
+            });
+            $("#twitter-nav-icon img").hover(function () {
+                $(this).attr("src","/img/twitter-icon-lit.png");
+            }, function() {
+                $(this).attr("src","/img/twitter-icon-dim.png");
+            });
+        });
+        </script>
+        <script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-24781362-1']);
           _gaq.push(['_trackPageview']);
@@ -41,7 +55,6 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-
         </script>
     </head>
     <body>
@@ -53,6 +66,8 @@
                 <li><a class="{{page.projects}}" href="/projects/">Projects</a></li>
                 <li><a class="{{page.blog}}" href="/blog/">Blog</a></li>
                 <li><a class="{{page.contact}}" href="/contact/">Contact</a></li>
+                <a id="rss-nav-icon" href="http://feeds.feedburner.com/NickKnowlson"><img src="/img/rss-icon-dim.png" /></a>
+                <a id="twitter-nav-icon" href="http://twitter.com/#!/nickknw"><img src="/img/twitter-icon-dim.png" /></a>
             </ul>
 	</div>
 

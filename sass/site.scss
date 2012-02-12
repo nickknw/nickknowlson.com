@@ -485,7 +485,7 @@ h1 a {
     list-style-type: none;
 }
 
-#nav a
+#nav li a
 {
     letter-spacing: 2px;
     display: block;
@@ -498,7 +498,7 @@ h1 a {
     padding: 8px 20px 12px 20px;
 }
 
-#nav a:hover 
+#nav li a:hover 
 {
     text-decoration:none;
     background-color: #A9C78C;
@@ -510,6 +510,12 @@ h1 a {
         /*background-color: #FFF2CF;*/
         background-color: white;
         color: #000000;
+}
+
+#nav #rss-nav-icon, #nav #twitter-nav-icon
+{
+    display: inline-block;
+    margin: 9px 10px 2px 15px;
 }
 
 /*.highlight
