@@ -13,6 +13,13 @@
 	<link rel="apple-touch-icon-precomposed" href="/favicon.ico" >
         <link href="http://feeds.feedburner.com/NickKnowlson" type="application/atom+xml" rel="alternate" title="Blog ATOM Feed" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        if (typeof jQuery == 'undefined')
+        {
+            document.write(unescape("%3Cscript src='/js/jquery-1.6.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+        </script>
+        
 
         {% if page.lightbox %}
         <link rel="stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" >
