@@ -104,17 +104,60 @@ body{
 
 /*--- NAV ---*/
 #nav{
-	list-style:none;
-	width:100%;
-	overflow:hidden;
-	margin:0;
+    height:45px; /* 25px height + 2 * 10px padding */
+    background-color:#6B563F;
+    list-style:none;
+    width:100%;
+    overflow:hidden;
+    margin:0;
+}
+#nav ul
+{
+    margin:0px;
 }
 #nav li{
-	float:left;
+    float:left;
+    display: inline;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
 }
 #nav a{
-	display:block;
+    display:block;
 }
+#nav li a
+{
+    letter-spacing: 2px;
+    display: block;
+    float: left;
+    height:25px;
+    background-color: #6B563F;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px 20px 12px 20px;
+}
+
+#nav li a:hover 
+{
+    text-decoration:none;
+    background-color: #A9C78C;
+    color: #000000;
+}
+
+#nav a.selected
+{
+        /*background-color: #FFF2CF;*/
+        background-color: white;
+        color: #000000;
+}
+
+#nav #rss-nav-icon, #nav #twitter-nav-icon
+{
+    display: inline-block;
+    margin: 9px 10px 2px 15px;
+}
+
 
 /*--- TYPE AND SPACING ---*/
 h1{
@@ -318,44 +361,6 @@ CSS for tablets and narrower devices
     }
 }
 
-
-/*------------------------------------*\
-	MOBILE
-\*------------------------------------*/
-/* CSS for mobile devices.  Linearise it! */
-@media (max-width: 720px) {
-    html, body {
-        background:#fff;
-    }
-    html {
-        font-size:1.125em;
-    }
-    body {
-        padding:20px;
-        width:auto;
-        -webkit-text-size-adjust:none;
-    }
-    .grid {
-        width:auto;
-        float:none;
-    }
-
-    /*--- LISTS ---*/
-    ul, ol {
-        margin:0 0 1em 25px;
-    }
-    ul ul, ol ol, ul ol, ol ul {
-        /* Let’s take care of lists in lists */
-        margin:0 0 0 12.5px;
-    }
-    dd {
-        margin-left:25px;
-    }
-    #formatted_solutions p {
-        margin-left: 25px;
-    }
-}
-
 /*------------------------------------*\
 	PRINT
 \*------------------------------------*/
@@ -465,57 +470,6 @@ a:hover {
 
 h1 a {
     color:#333;
-}
-
-#nav {
-    height:45px; /* 25px height + 2 * 10px padding */
-    background-color:#6B563F;
-}
-
-#nav ul
-{
-    margin:0px;
-}
-
-#nav li
-{
-    display: inline;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-}
-
-#nav li a
-{
-    letter-spacing: 2px;
-    display: block;
-    float: left;
-    height:25px;
-    background-color: #6B563F;
-    color: #ffffff;
-    font-size: 20px;
-    text-align: center;
-    padding: 8px 20px 12px 20px;
-}
-
-#nav li a:hover 
-{
-    text-decoration:none;
-    background-color: #A9C78C;
-    color: #000000;
-}
-
-#nav a.selected
-{
-        /*background-color: #FFF2CF;*/
-        background-color: white;
-        color: #000000;
-}
-
-#nav #rss-nav-icon, #nav #twitter-nav-icon
-{
-    display: inline-block;
-    margin: 9px 10px 2px 15px;
 }
 
 /*.highlight
