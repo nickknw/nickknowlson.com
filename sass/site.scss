@@ -319,7 +319,7 @@ tfoot{
 /*
 CSS for tablets and narrower devices
 */
-@media (min-width: 721px) and (max-width: 960px) {
+@media (max-width: 960px) {
     body {
         width:700px;
     }
