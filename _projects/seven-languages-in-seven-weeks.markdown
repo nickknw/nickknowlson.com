@@ -1,7 +1,7 @@
 ---
 layout: project
 date: 2012-02-05
-title: Seven Languages In Seven Weeks Exercises
+title: Exercises from Seven Languages In Seven Weeks
 languages: Ruby, Io, Prolog, Scala, Erlang, Clojure, Haskell
 summary: Working through the exercises from Seven Languages In Seven Weeks.
 github: seven-languages-in-seven-weeks
