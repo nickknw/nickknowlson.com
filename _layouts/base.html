@@ -68,18 +68,18 @@
 	<div id="header" class="grid grid-16">
             <a href="/"><img src="/img/logos/logo6.png" alt="logo" /></a>
             <ul id="nav">
-                <li><a class="{{page.home}}" href="/">Home</a></li>
-                <li><a class="{{page.about}}" href="/about/">About</a></li>
-                <li><a class="{{page.projects}}" href="/projects/">Projects</a></li>
-                <li><a class="{{page.blog}}" href="/blog/">Blog</a></li>
-                <li><a class="{{page.contact}}" href="/contact/">Contact</a></li>
-                <a id="rss-nav-icon" href="http://feeds.feedburner.com/NickKnowlson"><img src="/img/rss-icon-dim.png" /></a>
-                <a id="twitter-nav-icon" href="http://twitter.com/#!/nickknw"><img src="/img/twitter-icon-dim.png" /></a>
+                <li><a class="{{page.home}} nav-link" href="/">Home</a></li>
+                <li><a class="{{page.about}} nav-link" href="/about/">About</a></li>
+                <li><a class="{{page.projects}} nav-link" href="/projects/">Projects</a></li>
+                <li><a class="{{page.blog}} nav-link" href="/blog/">Blog</a></li>
+                <li><a class="{{page.contact}} nav-link" href="/contact/">Contact</a></li>
+                <li><a id="rss-nav-icon" href="http://feeds.feedburner.com/NickKnowlson"><img src="/img/rss-icon-dim.png" /></a></li>
+                <li><a id="twitter-nav-icon" href="http://twitter.com/#!/nickknw"><img src="/img/twitter-icon-dim.png" /></a></li>
             </ul>
 	</div>
 
         <div id="content" class="grid grid-16" style="background-color:white; clear:both;">
-            <div style="padding:25px">
+            <div id="content-padding">
                 {{ content }}
             </div>
         </div>
