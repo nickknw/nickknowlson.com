@@ -4,7 +4,12 @@
 
         $.getJSON('https://api.github.com/users/nickknw/repos?sort=pushed&callback=?', function(repos) {
 
-            var repo_name = repos.data[0].name
+            var counter = 0, repo_name;
+            do {
+                repo_name = repos.data[counter].name;
+                counter += 1;
+            }
+            while(repo_name === 'nickknowlson.com' || repo_name === 'nickknw.github.com');
 
             $.getJSON('https://api.github.com/repos/nickknw/'+repo_name+'/commits?callback=?', function(commits) {
 
