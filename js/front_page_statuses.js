@@ -2,36 +2,31 @@
 
         // github
 
-        $.getJSON('http://github.com/api/v2/json/repos/show/nickknw/?callback=?', function(repo_data) {
+        $.getJSON('https://api.github.com/users/nickknw/repos?sort=pushed&callback=?', function(repos) {
 
-            var most_recent_repo = 0;
-            $.each(repo_data.repositories, function(repo_counter) {
-                if(repo_data.repositories[most_recent_repo].pushed_at < repo_data.repositories[repo_counter].pushed_at) {
-                    most_recent_repo = repo_counter;
-                }
-            });
+            var repo_name = repos.data[0].name
 
-            var repo_name = repo_data.repositories[most_recent_repo].name
+            $.getJSON('https://api.github.com/repos/nickknw/'+repo_name+'/commits?callback=?', function(commits) {
 
-            $.getJSON('http://github.com/api/v2/json/commits/list/nickknw/'+repo_name+'/master/?callback=?', function(commit_data) {
+                var commit_data = commits.data;
 
                 var most_recent_commit = 0;
-                $.each(commit_data.commits, function(commit_counter) {
-                    if(commit_data.commits[most_recent_commit].committed_date < commit_data.commits[commit_counter].committed_date) {
+                $.each(commit_data, function(commit_counter) {
+                    if(commit_data[most_recent_commit].commit.committer.date < commit_data[commit_counter].commit.committer.date) {
                         most_recent_commit = commit_counter;
                     }
                 });
 
-                var commit = commit_data.commits[most_recent_commit]
+                var recentCommit = commit_data[most_recent_commit]
 
                 $("#github_commit_message").replaceWith(
                 '<div id="github_commit_message" style="display:none;">' +
                 '<strong>nickknw/'+repo_name+': </strong>' + 
-                commit.message + '<span class="indent faded">' +
-                new Date(commit.committed_date).toDateString().slice(4) + 
+                recentCommit.commit.message + '<span class="indent faded">' +
+                new Date(recentCommit.commit.committer.date).toDateString().slice(4) +
                 '</span></div>');
 
-                $('#git_url').attr('href', 'http://github.com' + commit.url);
+                $('#git_url').attr('href', 'http://github.com' + recentCommit.url);
                 $('#github_commit_message').fadeIn();
             });
         });
