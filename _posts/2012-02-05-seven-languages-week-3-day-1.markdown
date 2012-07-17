@@ -12,7 +12,7 @@ My troubles started at installation - Bruce Tate uses GNU Prolog in the book,
 and I spent far too long trying to get that working only to discover that some
 library functions essential to the exercises (`fd_domain`, `fd_all_different`)
 just caused GNU Prolog to crash on my machine. I will elaborate on this more in
-Day 2, but for anyone encountering this post who is in a similar situation, just
+Day 3, but for anyone encountering this post who is in a similar situation, just
 go use SWI Prolog instead.
 
 Prolog heavily relies on recursion but making a recursive rule is not the same
@@ -283,27 +283,35 @@ Full solutions
 
 Here is a nicely formatted version of my solutions to the exercises from Day 1 of Prolog. The home of the following code is [on github](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-3-prolog/day1.pl) with the other exercises.  
 
+<div id="formatted_solutions">
+
 <h3>Find:</h3>
 
-<h4>1. Some free Prolog tutorials</h4>
+<div class="question">1. Some free Prolog tutorials</div>
 
-* [http://www.lix.polytechnique.fr/~liberti/public/computing/prog/prolog/prolog-tutorial.html](http://www.lix.polytechnique.fr/~liberti/public/computing/prog/prolog/prolog-tutorial.html)
-* [http://www.csupomona.edu/~jrfisher/www/prolog_tutorial/contents.html](http://www.csupomona.edu/~jrfisher/www/prolog_tutorial/contents.html)
+<ul>
+<li><a href="http://www.lix.polytechnique.fr/~liberti/public/computing/prog/prolog/prolog-tutorial.html">http://www.lix.polytechnique.fr/~liberti/public/computing/prog/prolog/prolog-tutorial.html</a></li>
+<li><a href="http://www.csupomona.edu/~jrfisher/www/prolog_tutorial/contents.html">http://www.csupomona.edu/~jrfisher/www/prolog_tutorial/contents.html</a></li>
+</ul>
 
-<h4>2. A support forum (there are several)</h4>
+<div class="question">2. A support forum (there are several)</div>
 
-* [http://old.nabble.com/SWI-Prolog-f448.html](http://old.nabble.com/SWI-Prolog-f448.html)
-* [http://mail.gnu.org/pipermail/users-prolog/](http://mail.gnu.org/pipermail/users-prolog/)
-* [http://www.reddit.com/r/prolog](http://www.reddit.com/r/prolog)
+<ul>
+<li><a href="http://old.nabble.com/SWI-Prolog-f448.html">http://old.nabble.com/SWI-Prolog-f448.html</a></li>
+<li><a href="http://mail.gnu.org/pipermail/users-prolog/">http://mail.gnu.org/pipermail/users-prolog/</a></li>
+<li><a href="http://www.reddit.com/r/prolog">http://www.reddit.com/r/prolog</a></li>
+</ul>
 
 
-<h4>3. One online reference for the Prolog version you're using</h4>
+<div class="question">3. One online reference for the Prolog version you're using</div>
 
-* [http://www.swi-prolog.org/pldoc/index.html](http://www.swi-prolog.org/pldoc/index.html)
+<ul>
+<li><a href="http://www.swi-prolog.org/pldoc/index.html">http://www.swi-prolog.org/pldoc/index.html</a></li>
+</ul>
 
 <h3>Do:</h3>
 
-<h4>1. Make a simple knowledge base. Represent some of your favorite books and authors.</h4>
+<div class="question">1. Make a simple knowledge base. Represent some of your favorite books and authors.</div>
 
 {% highlight prolog %}
 book('The Name Of The Wind', 'Patrick Rothfuss').
@@ -315,7 +323,7 @@ book('The Pragmatic Programmer', 'Andy Hunt & Dave Thomas').
 book('Seven Languages In Seven Weeks', 'Bruce Tate').
 {% endhighlight %}
 
-<h4>2. Find all books in your knowledge base written by one author.</h4>
+<div class="question">2. Find all books in your knowledge base written by one author.</div>
 
 {% highlight prolog %}
 ?- book(What, 'Neal Stephenson').
@@ -329,7 +337,7 @@ What = 'The Skystone' ? ;
 What = 'The Singing Sword' ? ;
 {% endhighlight %}
 
-<h4>3. Make a knowledge base representing musicians and instruments. Also represent musicians and their genre of music.</h4>
+<div class="question">3. Make a knowledge base representing musicians and instruments. Also represent musicians and their genre of music.</div>
 
 {% highlight prolog %}
 musician_instrument('Hansi Kursch', vocals).
@@ -344,7 +352,7 @@ musician_genre('Duke Ellington', jazz).
 musician_genre('Jimi Hendrix', rock).
 {% endhighlight %}
 
-<h4>4. Find all musicians who play the guitar.</h4>
+<div class="question">4. Find all musicians who play the guitar.</div>
 
 {% highlight prolog %}
 ?- musician_instrument(What, guitar)
@@ -354,4 +362,6 @@ What = 'Andre Olbrich' ? ;
 What = 'Jimi Hendrix'
 {% endhighlight %}
 
-Next in this series: Day 2 of Prolog (coming soon)
+</div>
+
+Next in this series: [Day 2 of Prolog](/blog/2012/07/17/seven-languages-week-3-day-2)

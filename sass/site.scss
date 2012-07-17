@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /* Many thanks to inuit.css, which I hacked to pieces to create the following */
 
+$preferred_serif_fonts: Cambria, Georgia, "Times New Roman", serif; 
+$preferred_sans_serif_fonts: Calibri, "Helvetica Neue", Arial, sans-serif; 
+$preferred_monospace_fonts: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
 /*------------------------------------*\
 	RESET
 \*------------------------------------*/
@@ -55,7 +58,7 @@ abbr,acronym{
 html{
 	overflow-y:scroll; /* Force scrollbars 100% of the time */
 	font-size:100%; /* Use 16px as per http://www.informationarchitects.jp/en/100e2r/ and http://www.wilsonminer.com/posts/2008/oct/20/relative-readability/ */
-        font-family:Cambria, Georgia, "Times New Roman", serif; 
+        font-family: $preferred_serif_fonts;
 	line-height:1.5;
 	color:#333;
 }
@@ -162,21 +165,21 @@ h1{
     margin-bottom:0.25em;           /* I tend to want an image or a date close underneath my main headings */
     line-height:1.5;		/* 48px */
 }
-h2{
-    font-size:1.5em;		/* 24px */
+h2 {
+    font-size:1.75em;		/* 24px */
     line-height:1;			/* 24px */
 }
-h3{
-    font-size:1.25em;		/* 20px */
+h3 {
+    font-size:1.5em;		/* 20px */
     line-height:1.2;		/* 24px */
 }
-h4{
-    font-size:1em;		        /* 16px */
+h4 {
+    font-size:1.25em;
     line-height:1.333;		/* 24px */
 }
 h5,
 h6{
-    font-size:.85em;		/* 12px */
+    font-size:.85em;
     line-height:1.5;		/* 24px */
 }
 
@@ -241,7 +244,7 @@ small{
 
 pre,
 code{
-	font-family:monospace;
+	font-family: $preferred_monospace_fonts;
 	font-size:1em;
         font-style: normal;
 }
@@ -350,7 +353,7 @@ h1 a {
 .faded
 {
     color: #888888;
-    font-family:Calibri, "Helvetica Neue", Arial, sans-serif; 
+    font-family: $preferred_sans_serif_fonts; 
     font-size: 12px;
 }
 
@@ -471,7 +474,7 @@ div.mediumblockylist div
 .archiveblockylist a h2
 {
     padding-top: 8px;
-    font-family: Cambria, Georgia, "Times New Roman", serif;; 
+    font-family: $preferred_serif_fonts;
 }
 
 .archiveblockylist a div
@@ -491,7 +494,7 @@ p { margin-bottom:1em;}
 h2, h3, h4, h5 { 
     margin-bottom:.75em; 
     margin-top:1.5em; 
-    font-family:Calibri, "Helvetica Neue", Arial, sans-serif; 
+    font-family: $preferred_sans_serif_fonts;
 }
 h5 {
     margin-bottom:.5em; 
@@ -529,7 +532,7 @@ td a { display: block;}
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family:Calibri, "Helvetica Neue", Arial, sans-serif; 
+    font-family: $preferred_sans_serif_fonts;
 }
 
 .blockylist time span.month {
@@ -629,7 +632,7 @@ pre {
 
 code {
     font-size:12px;
-    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+    font-family: $preferred_monospace_fonts;
     background-color: #EEEEEE;
     padding: 4px;
 }
@@ -685,7 +688,7 @@ blockquote .highlight {
 .super {
     vertical-align: super;
     font-size:75%;
-    font-family:sans-serif;
+    font-family: $preferred_sans_serif_fonts;
 }
 
 #post img {
@@ -701,12 +704,32 @@ blockquote .highlight {
         margin-bottom: 0;
     }
 
-    p {
+    > p, .indent {
         margin-left: 60px;
     }
 
     ul {
         list-style-type: none;
+    }
+
+    .code_explanation {
+        margin: 0 0 1.5em;
+    }
+
+    .question {
+        font-size: 1em;
+        line-height:1.333;
+        font-family: $preferred_sans_serif_fonts;
+        margin-bottom: 0.75em;
+        margin-top: 1.5em;
+    }
+
+    .tiny_title {
+        font-size:.85em;
+        line-height:1.5;
+        font-family: $preferred_sans_serif_fonts;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
     }
 } 
 
@@ -757,8 +780,10 @@ CSS for tablets and narrower devices
     dd {
         margin-left:45px;
     }
-    #formatted_solutions p {
-        margin-left: 45px;
+    #formatted_solutions {
+        > p, .indent {
+            margin-left: 45px;
+        }
     }
 }
 
@@ -798,8 +823,10 @@ CSS for tablets and narrower devices
     dd {
         margin-left:25px;
     }
-    #formatted_solutions p {
-        margin-left: 25px;
+    #formatted_solutions {
+        > p, .indent {
+            margin-left: 25px;
+        }
     }
     #nav {
         height: auto;

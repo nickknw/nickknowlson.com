@@ -135,7 +135,7 @@ Here is a nicely formatted version of my solution to the exercise from Day 3 of 
 
 <h3>Do:</h3>
 
-<h4><b>1.</b> Modify the CSV application to support an each method to return a CsvRow object. Use method_missing on that CsvRow to return the value for the column for a given heading.</h4>
+<div class="question"><b>1.</b> Modify the CSV application to support an each method to return a CsvRow object. Use method_missing on that CsvRow to return the value for the column for a given heading.</div>
 
 {% highlight ruby %}
 module ActsAsCsv
@@ -199,7 +199,7 @@ csv = RubyCsv.new
 csv.each {|row| puts row.one}
 {% endhighlight %}
 
-<h5>Output (given the sample file in my github repo)</h5> 
+<div class="tiny_title">Output (given the sample file in my github repo)</div> 
 
 {% highlight bash %}
 lions

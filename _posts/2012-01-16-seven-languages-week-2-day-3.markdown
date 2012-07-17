@@ -193,8 +193,8 @@ Builder forward := method(
 
 <h3>Do: </h3>
 
-<h4><b>1.</b> Enhance the XML program to add spaces to show the indentation
-structure</h4>
+<div class="question"><b>1.</b> Enhance the XML program to add spaces to show the indentation
+structure</div>
 
 {% highlight io %}
 Builder indentLevel := 0
@@ -224,7 +224,7 @@ Builder ul(
 )
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight html %}
 <ul>
@@ -240,7 +240,7 @@ Builder ul(
 </ul>
 {% endhighlight %}
 
-<h4><b>2.</b> Create a list syntax that uses brackets</h4>
+<div class="question"><b>2.</b> Create a list syntax that uses brackets</div>
 
 {% highlight io %}
 curlyBrackets := method(
@@ -253,7 +253,7 @@ curlyBrackets := method(
 # that was unexpectedly easy and elegant. I almost feel like I've missed something
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight io %}
 list(1, 2, 3, 4, 5)
@@ -261,7 +261,7 @@ list("a", "b", "c", "d", "e")
 {% endhighlight %}
 
 
-<h4><b>3.</b> Enhance the XML program to handle attributes: if the first argument is a map (use the curly brackets syntax), add attributes to the XML program. For example: book({"author": "Tate"}...) would print &lt;book author="Tate"&gt;</h4>
+<div class="question"><b>3.</b> Enhance the XML program to handle attributes: if the first argument is a map (use the curly brackets syntax), add attributes to the XML program. For example: book({"author": "Tate"}...) would print &lt;book author="Tate"&gt;</div>
 
 {% highlight io %}
 OperatorTable addAssignOperator(":", "atPutNumber")
@@ -313,7 +313,7 @@ s := File with("builderSyntax.txt") openForReading contents
 doString(s)
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight html %}
 <ul>

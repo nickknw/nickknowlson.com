@@ -95,7 +95,7 @@ pretty interesting. Here is a nicely formatted version of my solutions to the ex
 
 <h3>Do:</h3>
 
-<h4><b>1.</b> Write a program to find the nth Fibonacci number. Fib(1) is 1, and fib(4) is 3. As a bonus, solve the problem with recursion and with loops.</h4>
+<div class="question"><b>1.</b> Write a program to find the nth Fibonacci number. Fib(1) is 1, and fib(4) is 3. As a bonus, solve the problem with recursion and with loops.</div>
 
 {% highlight io %}
 fib_recur := method(num,
@@ -127,7 +127,7 @@ fib_recur(8) println
 fib_loop(8) println
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 Fib 0
@@ -141,7 +141,7 @@ Fib 8
 21
 {% endhighlight %}
 
-<h4><b>2.</b> How would you change / to return 0 if the denominator is zero?</h4>
+<div class="question"><b>2.</b> How would you change / to return 0 if the denominator is zero?</div>
 
 {% highlight io %}
 # The tricky bit is saving a reference to the old method:
@@ -154,15 +154,15 @@ Number / = method(denom, if(denom == 0, 0, self origDiv(denom)))
 4 / 0 println
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 2
 0
 {% endhighlight %}
 
-<h4><b>3.</b> Write a program to add up all of the numbers in a two-dimensional
-array.</h4>
+<div class="question"><b>3.</b> Write a program to add up all of the numbers in a two-dimensional
+array.</div>
 
 {% highlight io %}
 addUp2DArray := method(array, array flatten reduce(+))
@@ -171,14 +171,14 @@ addUp2DArray(list(2,3,4,5)) println
 addUp2DArray(list(2,3, list(1,1,1), 4,5)) println
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 14
 17
 {% endhighlight %}
 
-<h4><b>4.</b> Add a slot called myAverage to a list that computes the average of all the numbers in a list. What happens if there are no numbers in a list? (<b>Bonus:</b> Raise an Io exception if any item in the list is not a number.)</h4>
+<div class="question"><b>4.</b> Add a slot called myAverage to a list that computes the average of all the numbers in a list. What happens if there are no numbers in a list? (<b>Bonus:</b> Raise an Io exception if any item in the list is not a number.)</div>
 
 {% highlight io %}
 # Easy way:
@@ -198,13 +198,13 @@ list(1,2,3,4) myAverage2 println
 #list(1,2,3,4,"a") myAverage2 println
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 2.5
 {% endhighlight %}
 
-<h4><b>5.</b> Write a prototype for a two-dimensional list. The dim(x,y) method should allocate a list of y lists that are x elements long, set(x, y, value) should set a value, and get(x, y) should return that value.</h4>
+<div class="question"><b>5.</b> Write a prototype for a two-dimensional list. The dim(x,y) method should allocate a list of y lists that are x elements long, set(x, y, value) should set a value, and get(x, y) should return that value.</div>
 
 {% highlight io %}
 List2D := List clone
@@ -257,7 +257,7 @@ firstMatrix get(2,4) println
 firstMatrix get(1,2) println
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 list(list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil))
@@ -271,7 +271,7 @@ asdfad
 nil
 {% endhighlight %}
 
-<h4><b>6. Bonus:</b> Write a transpose method so that (new_matrix get(y, x)) == matrix get(x,y) on the original list</h4>
+<div class="question"><b>6. Bonus:</b> Write a transpose method so that (new_matrix get(y, x)) == matrix get(x,y) on the original list</div>
 
 {% highlight io %}
 flipFirstTwoArgs := method(slotName,
@@ -308,7 +308,7 @@ firstMatrix transpose
 "3, 5: " print; firstMatrix get(3,5) println
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 2, 4: asdfad
@@ -326,7 +326,7 @@ transpose again!
 3, 5: NEW
 {% endhighlight %}
 
-<h4><b>7.</b> Write the matrix to a file, and read a matrix from a file.</h4>
+<div class="question"><b>7.</b> Write the matrix to a file, and read a matrix from a file.</div>
 
 {% highlight io %}
 file := File with("matrix.txt")
@@ -345,7 +345,7 @@ matrixFromFile type println
 matrixFromFile println
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 Sequence
@@ -353,7 +353,7 @@ List
 list(list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, asdfad, nil), list(nil, nil, nil, nil, nil, NEW), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil), list(nil, nil, nil, nil, nil, nil))
 {% endhighlight %}
 
-<h4><b>8.</b> Write a program that gives you ten tries to guess a random number from 1-100. If you would like, give a hint of "hotter" or "colder" after the first guess.</h4>
+<div class="question"><b>8.</b> Write a program that gives you ten tries to guess a random number from 1-100. If you would like, give a hint of "hotter" or "colder" after the first guess.</div>
 
 {% highlight io %}
 randomNumber := ((Random value) * 100 + 1) floor
@@ -374,7 +374,7 @@ if(guess == randomNumber,
     "Too bad, maybe next time" println)
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 Guess a number between 1 and 100: (guess 1 of 10): 50

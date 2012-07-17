@@ -53,13 +53,13 @@ Here is a nicely formatted version of my solutions to the exercises from Day 1 o
 
 <h3>Find:</h3>
 
-<h4>Some Io example problems</h4>
+<div class="question">Some Io example problems</div>
 
 <ul>
 <li><a href="http://www.iolanguage.com/about/samplecode/">http://www.iolanguage.com/about/samplecode/</a></li>
 </ul>
 
-<h4>An Io community that will answer questions</h4>
+<div class="question">An Io community that will answer questions</div>
 
 <ul>
 <li><a href="http://tech.groups.yahoo.com/group/iolanguage/messages">http://tech.groups.yahoo.com/group/iolanguage/messages</a></li>
@@ -68,7 +68,7 @@ Here is a nicely formatted version of my solutions to the exercises from Day 1 o
 <li><a href="http://www.reddit.com/r/iolanguage">http://www.reddit.com/r/iolanguage</a></li>
 </ul>
 
-<h4>A style guide with Io idioms</h4>
+<div class="question">A style guide with Io idioms</div>
 
 <ul>
 <li><a href="http://en.wikibooks.org/wiki/Io_Programming/Io_Style_Guide">http://en.wikibooks.org/wiki/Io_Programming/Io_Style_Guide</a></li>
@@ -76,16 +76,16 @@ Here is a nicely formatted version of my solutions to the exercises from Day 1 o
 
 <h3>Answer:</h3>
 
-<h4><b>1.</b> Evaluate 1 + 1 and then 1 + "one". Is Io strongly typed or weakly
-typed?</h4>
+<div class="question"><b>1.</b> Evaluate 1 + 1 and then 1 + "one". Is Io strongly typed or weakly
+typed?</div>
 
 <p>
 Strongly typed. Trying to run <code>1 + "one"</code> throws an exception that says:
 <code>"Exception: argument 0 to method '+' must be a Number, not a 'Sequence'"</code>
 </p>
   
-<h4><b>2.</b> Is 0 true or false? What about the empty string? Is nil true or
-false?</h4>
+<div class="question"><b>2.</b> Is 0 true or false? What about the empty string? Is nil true or
+false?</div>
 
 {% highlight io %}
 if(0) println   
@@ -93,7 +93,7 @@ if("") println
 if(nil) println 
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 true
@@ -101,7 +101,7 @@ true
 false
 {% endhighlight %}
 
-<h4><b>3.</b> How can you tell what slots a prototype supports?</h4>
+<div class="question"><b>3.</b> How can you tell what slots a prototype supports?</div>
 
 {% highlight io %}
 # <prototype> slotNames
@@ -111,13 +111,13 @@ Zerg sixPool := "Zergling rush!"
 Zerg slotNames println 
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 list(type, sixPool)
 {% endhighlight %}
 
-<h4><b>4.</b> What is the difference between = (equals), := (colon equals), and ::= (colon colon equals)? When would you use each one?</h4>
+<div class="question"><b>4.</b> What is the difference between = (equals), := (colon equals), and ::= (colon colon equals)? When would you use each one?</div>
 
 <ul>
 <li>=     is used to assign something to an existing slot</li>
@@ -136,11 +136,11 @@ list(type, sixPool)
 
 <h3>Do:</h3>
 
-<h4><b>1.</b> Run an Io program from a file.</h4>
+<div class="question"><b>1.</b> Run an Io program from a file.</div>
 
 <p> From the command line run: io day1.io</p>
 
-<h4><b>2.</b> Execute the code in a slot given its name.</h4>
+<div class="question"><b>2.</b> Execute the code in a slot given its name.</div>
 
 {% highlight io %}
 # I'm not quite sure I understood this question. I'll answer the two
@@ -168,7 +168,7 @@ Zerg specifyMacro("macroHarder")
 "Done!" println
 {% endhighlight %}
 
-<h5>Output</h5>
+<div class="tiny_title">Output</div>
 
 {% highlight bash %}
 Injecting larvae now!

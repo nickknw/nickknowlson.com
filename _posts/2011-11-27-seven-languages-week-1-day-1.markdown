@@ -25,13 +25,14 @@ Here is a nicely formatted version of my solutions to the exercises from Day 1 o
 
 <h3>Find:</h3>
 
-<h4><b>1.</b> A method that substitutes a part of a string</h4>
+<div class="question"><b>1.</b> A method that substitutes a part of a
+string</div>
 
 {% highlight ruby %}
 puts "BAM".gsub "M", "TMAN"
 {% endhighlight %}
 
-<h5>Output:</h5>
+<div class="tiny_title">Output:</div>
 
 {% highlight bash %}
 BATMAN
@@ -39,19 +40,19 @@ BATMAN
 
 <h3>Do:</h3>
 
-<h4><b>1.</b> Print the string "Hello World"</h4>
+<div class="question"><b>1.</b> Print the string "Hello World"</div>
 
 {% highlight ruby %}
 puts "Hello World"
 {% endhighlight %}
 
-<h5>Output:</h5>
+<div class="tiny_title">Output:</div>
 
 {% highlight bash %}
 Hello World
 {% endhighlight %}
 
-<h4><b>2.</b> For the string "Hello, Ruby," find the index of the word "Ruby."</h4>
+<div class="question"><b>2.</b> For the string "Hello, Ruby," find the index of the word "Ruby."</div>
 
 {% highlight ruby %}
 # literally:
@@ -60,32 +61,32 @@ p "Hello, Ruby,".index "Ruby."
 puts "Hello, Ruby".index "Ruby"
 {% endhighlight %}
 
-<h5>Output:</h5>
+<div class="tiny_title">Output:</div>
 
 {% highlight bash %}
 nil
 7
 {% endhighlight %}
 
-<h4><b>3.</b> Print your name ten times</h4>
+<div class="question"><b>3.</b> Print your name ten times</div>
 
 {% highlight ruby %}
 puts "Nick " * 10
 {% endhighlight %}
 
-<h5>Output:</h5>
+<div class="tiny_title">Output:</div>
 
 {% highlight bash %}
 Nick Nick Nick Nick Nick Nick Nick Nick Nick Nick 
 {% endhighlight %}
 
-<h4><b>4.</b> Print the string "This is sentence number 1," where the number 1 changes from 1 to 10</h4>
+<div class="question"><b>4.</b> Print the string "This is sentence number 1," where the number 1 changes from 1 to 10</div>
 
 {% highlight ruby %}
 (1..10).each { |num| puts "This is sentence number #{num}" }
 {% endhighlight %}
 
-<h5>Output:</h5>
+<div class="tiny_title">Output:</div>
 
 {% highlight bash %}
 This is sentence number 1
@@ -100,7 +101,7 @@ This is sentence number 9
 This is sentence number 10
 {% endhighlight %}
 
-<h4><b>Bonus:</b> Write a program that picks a random number. Let a player guess the number, telling the player whether the guess is too low or too high.</h4>
+<div class="question"><b>Bonus:</b> Write a program that picks a random number. Let a player guess the number, telling the player whether the guess is too low or too high.</div>
 
 {% highlight ruby %}
 random_number = rand(1000) + 1
@@ -116,7 +117,7 @@ end
 puts "Got it! It was #{random_number}"
 {% endhighlight %}
 
-<h5>Output:</h5>
+<div class="tiny_title">Output:</div>
 
 {% highlight bash %}
 Pick a number between 1 and 1000: 500
