@@ -159,7 +159,7 @@ well.
 
 {% highlight javascript %}
 function append (xs, ys) {
-    var result = xs,
+    var result = xs.slice(0),
     i;
 
     for (i = 0; i < ys.length; i++) {
