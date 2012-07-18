@@ -183,10 +183,11 @@ Nothing fancy here! This essentially duplicates the existing `concat` method in 
 
 {% highlight haskell %}
 append :: [a] -> [a] -> [a]
-append xs ys = foldr (:) ys xs
+append [] ys = ys
+append (x:xs) ys = x : append xs ys
 {% endhighlight %}
 
-Okay, this one might be a little bit fancy looking depending on your familiarity with Haskell, but once you know that `(:)` concatenates an element to the beginning of an array, and are familiar with [`foldr`](http://www.haskell.org/haskellwiki/Fold) (also known as `reduce`, `inject`, and `Aggregate`) it should more or less make sense. Once again, it is straightforward to use:
+A basic recursive implementation of append. Once again, it is straightforward to use:
 
 {% highlight haskell %}
 list = append [1, 2, 3] [4, 5, 6]
@@ -215,8 +216,9 @@ append([],Ys,Ys).
 append([X|Xs],Ys,[X|Zs]) :- append(Xs,Ys,Zs).
 {% endhighlight %}
 
-At first glance, this function is just like the previous two. It can be used
-like so:
+At first glance, this function is just like the previous two. Note how similar
+it is to the Haskell example in particular, since it too is just a simple
+recursive function. It can be used like so:
 
 {% highlight prolog %}
 ?- append([1, 2, 3], [4, 5, 6], List).
@@ -235,8 +237,9 @@ List = [4, 5, 6].
 {% endhighlight %}
 
 Prolog solves for the missing parameter and correctly calculates the result!
-This is still not the best way to think about rules though, as it breaks down when
-confronted with this:
+This is the major difference between traditional languages and a logic language.
+But `(param1, return value, param2)` is still not the best way to think about
+rules, as it breaks down when confronted with something like this:
 
 {% highlight prolog %}
 ?- append(List1, List2, [1, 2, 3]).
