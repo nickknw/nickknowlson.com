@@ -31,7 +31,8 @@
                 new Date(recentCommit.commit.committer.date).toDateString().slice(4) +
                 '</span></div>');
 
-                $('#git_url').attr('href', 'http://github.com' + recentCommit.url);
+                // this feels hacky but hey, it works
+                $('#git_url').attr('href', "http://github.com/nickknw/" + repo_name + "/commit/" + recentCommit.sha);
                 $('#github_commit_message').fadeIn();
             });
         });
