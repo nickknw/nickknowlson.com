@@ -255,7 +255,7 @@ false.
 {% endhighlight %}
 
 Prolog just generated all the possible ways you could combine two lists to make
-`[1, 2, 3]`! All this functionaliy from that tiny definition of `append` up
+`[1, 2, 3]`! All this functionality from that tiny definition of `append` up
 above!
 
 There's one more interesting use for append - as a lie-detector:
