@@ -275,7 +275,7 @@ receive. Oh well, if I figure it out I'll come back to it.
 
 <div class="code_explanation">
 I wrote a long awful version of this first, then cheated to write a better one.
-I looked at <a href="http://stackoverflow.com/questions/1768274/prolog-learning-by-example">this sudoku solver</a> (found in the [clp(fd) documentation](http://www.swi-prolog.org/man/clpfd.html)), understood how it worked, then closed it and wrote my own. This is the version that you see below. I also chose to do just 9x9.
+I looked at <a href="http://stackoverflow.com/questions/1768274/prolog-learning-by-example">this sudoku solver</a> (found in the <a href="http://www.swi-prolog.org/man/clpfd.html">clp(fd) documentation</a>), understood how it worked, then closed it and wrote my own. This is the version that you see below. I also chose to do just 9x9.
 </div>
 
 {% highlight prolog %}
