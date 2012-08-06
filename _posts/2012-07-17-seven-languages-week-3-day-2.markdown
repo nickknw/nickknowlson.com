@@ -491,4 +491,4 @@ mySort([X], [X]).
 
 </div>
 
-Next in this series: Day 3 of Prolog (coming soon)
+Next in this series: [Day 3 of Prolog](/blog/2012/08/06/seven-languages-week-3-day-3/)

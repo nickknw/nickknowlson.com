@@ -713,7 +713,11 @@ blockquote .highlight {
     }
 
     .code_explanation {
-        margin: 0 0 1.5em;
+        margin: 0.5em 0;
+    }
+
+    .symmetrical_line_height pre {
+        line-height: 12px;
     }
 
     .question {

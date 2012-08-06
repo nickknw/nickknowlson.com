@@ -36,3 +36,4 @@ Week 3: Prolog
 
 * [Day 1](/blog/2012/02/05/seven-languages-week-3-day-1/)
 * [Day 2](/blog/2012/07/17/seven-languages-week-3-day-2/)
+* [Day 3](/blog/2012/08/06/seven-languages-week-3-day-3/)
