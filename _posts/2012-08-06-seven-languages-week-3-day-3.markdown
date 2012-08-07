@@ -191,7 +191,7 @@ SWI-Prolog managed to solve the sample sudoku problem in an average of **78 mill
 JaCoP managed to solve the sample sudoku problem in an average of **95
 milliseconds** on my machine.
 
-The Scala version takes **1.2 times** longer to run than the Prolog version. Honestly,
+The Scala version takes **1.2 times** the amount of time the Prolog version takes. Honestly,
 this was an unexpected result for me; I would have guessed JaCoP had the edge.
 Regardless, they are both _pretty damn fast_ solutions for not a lot of effort.
 Both win here.
