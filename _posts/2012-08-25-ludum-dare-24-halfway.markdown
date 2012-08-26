@@ -9,13 +9,15 @@ Well, a little past halfway in my case, since I’m going to a Barcraft tomorrow
 
 **What is it?**
 
-My game is essentially a multiplayer Conway’s Game of Life (loosely related to the theme). I’ve decided to call it “Conway’s Revenge”. It doesn’t follow the original rules for the Game of Life – I’ve made changes to the live/die algorithm to account for multiple players and to prevent spending too long in a deadlock scenario, while making sure it’s not too hard to get your cells to grow and expand.
+My game is essentially a multiplayer Conway’s Game of Life (it's loosely related to the theme, anyway). I’ve decided to call it “Conway’s Revenge”! 
 
-I’m more or less happy with the live/die algorithm now; I’ve got pause, play and step forward buttons; and you can draw new red or green tiles.
+It doesn’t follow the original rules for the Game of Life: I’ve made changes to the live/die algorithm to account for multiple players and to prevent spending too long in a deadlock scenario, while making sure it’s not too hard to get your cells to grow and expand.
+
+Current status is: I’m more or less happy with the live/die algorithm; I’ve got pause, play and step forward buttons; and you can draw new red or green tiles.
 
 **So what’s next?**
 
-I have something interesting planned for the music that I’d really like to get done. I want to have a main menu screen as well as some instructions (maybe on the main menu?). To give the game a bit of actual replay value I’d like to do one or some of the following:
+I have something interesting planned for the music that I’d really like to get done, but I'm not going to reveal that just yet. I want to have a main menu screen as well as some instructions. To give the game a bit of actual replay value I’d like to do one or more of the following:
 
  1. Implement a progressively more difficult set of levels where you face off against different enemy formations
  1. Let you pick the number of players and place tiles of all colours so you can set up your own scenarios to see how they play out.
