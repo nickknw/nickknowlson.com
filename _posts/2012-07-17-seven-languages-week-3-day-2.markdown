@@ -141,13 +141,20 @@ To cement these, here are some concrete examples of pattern matching with lists:
 
 <h3>Unification</h3>
 
-Unification is one of Prolog's fairly unique key features. A lot of the really neat things Prolog can do rely on unification to work (including that map colouring problem from [last week](/blog/2012/02/05/seven-languages-week-3-day-1/)). What is unificiation?
+**UPDATE:** Turns out I had a massive misunderstanding about what unification
+was. I had conflated it with a number of other concepts{2} that combined together
+form Prolog's execution model{1}. To continue in the vein of helping others
+learn from my mistakes I will explain what unification actually is and
+how it fits into Prolog's execution model.
 
-To quote [from Wikipedia](http://en.wikipedia.org/wiki/Unification_(computer_science\)):
+It is a bit lengthy, and this article is long enough, so I've separated it into
+a separate post explaining [Prolog's execution
+model](/blog/2012/08/31/prologs-execution-model/).
 
-> The goal of unification is to find a substitution which demonstrates that two seemingly different terms are in fact either identical or just equal.
+The logic programming difference
+---
 
-So what does that really mean? To demonstrate the difference unification makes I am going to show you the same
+So what does having that fancy execution model really mean? To demonstrate the difference it can make I am going to show you the same
 function written in three different languages and three different styles. I've
 picked the `append` function (append one list to another list)
 which is a great example, even though it's been explained many times before. In
