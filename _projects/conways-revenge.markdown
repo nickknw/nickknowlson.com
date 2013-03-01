@@ -20,7 +20,7 @@ My entry for Ludum Dare #24, with the theme of **Evolution**, is the game
 **Conway's Revenge**. [Play it here!](/projects/conways-revenge/flash/) Here is
 the official [Ludum Dare entry page](http://www.ludumdare.com/compo/ludum-dare-24/?action=preview&uid=15084).
 
-It is essentially [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) modified to work with mulitple
+It is essentially [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) modified to work with multiple
 opposing teams of cellular automata. The rules of reproduction have been tweaked
 to make the game more interesting and 'game-like' by preventing deadlock scenarios 
 and making sure it's not too hard to get your cells to grow and expand.
