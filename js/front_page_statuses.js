@@ -72,17 +72,5 @@
             });
         });
 
-        // twitter
-
-        $.getJSON('http://twitter.com/status/user_timeline/nickknw.json?count=6&callback=?', function(twitter_data) {
-            if(twitter_data && twitter_data[0]) {
-                $("#twitter_text").replaceWith(
-                '<div id="twitter_text" style="display:none;">' +
-                twitter_data[0].text + '<span class="indent faded">' +
-                new Date(twitter_data[0].created_at).toDateString().slice(4) +
-                '</span></div>');
-                $('#twitter_text').fadeIn();
-            }
-        });
     });
 
