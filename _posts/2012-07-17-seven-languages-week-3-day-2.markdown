@@ -142,19 +142,14 @@ To cement these, here are some concrete examples of pattern matching with lists:
 <h3>Unification</h3>
 
 **UPDATE:** Turns out I had a massive misunderstanding about what unification
-was. I had conflated it with a number of other concepts{2} that combined together
-form Prolog's execution model{1}. To continue in the vein of helping others
-learn from my mistakes I will explain what unification actually is and
-how it fits into Prolog's execution model.
+was. I had conflated it with a number of other concepts that combined together
+form Prolog's execution model. I've removed what I wrote about unification and
+may some day do a follow-up article on Prolog's execution model.
 
-It is a bit lengthy, and this article is long enough, so I've separated it into
-a separate post explaining [Prolog's execution
-model](/blog/2012/08/31/prologs-execution-model/).
+<h3>The logic programming difference</h3>
 
-The logic programming difference
----
-
-So what does having that fancy execution model really mean? To demonstrate the difference it can make I am going to show you the same
+So what does having that fancy execution model really mean? To demonstrate the
+difference it can make I am going to show you the same
 function written in three different languages and three different styles. I've
 picked the `append` function (append one list to another list)
 which is a great example, even though it's been explained many times before. In
