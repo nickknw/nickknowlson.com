@@ -211,7 +211,7 @@ But this function still just appends one list to another. It's the same as the
 built in `++` function, and basically equivalent to the previous javascript
 example.
 
-<h4>Logic-based with unification (Prolog)</h4>
+<h4>Logic-based (Prolog)</h4>
 
 {% highlight prolog %}
 append([],Ys,Ys).

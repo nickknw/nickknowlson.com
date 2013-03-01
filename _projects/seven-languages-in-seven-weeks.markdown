@@ -15,25 +15,46 @@ Weeks*](http://www.pragprog.com/titles/btlang/seven-languages-in-seven-weeks) by
 Bruce Tate, I will keep this page updated with my progress. Each day will be
 represented by a separate blog post.
 
-Week 1: Ruby
----
+<h3>Week 1: Ruby</h3>
 
-* [Day 1](/blog/2011/11/27/seven-languages-week-1-day-1/)
-* [Day 2](/blog/2011/12/04/seven-languages-week-1-day-2/)
-* [Day 3](/blog/2011/12/15/seven-languages-week-1-day-3/)
+Impressions from Day 1 post:
+<blockquote>
+Out of the seven languages in this book, Ruby is the one I was most familiar with previously. It made for an easy start, and gave me a bit of momentum before I started to tackle languages like Prolog.
+</blockquote>
 
-Week 2: Io
----
+* [Day 1](/blog/2011/11/27/seven-languages-week-1-day-1/) - string manipulation,
+  looping  
+* [Day 2](/blog/2011/12/04/seven-languages-week-1-day-2/) - collections,
+  closures, classes, modules  
+* [Day 3](/blog/2011/12/15/seven-languages-week-1-day-3/) - open classes,
+  method\_missing, mixins  
 
-* [Day 1](/blog/2011/12/18/seven-languages-week-2-day-1/)
-* [Day 2](/blog/2012/01/11/seven-languages-week-2-day-2/)
+<h3>Week 2: Io</h3>
 
-  * [Transposing a matrix in Io](/blog/2011/12/30/transposing-a-matrix-in-io/)
-* [Day 3](/blog/2012/01/16/seven-languages-week-2-day-3/)
+Impressions from Day 1 post:
+<blockquote>
+Syntactically, Io is a very very lightweight language, evocative of lisps in its regularity and minimalism. It provides a nice contrast with the previous chapter on Ruby. Ruby’s definition of simple code is something like “The more an expression reads like a (succinct) explanation of its intent, the better” whereas Io’s definition of simple code is something like “The less extraneous syntax that is needed to represent an expression, the better”.
+</blockquote>
 
-Week 3: Prolog
----
+* [Day 1](/blog/2011/12/18/seven-languages-week-2-day-1/) - syntax, slots,
+  prototypes  
+* [Day 2](/blog/2012/01/11/seven-languages-week-2-day-2/) - conditionals, loops,
+  operators, messages, reflection  
 
-* [Day 1](/blog/2012/02/05/seven-languages-week-3-day-1/)
-* [Day 2](/blog/2012/07/17/seven-languages-week-3-day-2/)
-* [Day 3](/blog/2012/08/06/seven-languages-week-3-day-3/)
+  * [Transposing a matrix in Io](/blog/2011/12/30/transposing-a-matrix-in-io/) -
+    deconstruction of a pretty solution  
+* [Day 3](/blog/2012/01/16/seven-languages-week-2-day-3/) - metaprogramming,
+  internal DSLs, concurrency  
+
+<h3>Week 3: Prolog</h3>
+Impressions from Day 1 post:
+<blockquote>
+Despite all this, during the course of Week 3 I have been convinced that logic programming can be extremely powerful. If you know how to define a problem in terms that Prolog understands, then you can write a program that solves a problem without having the slightest idea of how to actually solve it (a good example is Sudoku, which shows up in Day 3). Logic languages are the closest I have seen to the unattainable ideal of ‘writing a program that will look at the problem and write a program to solve it for you’.
+</blockquote>
+
+* [Day 1](/blog/2012/02/05/seven-languages-week-3-day-1/) - facts, rules,
+  queries  
+* [Day 2](/blog/2012/07/17/seven-languages-week-3-day-2/) - lists and pattern
+  matching with them, contrasting logic programming with other paradigms  
+* [Day 3](/blog/2012/08/06/seven-languages-week-3-day-3/) - datalog, constraint
+  programming, other logic languages, logic libraries  
