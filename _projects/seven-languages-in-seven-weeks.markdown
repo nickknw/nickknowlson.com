@@ -15,6 +15,11 @@ Weeks*](http://www.pragprog.com/titles/btlang/seven-languages-in-seven-weeks) by
 Bruce Tate, I will keep this page updated with my progress. Each day will be
 represented by a separate blog post.
 
+Why am I doing this? Many reasons! I want to widen my horizons, to generalize before I
+specialize. I want to learn how to learn and practice getting good at it. I want
+to separate the essence of programming from the notation. I want to [live with the
+masters](http://www.cs.uni.edu/~wallingf/blog/archives/monthly/2012-09.html#e2012-09-05T17_24_37.htm) and learn from them. Also, it's a ton of fun!
+
 <h3>Week 1: Ruby</h3>
 
 Impressions from Day 1 post:
