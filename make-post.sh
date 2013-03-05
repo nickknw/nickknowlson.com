@@ -3,5 +3,6 @@
 DATE=`date +"%Y-%m-%d"`
 NAME="$@"
 NICE_NAME=${NAME//[ .]/-}
+BOILERPLATE="---\nlayout: post\ntitle: $NAME\n---"
 
-touch _posts/$DATE-$NICE_NAME.markdown
+echo -e $BOILERPLATE > _posts/$DATE-$NICE_NAME.markdown
