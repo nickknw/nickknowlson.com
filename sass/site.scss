@@ -161,26 +161,29 @@ body{
 
 /*--- TYPE AND SPACING ---*/
 h1{
-    font-size:2em;			/* 32px */
-    margin-bottom:0.25em;           /* I tend to want an image or a date close underneath my main headings */
+    font-size:2em;		/* 32px */
+    margin-bottom:0.25em;       /* I tend to want an image or a date close underneath my main headings */
     line-height:1.5;		/* 48px */
 }
 h2 {
-    font-size:1.75em;		/* 24px */
-    line-height:1;			/* 24px */
+    font-size:1.75em;
+    line-height:1;
 }
 h3 {
-    font-size:1.5em;		/* 20px */
-    line-height:1.2;		/* 24px */
+    font-size:1.5em;
+    line-height:1.2;
+    font-variant: small-caps;
 }
 h4 {
-    font-size:1.25em;
-    line-height:1.333;		/* 24px */
+    font-size:1.1em;
+    line-height:1.333;
+    font-weight: bold;
 }
 h5,
 h6{
+    /* I think I've stopped using these - get rid of in future maybe */
     font-size:.85em;
-    line-height:1.5;		/* 24px */
+    line-height:1.5;
 }
 
 p {
@@ -492,8 +495,7 @@ div.mediumblockylist div
 p { margin-bottom:1em;}
 
 h2, h3, h4, h5 { 
-    margin-bottom:.75em; 
-    margin-top:1.5em; 
+    margin:1em 0 .75em 0;
     font-family: $preferred_sans_serif_fonts;
 }
 h5 {
