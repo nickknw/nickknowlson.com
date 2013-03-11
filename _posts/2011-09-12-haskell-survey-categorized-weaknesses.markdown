@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Categorized Weaknesses from the State of Haskell 2011 Survey
-description: A categorized breakdown of the results from the question: "What do you think is Haskell's most glaring weakness / blind spot / problem?" from the 2011 State of Haskell Survery.
+description: A categorized breakdown of the results from the question 'What do you think is Haskell's most glaring weakness / blind spot / problem?' from the 2011 State of Haskell Survery.
 ---
 
 After reading about the results of the [State of Haskell, 2011
