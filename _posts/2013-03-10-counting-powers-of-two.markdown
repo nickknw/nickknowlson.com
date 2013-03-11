@@ -50,7 +50,7 @@ The Formula
 ---
 
 Where `x` represents the thousands digits and is equal to 1 or greater (multiple
-digits work fine but substituting 0 in doesn't make any sense):
+digits work fine but substituting 0 in doesn't end up making any sense):
 
     (x * 1000) + ((25 * x) - x)
 
