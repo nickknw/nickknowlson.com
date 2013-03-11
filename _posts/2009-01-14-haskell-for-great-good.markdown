@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Haskell for great good
+description: A couple of neat points about Haskell.
 ---
 
 (**\*\*Old post alert\*\*** This is an old post I dug up from sometime around college)

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 3 (Prolog) - Day 2"
+description: Writeup about topics and exercises from Day 2 of Prolog from the book Seven Languages In Seven Weeks.
 ---
 
 Day 2 of Prolog really emphasized its declarative aspects for me. Writing Prolog

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 3 (Prolog) - Day 1"
+description: Writeup about topics and exercises from Day 1 of Prolog from the book Seven Languages In Seven Weeks.
 ---
 
 Although I am not yet halfway through the book, I am pretty sure that Prolog

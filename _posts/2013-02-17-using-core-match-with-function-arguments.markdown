@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using core.match with function arguments
+description: Post about how to use Clojure's core.match with function arguments.
 ---
 
 Recently I started learning Clojure (partly in preparation for its upcoming

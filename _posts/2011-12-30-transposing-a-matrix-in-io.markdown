@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Transposing a matrix in Io"
+description: Explanation of a neat way to write a matrix transpose function in Io.
 ---
 
 While doing the exercises from Seven Languages In Seven Weeks, I came up with a

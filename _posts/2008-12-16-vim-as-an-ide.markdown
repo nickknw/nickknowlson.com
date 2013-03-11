@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Vim as an IDE
+description: Short article on using vim as an IDE.
 ---
 
 (**\*\*Old post alert\*\*** This is an old post I dug up from sometime around college)

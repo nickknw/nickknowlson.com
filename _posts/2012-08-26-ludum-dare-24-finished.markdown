@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ludum Dare &#35;24 - Post-mortem
+description: Post-mortem of my Ludum Dare 24 experience and project.
 ---
 
 All right, that's it - for better or for worse, I'm out of time. There were

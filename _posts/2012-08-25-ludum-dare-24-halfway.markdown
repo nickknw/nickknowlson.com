@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ludum Dare &#35;24 - Halfway!
+description: Halfway status update for Ludum Dare 24.
 ---
 
 Well, a little past halfway in my case, since I’m going to a Barcraft tomorrow!

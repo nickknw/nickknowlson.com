@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Command line file transfer
+description: An article on how nice sshfs is and how to get it set up.
 ---
 
 (**\*\*Old post alert\*\*** This is an old post I dug up from sometime around college)

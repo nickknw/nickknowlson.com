@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Counting Powers of Two - A Neat Pattern
+description: Article about a neat pattern I observed when counting powers of two.
 ---
 
 A little while ago I was going for a walk and searching for something to occupy
