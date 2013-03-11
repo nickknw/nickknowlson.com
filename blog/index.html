@@ -12,7 +12,7 @@ og_type: blog
   {{ post.title }}
   </a></h1>
   <div class="faded" style="font-size:14px; margin-bottom:5px;">{{ post.date | date_to_string }}</div>
-  {{ post.content | truncatehtml: 700 }}
+  {{ post.content | truncatehtml: 700 }} (<a href="{{ post.url }}">Read More</a>)
   </div>
 
   <div style="margin-top:20px; font-size:14px;">
