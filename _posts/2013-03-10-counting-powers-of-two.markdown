@@ -33,8 +33,8 @@ Take the number 1024 and split it into two parts, 1000 and 24. Keep on doing thi
     4000 and 96
     8000 and 192
 
-There's an interesting relationship between the thousands digit and the rest,
-do you see it yet?
+There's an interesting relationship between the thousands digit and the rest
+(well, there's a few), do you see any yet?
 
 What if I represent it like this:
 
@@ -44,10 +44,18 @@ What if I represent it like this:
     8000 + (200 - 8)
 
 You can just keep on going, doubling both numbers and subtracting the thousands
-digit from the other number. But what does this look like if you generalize it one
-step more...?
+digit from the other number. It is a pretty quick mental operation to double 200
+and subtract 16. This isn't the only way to express this relationship though:
 
-The Formula
+    1000 + (24 * 1)
+    2000 + (24 * 2)
+    4000 + (24 * 4)
+    8000 + (24 * 8)
+
+It's a simpler expression of the relationship but lacks the calculation shortcut
+the first one has. So what does these look like if you generalize them one step more...?
+
+The Formulas
 ---
 
 Where `x` represents the thousands digits and is equal to 1 or greater (multiple
@@ -55,14 +63,20 @@ digits work fine but substituting 0 in doesn't end up making any sense):
 
     (x * 1000) + ((25 * x) - x)
 
+This can be simplified to:
+
+    (x * 1000) + (24 * x)
+
 An interesting benefit is that now you can answer the question "Okay, `64kB`... 64 thousand
 and _how many_ bytes?" 
 
-Well using our formula it is `(25 * 64) - 64` bytes, but that's easier to do
-with rounder numbers so let's multiply `25` by `4` and divide `64` by `4` to get
-`100 * 16`.  Way easier, that's `1,600`. Now the subtraction: `1,600 - 64 =
-1,536`. The answer is 64 thousand and `1,536` bytes, or `65,536` bytes.  For
-those like me who were wondering, that's 2<sup>16</sup>!
+Well using the first formula it is `(25 * 64) - 64` bytes, but that's easier to do
+with rounder numbers. The number you're multiplying 25 by will always be easily
+divisible by 4 <sup><strong>note 1</strong></sup> and 100 is easier to multiply by than 25, so let's multiply 25
+by 4 and divide 64 by 4 to get `100 * 16`.  It's easy to instantly see that's `1,600`.
+Now the subtraction: `1,600 - 64 = 1,536`. The answer is 64 thousand and `1,536`
+bytes, or `65,536` bytes.  For those like me who were wondering, that's
+2<sup>16</sup>!
 
 In Closing
 ---
@@ -70,3 +84,5 @@ In Closing
 I feel like this formula is only partway to somewhere - sure it's a neat pattern but
 it is a bit awkward. I'd love to hear about any more cool patterns or neat
 mathematical tricks, if you know any and would like to share!
+
+<p><strong>note 1</strong> - Unless it's smaller than 4 in which case it doesn't matter, don't get too pedantic on me :)</p>
