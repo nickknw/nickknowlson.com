@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Command line file transfer
-description: An article on how nice sshfs is and how to get it set up.
+title: Command line file transfer using sshfs
+description: What sshfs is and how to get it set up so you can easily transfer files on the command line.
 ---
 
 (**\*\*Old post alert\*\*** This is an old post I dug up from sometime around college)

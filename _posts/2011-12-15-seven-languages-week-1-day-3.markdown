@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 1 (Ruby) - Day 3"
-description: Writeup about topics and exercises from Day 3 of Ruby from the book Seven Languages In Seven Weeks.
+description: Topics and exercises from Day 3 of Ruby from the book Seven Languages In Seven Weeks.
 ---
 
 Day 3 is about metaprogramming: writing code that writes code. Now we are really

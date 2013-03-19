@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using core.match with function arguments
-description: Post about how to use Clojure's core.match with function arguments.
+description: How to use Clojure's core.match with function arguments. You can't just pass them straight to `match` and expect to follow most current online examples. The types aren't quite right!
 ---
 
 Recently I started learning Clojure (partly in preparation for its upcoming

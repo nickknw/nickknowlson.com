@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Counting Powers of Two - A Neat Pattern
-description: Article about an interesting pattern I observed when counting higher powers of two.
+description: An interesting pattern I observed when counting up to the higher powers of two.
 ---
 
 A little while ago I was going for a walk and searching for something to occupy

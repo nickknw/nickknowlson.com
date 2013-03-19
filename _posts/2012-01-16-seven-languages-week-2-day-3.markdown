@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 2 (Io) - Day 3"
-description: Writeup about topics and exercises from Day 3 of Io from the book Seven Languages In Seven Weeks.
+description: Topics and exercises from Day 3 of Io from the book Seven Languages In Seven Weeks.
 ---
 
 Since this is the last day of Io, I am going to reflect a bit on what I liked about it.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 2 (Io) - Day 2"
-description: Writeup about topics and exercises from Day 2 of Io from the book Seven Languages In Seven Weeks.
+description: Topics and exercises from Day 2 of Io from the book Seven Languages In Seven Weeks.
 ---
 
 Day 2 of Io was the most difficult (as well as the most fun) day yet. It took me

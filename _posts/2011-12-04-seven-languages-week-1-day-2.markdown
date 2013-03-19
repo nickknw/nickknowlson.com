@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 1 (Ruby) - Day 2"
-description: Writeup about topics and exercises from Day 2 of Ruby from the book Seven Languages In Seven Weeks.
+description: Topics and exercises from Day 2 of Ruby from the book Seven Languages In Seven Weeks.
 ---
 
 Day 2 of Ruby covers collections, code blocks, classes and modules. I'm familiar

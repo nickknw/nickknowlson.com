@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 1 (Ruby) - Day 1"
-description: Writeup about topics and exercises from Day 1 of Ruby from the book Seven Languages In Seven Weeks.
+description: Topics and exercises from Day 1 of Ruby from the book Seven Languages In Seven Weeks.
 ---
 
 Out of the seven languages in this book, Ruby is the one I was most familiar

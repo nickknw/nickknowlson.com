@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 2 (Io) - Day 1"
-description: Writeup about topics and exercises from Day 1 of Io from the book Seven Languages In Seven Weeks.
+description: Topics and exercises from Day 1 of Io from the book Seven Languages In Seven Weeks.
 ---
 
 Day 1 of Io is the first of many chapters that will give me that 'new at

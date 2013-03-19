@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 3 (Prolog) - Day 3"
-description: Writeup about topics and exercises from Day 3 of Prolog from the book Seven Languages In Seven Weeks.
+description: Topics and exercises from Day 3 of Prolog from the book Seven Languages In Seven Weeks.
 ---
 
 Day 3 tackled some bigger examples: solving sudoku and the eight
