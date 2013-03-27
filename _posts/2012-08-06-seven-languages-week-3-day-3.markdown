@@ -388,4 +388,4 @@ like to move on to Scala at this point</div>
 
 </div>
 
-Next in this series: Day 1 of Scala (coming soon)
+Next in this series: [Day 1 of Scala](http://localhost:4000/blog/2013/03/28/seven-languages-week-4-day-1/).
