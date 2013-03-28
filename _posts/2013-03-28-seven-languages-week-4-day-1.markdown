@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Seven Languages: Week 4 (Scala) - Day 1"
-description: I have to admit Day 1 of Scala was a bit of a relief. Forcing myself to think
-through the perspective of Prolog was
+description: I have to admit Day 1 of Scala was a bit of a relief. Forcing myself to think through the perspective of Prolog was
 ---
 
 I have to admit Day 1 of Scala was a bit of a relief. Forcing myself to think
@@ -26,7 +25,7 @@ The collection libraries in 2.8+ also deserve special mention: a lot of work
 has been put into them and it shows!
 
 <div class="interjection"><p>
-(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/02/18/seven-languages-week-3-day-3/">Week 3 (Prolog) - Day 3</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">project page</a>.)
+(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/08/06/seven-languages-week-3-day-3/">Week 3 (Prolog) - Day 3</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">project page</a>.)
 </p></div>
 
 Topics Covered
@@ -69,6 +68,8 @@ treated a bit differently - they must all reside in a static Companion Object.
 This is unusual but I've found the separation kind of nice so far. Here's a
 stripped-down version of my TicTacToeBoard class from the exercise:
 
+(Heads up: this example depends on a few classes (Player, X, O, Blank) that are defined below under 'Case Classes')
+
 {% highlight scala %}
 class TicTacToeBoard(board : Array[Array[Player]]) {
 
@@ -91,8 +92,7 @@ object TicTacToeBoard {
 }
 {% endhighlight %}
 
-Head ups: this example depends on a few classes (Player, X, O, Blank) that are
-defined in the next section. You could use this class like so:
+You could use this class like so: 
 
 {% highlight scala %}
 val board = new TicTacToeBoard(Array(
@@ -105,7 +105,7 @@ println(board.validMove(1, 2)) // true
 {% endhighlight %}
 
 <h4>Case Classes</h4>
-[Case Classes](http://www.scala-lang.org/node/107) are a great addition to Scala, they are one of my favourite things.
+[Case Classes](http://www.scala-lang.org/node/107) are a great addition to Scala, they're really convenient.
 They are basically a shortcut to define simple data holding classes with a few
 [extra features](http://stackoverflow.com/questions/2312881/what-is-the-difference-between-scalas-case-class-and-class). The big one is that you can use case classes with pattern
 matching. If you're coming from Haskell, you'll be interested
@@ -126,29 +126,30 @@ case object Blank extends Player {
 
 This segment of code gives me pretty much what you'd expect: three classes that
 share an abstract parent Player class. Since X, O, and Blank are defined using
-`object` this also results in three singleton objects `X`, `O`, and `Blank`.
-There are sensible default toString implementations for X and O, and I can
-pattern match against the classes (which I do in [TicTacToeBoard.determineWinner](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-4-scala/day1.scala#L112).
+`object` this results in three singleton objects `X`, `O`, and `Blank`.
+I also get sensible default toString implementations for X and O, and I can
+pattern match against the classes (which I do in [TicTacToeBoard.determineWinner](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-4-scala/day1.scala#L112)).
 
-Scala also has [traits](http://www.scala-lang.org/node/126) which are great but
-will be talked about next post, where I will be able to show you an example from the
-exercise.
+Instead of interfaces Scala has [traits](http://www.scala-lang.org/node/126)
+which are great but will be talked about next post, where I will be able to show
+you an example from the exercise.
 
 Highlights From Exercises
 ---
 
-The exercise this week was quite fun, although I went a bit overboard with it.
-I made a game game that will let you play arbitrarily sized tic tac toe! I
-checked the rules for [m,n,k games](http://en.wikipedia.org/wiki/M,n,k-game) and
-put a few limits in so depending on the board size you choose you're playing
-[Tic Tac Toe](http://en.wikipedia.org/wiki/Tic_Tac_Toe),
+The exercise this week was quite fun, although I did go a bit overboard with it.
+The aim was to create a 3x3 Tic Tac Toe game, but I thought it would be more fun
+to do arbitrarily large boards. I checked the rules for [m,n,k
+games](http://en.wikipedia.org/wiki/M,n,k-game) and put a few limits in so that
+depending on the board size you choose you're playing [Tic Tac
+Toe](http://en.wikipedia.org/wiki/Tic_Tac_Toe),
 [Gomoku](http://en.wikipedia.org/wiki/Gomoku),
 [Connect6](http://en.wikipedia.org/wiki/Connect6), or some custom variation in
 between.
 
-Unfortunately because of this, one of my favourite bits of code from this
-exercise is now obsolete. I had written a really simple three in a row checking
-function using pattern matching, and I was (and still am!) quite happy with it.
+Unfortunately, because of this feature creep one of my favourite bits of code from this
+exercise is now obsolete! I had written a really simple three in a row checking
+function using pattern matching, and I was (still am!) quite happy with it.
 
 It only works if you know at compile-time how many in a row you're checking for,
 so it sadly had to be replaced for me to expand to arbitrarily sized games. But
@@ -157,24 +158,40 @@ here it is:
 {% highlight scala %}
 def threeInARow(list : List[Player]) : Option[Player] = list match {
     case Nil => None
-    case x :: y :: z :: tail if x == y && y == z && z != Blank => Some(z)
+    case x :: y :: z :: _ if x == y && y == z && z != Blank => Some(z)
     case _ :: tail => threeInARow(tail)
 }
 {% endhighlight %}
 
-Isn't pattern matching nice to have?
+The code behind [determineWinner](https://github.com/nickknw/seven-languages-in-seven-weeks/blob/master/week-4-scala/day1.scala#L112) 
+is also pretty cool looking, although I don't know enough about Scala style yet
+to know whether it's good or not! Anyway, I define a local function called
+`checkForWinner` and the rest of the method becomes really readable:
 
-I actually went overboard in another way as well on this exercise. I spent a
-fair amount of time making it solid and usable. It's command-line Tic Tac Toe,
-but hopefully it's among the best damn command-line Tic Tac Toes you've seen.
+{% highlight scala %}
+rows foreach checkForWinner
+columns foreach checkForWinner
+diagonalsLTR foreach checkForWinner
+diagonalsRTL foreach checkForWinner
 
-Because of this, I decided I may as well give it a permanent home and I gave it
-its own [Arbitrary-Sized Tic Tac Toe project page](/projects/arbitrarily-sized-tic-tac-toe/)!
+if(board.map(row => row.contains(Blank)).contains(true)) {
+    return GameResult.NoResult
+}
 
-Here's what it looks like:
+return GameResult.Tie
+{% endhighlight %}
+
+I actually went overboard in another way on this exercise - I spent a lot of
+time making it solid and usable. I mean, it's just command-line Tic Tac
+Toe, but hopefully it's the best damn command-line Tic Tac Toes it could be.
+
+Anyway, I decided it may as well have a permanent home and I gave it
+its own project page: [Arbitrarily-Sized Tic Tac Toe](/projects/arbitrarily-sized-tic-tac-toe/)!
+
+Here's a peek at the regular size:
 
 <div class="symmetrical_line_height">
-{% highlight bash %}
+<pre><code>
 Player X's turn.
 Enter square: (e.g. A0): a2
 
@@ -186,47 +203,10 @@ Enter square: (e.g. A0): a2
    │───│───│───│
 2  │ X │   │   │
    └───┴───┴───┘
-{% endhighlight %}
+</code></pre>
 </div>
 
-What, you want bigger? Okay!
-
-<div class="symmetrical_line_height">
-{% highlight bash %}
-Enter board size: 9
-
-5 in a row to win (9x9 board)
-
-     A   B   C   D   E   F   G   H   I   
-   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
-0  │   │   │   │   │   │   │   │   │   │
-   │───│───│───│───│───│───│───│───│───│
-1  │   │   │   │   │   │   │   │   │   │
-   │───│───│───│───│───│───│───│───│───│
-2  │   │   │   │   │   │   │   │   │   │
-   │───│───│───│───│───│───│───│───│───│
-3  │   │   │   │   │   │   │   │   │   │
-   │───│───│───│───│───│───│───│───│───│
-4  │   │   │   │   │   │   │   │   │   │
-   │───│───│───│───│───│───│───│───│───│
-5  │   │   │   │   │   │   │   │   │   │
-   │───│───│───│───│───│───│───│───│───│
-6  │   │   │   │   │   │   │   │   │   │
-   │───│───│───│───│───│───│───│───│───│
-7  │   │   │   │   │   │   │   │   │   │
-   │───│───│───│───│───│───│───│───│───│
-8  │   │   │   │   │   │   │   │   │   │
-   └───┴───┴───┴───┴───┴───┴───┴───┴───┘
-
-
-Player X's turn.
-Enter square: (e.g. A0): 
-{% endhighlight %}
-</div>
-
-Want to see how big it can go? Go [download it now](/projects/arbitrarily-sized-tic-tac-toe/) and try it out! I haven't
-enforced any kind of sensible limit, so you can fill your terminal with
-characters or get OutOfMemory errors to your heart's content.
+If you want to see how it handles bigger boards, go ahead and [try it out](/projects/arbitrarily-sized-tic-tac-toe/)!
 
 Full solutions
 ---
@@ -529,7 +509,9 @@ Game.main(null)
 {% endhighlight %}
 </div>
 
-Phew! That was a long one, eh? Once again, you can see more about this by going
-to its [project page](/projects/arbitrarily-sized-tic-tac-toe/).
+Phew! That was a long one, eh? Once again, you can see more about the project by going
+to the [Tic Tac Toe project page](/projects/arbitrarily-sized-tic-tac-toe/) and
+you can learn more about this series of posts by going to the [Seven Languages
+project page](/projects/seven-languages-in-seven-weeks/).
 
 Next in this series: Day 2 of Scala (coming soon).
