@@ -708,7 +708,7 @@ blockquote .highlight {
     }
 
     > p, .indent {
-        margin-left: 60px;
+        margin-left: 2em;
     }
 
     ul {
@@ -783,11 +783,6 @@ CSS for tablets and narrower devices
     dd {
         margin-left:45px;
     }
-    #formatted_solutions {
-        > p, .indent {
-            margin-left: 45px;
-        }
-    }
 }
 
 
@@ -825,11 +820,6 @@ CSS for tablets and narrower devices
     }
     dd {
         margin-left:25px;
-    }
-    #formatted_solutions {
-        > p, .indent {
-            margin-left: 25px;
-        }
     }
     #nav {
         height: auto;
