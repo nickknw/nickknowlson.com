@@ -217,11 +217,11 @@ Here is a nicely formatted version of my solutions to the exercises from Day 1 o
 
 <h3>Find:</h3>
 
-<h4>1. The Scala API</h4>
+<div class="question"><b>1.</b> The Scala API</div>
 
 <p><a href="http://www.scala-lang.org/api/current/index.html">http://www.scala-lang.org/api/current/index.html</a></p>
 
-<h4>2. A comparison of Java and Scala</h4>
+<div class="question"><b>2.</b> A comparison of Java and Scala</div>
 
 <ul>
    <li>Quite a nice article, well-written, good detail level</li>
@@ -241,13 +241,13 @@ Here is a nicely formatted version of my solutions to the exercises from Day 1 o
    <li><li><a href="http://www.ibm.com/developerworks/java/library/j-scala01228/index.html">http://www.ibm.com/developerworks/java/library/j-scala01228/index.html</a></li></li></ul>
 </ul>
 
-<h4>3. A discussion of val versus var</h4>
+<div class="question"><b>3.</b> A discussion of val versus var</div>
 
 <p><a href="http://stackoverflow.com/questions/1791408/what-is-the-difference-between-a-var-and-val-definition-in-scala">http://stackoverflow.com/questions/1791408/what-is-the-difference-between-a-var-and-val-definition-in-scala</a></p>
 
 <h3>Do:</h3>
 
-<h4><b>1.</b> Write a game that will take a tic-tac-toe board with X, O, and blank characters and detect the winner or whether there is a tie or no winner yet.  Use classes where appropriate.</h4>
+<div class="question"><b>1.</b> Write a game that will take a tic-tac-toe board with X, O, and blank characters and detect the winner or whether there is a tie or no winner yet.  Use classes where appropriate.</div>
 
 {% highlight scala %}
 // Run this file with 'scala -Dfile.encoding=UTF-8 day1.scala'
@@ -433,9 +433,11 @@ object TicTacToeBoard {
     }
 
 }
+{% endhighlight %}
 
-// 2. Bonus Problem: Let two players play tic-tac-toe.
+<div class="question"><b>2.</b> Bonus Problem: Let two players play tic-tac-toe.</div>
 
+{% highlight scala %}
 object Game {
     val Position = """([A-Za-z]+)\s*(\d+)""".r
 
