@@ -25,7 +25,7 @@ up in a few chapters, and I am looking forward to it. Scheme is also on my
 horizon (if a bit farther out), but that's a subject for another post. 
 
 <div class="interjection"><p>
-(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/01/11/seven-languages-week-2-day-2/">Week 2 (Io) - Day 2</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">project page</a>.)
+(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/01/11/seven-languages-week-2-day-2/">Week 2 (Io) - Day 2</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">Seven Languages project page</a>.)
 </p></div>
 
 Topics covered

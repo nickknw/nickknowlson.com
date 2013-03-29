@@ -31,7 +31,7 @@ have seen to the unattainable ideal of 'writing a program that will look at the
 problem and write a program to solve it for you'.
 
 <div class="interjection"><p>
-(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/01/16/seven-languages-week-2-day-3/">Week 2 (Io) - Day 3</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">project page</a>.)
+(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/01/16/seven-languages-week-2-day-3/">Week 2 (Io) - Day 3</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">Seven Languages project page</a>.)
 </p></div>
 
 Topics covered

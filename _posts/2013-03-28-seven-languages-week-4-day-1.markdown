@@ -25,7 +25,7 @@ The collection libraries in 2.8+ also deserve special mention: a lot of work
 has been put into them and it shows!
 
 <div class="interjection"><p>
-(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/08/06/seven-languages-week-3-day-3/">Week 3 (Prolog) - Day 3</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">project page</a>.)
+(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/08/06/seven-languages-week-3-day-3/">Week 3 (Prolog) - Day 3</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">Seven Languages project page</a>.)
 </p></div>
 
 Topics Covered

@@ -66,7 +66,7 @@ gave me the most trouble here in hopes I can save some future programmer a bit
 of time.
 
 <div class="interjection"><p>
-(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/02/05/seven-languages-week-3-day-1/">Week 3 (Prolog) - Day 1</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">project page</a>.)
+(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. The article previous to this one is <a href="/blog/2012/02/05/seven-languages-week-3-day-1/">Week 3 (Prolog) - Day 1</a>. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">Seven Languages project page</a>.)
 </p></div>
 
 Topics covered

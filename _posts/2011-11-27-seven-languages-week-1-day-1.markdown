@@ -10,7 +10,7 @@ I started to tackle languages like Prolog. I'm appreciative of that, because
 Prolog sure was a struggle for a while.
 
 <div class="interjection"><p>
-(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. This article is the first one in the series. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">project page</a>.)
+(This article is part of a series of posts I am doing about my journey through the exercises of the book <a href="http://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven Languages In Seven Weeks</a>. This article is the first one in the series. For an overview see the <a href="/projects/seven-languages-in-seven-weeks/">Seven Languages project page</a>.)
 </p></div>
 
 Day 1 of Week 1 was pretty basic - a bit of string manipulation and looping.
