@@ -63,3 +63,15 @@ Despite all this, during the course of Week 3 I have been convinced that logic p
   matching with them, contrasting logic programming with other paradigms  
 * [Day 3](/blog/2012/08/06/seven-languages-week-3-day-3/) - datalog, constraint
   programming, other logic languages, logic libraries  
+
+<h4>Week 4: Scala</h4>
+Impressions from Day 1 post:
+<blockquote>
+The beauty of Scala (in my eyes) is its flexibility and practicality.   It
+pushes you towards immutability and is capable of very succinct functional code,
+but it also has that mutable imperative escape hatch, and a good set of tools
+for working with problems that suit code like that. It will let you write in the 
+style that is most appropriate for the problem you are trying to solve.
+</blockquote>
+
+* [Day 1](/blog/2012/03/28/seven-languages-week-4-day-1/) - syntax, object oriented features
