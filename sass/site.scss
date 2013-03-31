@@ -198,11 +198,9 @@ a:hover {
 }
 
 ul, ol {
-    margin:0 0 1em 60px;
+    margin:0 0 1em 2em;
 }
 ul ul, ol ol, ul ol, ol ul {
-    /* Let’s take care of lists in lists */
-    margin:0 0 0 30px;
     list-style-type: disc;
 }
 ul p, ol p {
@@ -772,14 +770,6 @@ CSS for tablets and narrower devices
     .grid-15	{ width:655px; }
     .grid-16	{ width:700px; }
 
-    /*--- LISTS ---*/
-    ul, ol {
-        margin:0 0 1em 45px;
-    }
-    ul ul, ol ol, ul ol, ol ul {
-        /* Let’s take care of lists in lists */
-        margin:0 0 0 22.5px;
-    }
     dd {
         margin-left:45px;
     }
@@ -810,14 +800,6 @@ CSS for tablets and narrower devices
         padding: 15px 10px;
     }
 
-    /*--- LISTS ---*/
-    ul, ol {
-        margin:0 0 1em 25px;
-    }
-    ul ul, ol ol, ul ol, ol ul {
-        /* Let’s take care of lists in lists */
-        margin:0 0 0 12.5px;
-    }
     dd {
         margin-left:25px;
     }
