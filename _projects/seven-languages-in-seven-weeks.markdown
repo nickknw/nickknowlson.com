@@ -64,7 +64,7 @@ Despite all this, during the course of Week 3 I have been convinced that logic p
 * [Day 3](/blog/2012/08/06/seven-languages-week-3-day-3/) - datalog, constraint
   programming, other logic languages, logic libraries  
 
-<h4>Week 4: Scala</h4>
+<h3>Week 4: Scala</h3>
 Impressions from Day 1 post:
 <blockquote>
 The beauty of Scala (in my eyes) is its flexibility and practicality.   It
