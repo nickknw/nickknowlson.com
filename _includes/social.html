@@ -13,13 +13,31 @@
 
     <!-- Twitter -->
     <div id="twitter_button"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="nickknw">Tweet</a>
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
-
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      window.twttr = (function (d,s,id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+        js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+      }(document, "script", "twitter-wjs"));
+    </script>
+    </div>
     <!-- Reddit -->
     <div id="reddit_button"><script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script></div>
 
     <!-- Facebook -->
     <div id="facebook_button"><div id="fb-root"></div> <script src="http://connect.facebook.net/en_US/all.js#appId=122515937846861&amp;xfbml=1"></script><fb:like href="http://nickknowlson.com{{ page.url }}" send="false" layout="button_count" width="320" show_faces="true" action="like" font=""></fb:like></div>
 
+    <script type="text/javascript">
+    $(document).ready(function () {
+        twttr.events.bind('tweet', function(event) {
+            ga('send', 'twitter', 'tweet', document.URL);
+        });
+        FB.Event.subscribe('edge.create', function(targetUrl) {
+          ga('send', 'facebook', 'like', targetUrl);
+        });
+    }
+    </script>
 </div>
 </div>
