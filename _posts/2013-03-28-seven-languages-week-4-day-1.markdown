@@ -516,4 +516,4 @@ to the [Tic Tac Toe project page](/projects/arbitrarily-sized-tic-tac-toe/) and
 you can learn more about this series of posts by going to the [Seven Languages
 project page](/projects/seven-languages-in-seven-weeks/).
 
-Next in this series: Day 2 of Scala (coming soon).
+Next in this series: [Day 2 of Scala](/blog/2013/04/10/seven-languages-week-4-day-2/).

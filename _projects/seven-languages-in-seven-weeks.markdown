@@ -74,4 +74,5 @@ for working with problems that suit code like that. It will let you write in the
 style that is most appropriate for the problem you are trying to solve.
 </blockquote>
 
-* [Day 1](/blog/2012/03/28/seven-languages-week-4-day-1/) - syntax, object oriented features
+* [Day 1](/blog/2013/03/28/seven-languages-week-4-day-1/) - syntax, object oriented features
+* [Day 2](/blog/2013/04/10/seven-languages-week-4-day-2/) - functional programming, collections, idea of emptiness
