@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Seven Languages: Week 4 (Scala) - Day 2"
-description: FILL IN LATER
+description: Day 2 of Scala focused on its functional programming prowess. Since this is the first time functional programming has
 ---
 
 Day 2 of Scala focused on its functional programming prowess. Since this is
