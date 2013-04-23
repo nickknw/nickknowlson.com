@@ -105,6 +105,17 @@ sentiments I've previously seen on this topic.
 I have made each headline a link as well so each question/answer combo can be linked
 to individually.
 
+ 1.  [Maybe isn't the be-all end-all.](#maybe-shortcomings)
+ 2.  [My IDE plugin already does this.](#ide-plugin)
+ 3.  [NPEs are the proper response to a missing value you forgot to consider.](#hiding)
+ 4.  [The real problem is people not properly reasoning about their functions.](#real-problem)
+ 5.  [What if a value cannot have any meaningful default value?](#default-value)
+ 6.  [So you're still testing against null, except that it's called Nothing.](#same-thing)
+ 7.  [I think the safe-invoke operator in Groovy etc. is better than Maybe.](#safe-invoke)
+ 8.  [What About Fantom &amp; Kotlin?](#fantom-kotlin)
+ 9.  [But Option in Scala DOESN'T save you from null!](#option-scala)
+ 10. [Safety ISN'T guaranteed because of the existence of unsafe extraction methods.](#unsafe-methods)
+
 <h4><a id="maybe-shortcomings" href="#maybe-shortcomings" class="header_link">Maybe isn't the be-all
 end-all.</a> </h4>
 
@@ -250,9 +261,7 @@ Feel free to point out to people that Scala's implementation of Option still
 allows for NullPointerExceptions, just don't generalize it to "Maybe and Option
 aren't useful".
 
-<h4><a id="unsafe-methods" href="#unsafe-methods"
-class="header_link">Safety ISN'T guaranteed because of the existence of unsafe
-extraction methods.</a> </h4>
+<h4><a id="unsafe-methods" href="#unsafe-methods" class="header_link">Safety ISN'T guaranteed because of the existence of unsafe extraction methods.</a> </h4>
 
 Often implementations of Maybe will include more than just safe extraction
 methods. Haskell's `fromJust` and Scala's `get` are both retrieval functions
