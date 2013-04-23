@@ -82,7 +82,7 @@ but implementations in different languages have different names.
 
  * ML, Scala, F#, Rust: Option
  * C#: Nullable
- * Fantom: ? appended to type
+ * Fantom, Kotlin: ? appended to type
 
 **Second**, not all environments with Maybe have non-nullable types. This makes
 Maybe less valuable in those environments (since you lose the **very** useful "I
@@ -106,7 +106,7 @@ I have made each headline a link as well so each question/answer combo can be li
 to individually.
 
 <h4><a id="maybe-shortcomings" href="#maybe-shortcomings" class="header_link">Maybe isn't the be-all
-end-all.</a></h4>
+end-all.</a> </h4>
 
 I definitely agree. For one thing, I haven't even mentioned
 [Either](http://www.haskell.org/ghc/docs/6.12.2/html/libraries/base-4.2.0.1/Data-Either.html)!
@@ -132,7 +132,7 @@ Beautifully stated! This is a much more general (and elegant) way to look at
 it. It's a somewhat harder sentiment to communicate effectively to a lot of
 people though.
 
-<h4><a id="ide-plugin" href="#ide-plugin" class="header_link">My IDE plugin already does this.</a></h4>
+<h4><a id="ide-plugin" href="#ide-plugin" class="header_link">My IDE plugin already does this.</a> </h4>
 
 Yes, there are some IDEs and plugins that provide limited null reference analysis.
 The key though, is that it **is** limited. As far as I know none of them
@@ -145,7 +145,7 @@ the case of an empty value here".
 
 <h4><a id="hiding" href="#hiding" class="header_link">NPEs are the proper
 response to a missing value you forgot to consider. You should be notified when
-something goes wrong, not hide it with Maybe.</a></h4>
+something goes wrong, not hide it with Maybe.</a> </h4>
 
 I've got good news for you - we fundamentally agree in our approach to how
 errors should be handled! You have probably seen some bad examples of Maybe
@@ -156,25 +156,42 @@ Buggy code is instead caught at compile-time and your program ends up not
 _having_ to throw an exception and terminate gracefully because _the bug has
 already been fixed!_
 
-<h4><a id="default-value" href="#default-value" class="header_link">Null is meaningful! What if a value cannot have any meaningful default value?</a></h4>
+<h4><a id="real-problem" href="#real-problem" class="header_link">The real
+problem is people not properly reasoning about their functions, that isn't the
+fault of null.</a> </h4>
+
+Sure, that is one way to look at it: it's not `null`'s fault, it is the
+programmer's fault. If you take this view then `null` is just one of the tools
+used to represent emptiness and invalid values. But it isn't a very good tool,
+or at least not as good as it could be.
+
+Maybe is a tool that fills the same gap as null but is much more helpful to
+programmers. It helps directly address the core problem of "people not properly
+reasoning about their functions" by pointing out mistakes in reasoning earlier.
+With it you can statically verify that all null checks are made, and eliminate
+an entire class of run-time errors.
+
+It is not a silver bullet, but it **is** a better tool.
+
+<h4><a id="default-value" href="#default-value" class="header_link">Null is meaningful! What if a value cannot have any meaningful default value?</a> </h4>
 
 Then either wait until it has a meaningful value to put in it or wrap it in
 Maybe and give it a value of Nothing. That's what Maybe is for - To provide a
 type-checkable alternative to `null`!
 
-<h4><a id="same-thing" href="#same-thing" class="header_link">So you're still testing against null, except that it's called Nothing. What have we gained?</a></h4>
+<h4><a id="same-thing" href="#same-thing" class="header_link">So you're still testing against null, except that it's called Nothing. What have we gained?</a> </h4>
 
-We have gained earlier detection of errors. Now if there is a missed check for
-an empty value you will find out at compile-time rather than run-time. The user
-doesn't see the error, it is fixed before it gets outside the developer's
-computer.
+We have gained earlier detection of an entire class of errors! Now if there is a
+missed check for an empty value you will find out at compile-time rather than
+run-time. The user doesn't see the error, it is fixed before it gets outside the
+developer's computer.
 
-<h4><a id="safe-invoke" href="#safe-invoke" class="header_link">I think the safe-invoke operator in Groovy/Kotlin/Fantom is better than Maybe.</a></h4>
+<h4><a id="safe-invoke" href="#safe-invoke" class="header_link">I think the safe-invoke operator in Groovy/Kotlin/Fantom/CoffeeScript is better than Maybe.</a> </h4>
 
 I'm going to talk about Kotlin and Fantom separately in the next section because
 they're special.
 
-In Groovy, the safe invoke operator (`?.`) lets you safely call a method or access
+In Groovy/CoffeeScript, the safe invoke operator (`?.`) lets you safely call a method or access
 a field on an object that may be null. If the object IS `null` then the
 method/field just returns `null` as well, instead of an exception being thrown.
 
@@ -184,11 +201,11 @@ a different problem.  If you compare it directly to Maybe, it's only solving the
 to have, but isn't nearly as interesting as moving a whole class of run-time
 exceptions to compile-time.
 
-Which is fine, [Groovy isn't really about statically enforcing things](http://james-iry.blogspot.ca/2009/07/groovy-does-not-have-optional-static.html).
+Which is fine, [Groovy isn't really about statically enforcing things](http://james-iry.blogspot.ca/2009/07/groovy-does-not-have-optional-static.html) and neither is CoffeeScript.
 Just don't misrepresent this feature as being anything more than **a convenient
 syntax for null checks**.
 
-<h4><a id="fantom-kotlin" href="#fantom-kotlin" class="header_link">What About Fantom &amp; Kotlin?</a></h4>
+<h4><a id="fantom-kotlin" href="#fantom-kotlin" class="header_link">What About Fantom &amp; Kotlin?</a> </h4>
 
 Fantom and Kotlin are different because they are both languages that have
 non-nullable reference types and have built Maybe in as a language
@@ -221,7 +238,7 @@ Fantom/Kotlin and what alternatives the language provides because, frankly, I am
 pretty unfamiliar with them. If anyone with experience would like to speak up
 I'd be happy to annotate this section with their information.
 
-<h4><a id="option-scala" href="#option-scala" class="header_link">But Option in Scala DOESN'T save you from null!</a></h4>
+<h4><a id="option-scala" href="#option-scala" class="header_link">But Option in Scala DOESN'T save you from null!</a> </h4>
 
 Yes, in Scala you can still get NullPointerExceptions. Scala doesn't have
 non-nullable reference types because Martin Odersky (for what were probably good
@@ -230,5 +247,21 @@ language. That doesn't invalidate all the other implementations of Maybe
 and it doesn't mean it can't still be somewhat useful in Scala. 
 
 Feel free to point out to people that Scala's implementation of Option still
-allows for NullPointerExceptions, just stop generalizing it to "Maybe and Option
+allows for NullPointerExceptions, just don't generalize it to "Maybe and Option
 aren't useful".
+
+<h4><a id="unsafe-methods" href="#unsafe-methods"
+class="header_link">Safety ISN'T guaranteed because of the existence of unsafe
+extraction methods.</a> </h4>
+
+Often implementations of Maybe will include more than only safe extraction
+methods. Haskell's `fromJust` and Scala's `get` both attempt to retrieve the
+value wrapped in Maybe and throw runtime errors if it doesn't exist.
+
+So it is possible to shoot yourself in the foot, if you want to. The difference
+is: you have to **explicitly ask** for this behaviour, it cannot sneak in by
+accident.
+
+Whenever I claim Maybe can move null reference exceptions to compile-time,
+it comes with the assumption that you're using the built-in safe extractions
+methods and that you're not _requesting_ run-time exceptions.
