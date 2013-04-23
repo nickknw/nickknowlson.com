@@ -136,7 +136,7 @@ people though.
 
 Yes, there are some IDEs and plugins that provide limited null reference analysis.
 The key though, is that it **is** limited. As far as I know none of them
-provide the same system-wide elimination of null that encoding it in the
+provide the same system-wide elimination of `null` that encoding it in the
 type-system can guarantee.
 
 And so, you still don't get the same reassurances of "I know this value will
@@ -165,13 +165,13 @@ programmer's fault. If you take this view then `null` is just one of the tools
 used to represent emptiness and invalid values. But it isn't a very good tool,
 or at least not as good as it could be.
 
-Maybe is a tool that fills the same gap as null but is much more helpful to
+Maybe is a tool that fills the same gap as `null` but is much more helpful to
 programmers. It helps directly address the core problem of "people not properly
 reasoning about their functions" by pointing out mistakes in reasoning earlier.
 With it you can statically verify that all null checks are made, and eliminate
 an entire class of run-time errors.
 
-It is not a silver bullet, but it **is** a better tool.
+I'm not claiming it is a silver bullet, but it **is** a better tool.
 
 <h4><a id="default-value" href="#default-value" class="header_link">Null is meaningful! What if a value cannot have any meaningful default value?</a> </h4>
 
@@ -192,7 +192,7 @@ I'm going to talk about Kotlin and Fantom separately in the next section because
 they're special.
 
 In Groovy/CoffeeScript, the safe invoke operator (`?.`) lets you safely call a method or access
-a field on an object that may be null. If the object IS `null` then the
+a field on an object that may be `null`. If the object IS `null` then the
 method/field just returns `null` as well, instead of an exception being thrown.
 
 I agree that the safe-invoke operator is certainly convenient but it is solving
@@ -254,14 +254,15 @@ aren't useful".
 class="header_link">Safety ISN'T guaranteed because of the existence of unsafe
 extraction methods.</a> </h4>
 
-Often implementations of Maybe will include more than only safe extraction
-methods. Haskell's `fromJust` and Scala's `get` both attempt to retrieve the
-value wrapped in Maybe and throw runtime errors if it doesn't exist.
+Often implementations of Maybe will include more than just safe extraction
+methods. Haskell's `fromJust` and Scala's `get` are both retrieval functions
+that throw runtime errors if the value wrapped in Maybe doesn't exist. Just like
+how `null` usually works.
 
-So it is possible to shoot yourself in the foot, if you want to. The difference
+So it **is** possible to shoot yourself in the foot if you want to. The difference
 is: you have to **explicitly ask** for this behaviour, it cannot sneak in by
 accident.
 
 Whenever I claim Maybe can move null reference exceptions to compile-time,
-it comes with the assumption that you're using the built-in safe extractions
+it comes with the assumption that you're using the built-in safe extraction
 methods and that you're not _requesting_ run-time exceptions.
