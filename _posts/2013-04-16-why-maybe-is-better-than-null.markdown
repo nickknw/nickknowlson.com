@@ -269,7 +269,7 @@ that throw runtime errors if the value wrapped in Maybe doesn't exist. Just like
 how `null` usually works.
 
 So it **is** possible to shoot yourself in the foot if you want to. The difference
-is: you have to **explicitly ask** for this behaviour, it cannot sneak in by
+is you have to **explicitly ask** for this behaviour, it cannot sneak in by
 accident.
 
 Whenever I claim Maybe can move null reference exceptions to compile-time,
