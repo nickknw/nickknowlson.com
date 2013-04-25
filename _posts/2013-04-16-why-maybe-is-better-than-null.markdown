@@ -159,13 +159,23 @@ response to a missing value you forgot to consider. You should be notified when
 something goes wrong, not hide it with Maybe.</a> </h4>
 
 I've got good news for you - we fundamentally agree in our approach to how
-errors should be handled! You have probably seen some bad examples of Maybe
-usage, since proper usage would lead to these errors being caught _even earlier_
+errors should be handled! You might have seen some bad examples of Maybe
+usage, since properl usage would lead to these errors being caught _even earlier_
 than a NullPointerException would have.
 
-Buggy code is instead caught at compile-time and your program ends up not
-_having_ to throw an exception and terminate gracefully because _the bug has
-already been fixed!_
+You can still choose to do the equivalent of `if (null) return;` and
+some examples _will do that_, because it makes sense to do in some contexts.
+What matters is that Maybe forces you to think about it at the time of _writing_
+the code, and to be _explicit_ about it.
+
+Instead of you being notified when things go wrong, Maybe forces you to **think
+things through** in the first place and make an explicit choice about what to do
+(at least as far as possibly empty values are concerned).
+
+And finally, for those of you who really love exceptions, implementations of
+Maybe usually provide an unsafe retrieval method, so you can replicate the
+behaviour of null (run-time exceptions and all) _if_ that is what you _choose_
+to do.
 
 <h4><a id="real-problem" href="#real-problem" class="header_link">The real
 problem is people not properly reasoning about their functions, that isn't the
