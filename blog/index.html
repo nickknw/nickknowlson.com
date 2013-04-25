@@ -12,14 +12,15 @@ og_type: blog
   {{ post.title }}
   </a></h1>
   <div class="faded" style="font-size:14px; margin-bottom:5px;">{{ post.date | date_to_string }}</div>
-  {{ post.content | truncatehtml: 700 }} (<a href="{{ post.url }}">Read More</a>)
+    {{ post.content | truncatehtml: 700 }}
+    <div style="margin-top:1.5em">
+        <a href="{{ post.url }}" style="font-size:18px;">Read More</a>
+        —
+        <a style="font-size:14px;" href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
+    </div>
   </div>
 
-  <div style="margin-top:20px; font-size:14px;">
-    <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
-  </div>
-
-    <hr class="fancyrule" />
+  <hr class="fancyrule" />
 {% endfor %}
 
 <a href="/blog/archive/">← Older posts</a>
