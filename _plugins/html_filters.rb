@@ -2,8 +2,8 @@
 require 'rubygems'
 require 'nokogiri'
 
-module Liquid
-  module StandardFilters
+module Jekyll
+  module TruncateHtmlFilter
     
     def truncatehtml(raw, max_length = 15, continuation_string = "...")
      doc = Nokogiri::HTML(raw.encode('UTF-8', :invalid => :replace, :undef => :replace, :replace => '')) 
@@ -65,3 +65,5 @@ module Liquid
       
   end
 end
+
+Liquid::Template.register_filter(Jekyll::TruncateHtmlFilter)

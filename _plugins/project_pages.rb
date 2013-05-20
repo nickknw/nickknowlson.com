@@ -36,15 +36,18 @@ module Jekyll
         end
 
         def url
-            return @url if @url
-
-            @url = if permalink 
-                permalink
+            @url = if @name 
+                slug = File.basename(name, ".markdown")
+                "/projects/#{slug}/"
             else
                 '/'
             end
 
             @url
+        end
+
+        def permalink
+          self.data && self.data['permalink']
         end
 
         def date
