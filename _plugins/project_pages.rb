@@ -2,6 +2,13 @@ module Jekyll
 
 
     class ProjectPage < Page
+        
+        # Attributes for Liquid templates
+        ATTRIBUTES_FOR_LIQUID = %w[
+            title
+            url
+            date
+        ]
 
         def initialize(site, base, dir, name)
             @site = site
@@ -15,6 +22,19 @@ module Jekyll
             self.data['is_project'] = true
         end
 
+        def render(layouts, site_payload)
+          # construct payload
+          payload = {
+            "page" => self.to_liquid
+          }.deep_merge(site_payload)
+
+          do_layout(payload, layouts)
+        end
+
+        def title
+            self.data["title"]
+        end
+
         def url
             return @url if @url
 
@@ -25,6 +45,17 @@ module Jekyll
             end
 
             @url
+        end
+
+        def date
+            self.data["date"].to_time
+        end
+
+        def to_liquid
+          further_data = Hash[ATTRIBUTES_FOR_LIQUID.map { |attribute|
+            [attribute, send(attribute)]
+          }]
+          data.deep_merge(further_data)
         end
 
         def full_path_to_source
