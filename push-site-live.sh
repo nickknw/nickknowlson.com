@@ -1,5 +1,5 @@
 # commit
-jekyll
+jekyll build
 cp -rf _site/* ../nickknw.github.com/
 cd ../nickknw.github.com/
 git add .
