@@ -24,8 +24,8 @@ Maybe, at its core, is a construct that allows programmers to **move null checks
 into the type system**, so they can be enforced at _compile-time_. Instead of
 forgetting to deal with a null check and finding out with an exception at
 run-time, you forget to deal with a null check and _find out with an error at compile-time,_
-before anyone else even sees it! And that's **not just some null checks**, that's **all of
-them, guaranteed!**
+before anyone else even sees it! And that's **not just some** null checks, that's **all of
+them!**
 
 <h3>Details</h3>
 
@@ -40,15 +40,17 @@ of null pointer exceptions:
 So how does Maybe accomplish this, and how does it achieve all those benefits
 listed above? It's actually very straightforward.
 
-In object-oriented terms, think of `Maybe` as a generic interface that has
-exactly two implementing classes: `Just` and `Nothing`. The `Just` class wraps a value
-of some other type and the `Nothing` class doesn't. There are a variety of ways to
-extract the value safely, but I'm going to omit these for now, as they're not
-the point. When you receive an object of type `Maybe<String>` (for example) you now have
-the type system helping you out, telling you "there _might_ be a String here but
-it _might_ be empty". You **can't** perform operations on the String until you've
-safely extracted it and _made a choice_ about what to do in the case that its
-empty. 
+I'm going to explain this in object-oriented terms, because if you're already
+familiar with algebraic data types odds are you already know about Maybe too.
+Anyway, think of `Maybe<T>` as an interface with a single type parameter that
+has exactly two implementing classes: `Just<T>` and `Nothing`. The `Just<T>`
+class wraps a value of some other type and the `Nothing` class doesn't. There
+are a variety of methods provided by Maybe to extract the value safely, but I'm
+going to omit these for now, as they're not the point. When you receive an
+object of type `Maybe<String>` (for example) you now have the type system
+helping you out, telling you "there _might_ be a String here but it _might_ be
+empty". You **can't** perform operations on the String until you've safely
+extracted it and _made a choice_ about what to do in the case that its empty. 
 
 By itself (without point **#1**) this is nice but not fantastic. The benefit
 really kicks in when you also have non-nullable types. It simplifies the 80% of
@@ -68,8 +70,8 @@ easier to write code. More importantly, it is easier to write **more robust**
 code. For all programmers, not just the experienced or talented.
 
 And that is something I am firmly in favour of. A product is never the result of
-a single person's code - everything has dependencies. Improvements to the code
-of others benefits all of us.
+a single person's code - everything has dependencies. Improvements to other
+people's code benefit all of us.
 
 <h3>Addendum</h3>
 
@@ -261,7 +263,7 @@ which you might do when you have nested calls that could fail.
 I can't speak to how often this ends up being an issue for people working in
 Fantom/Kotlin and what alternatives the language provides because, frankly, I am
 pretty unfamiliar with them. If anyone with experience would like to speak up
-I'd be happy to annotate this section with their information.
+I'd be happy to add their information to this section.
 
 <h4><a id="option-scala" href="#option-scala" class="header_link">But Option in Scala DOESN'T save you from null!</a> </h4>
 
