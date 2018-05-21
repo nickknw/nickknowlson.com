@@ -1,3 +1,30 @@
-pygments: true
+
 permalink: /blog/:year/:month/:day/:title/
 exclude: [README.markdown, refresh-post, push-site-live, make-post.sh]
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# rss
+title: "Nick Knowlson"
+url: "http://nickknowlson.com"
+baseurl: ""
+description: "Software Developer. Advocate for quality. I enjoy programming, reading, gaming and metal (among many other things)."
+author: "Nick Knowlson"
+
+# sitemap plugin
+sitemap:
+    filename: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/404.xml"
+    include_posts:
+        - "/index.html"
+        - "/blog/index.html"
+        - "/blog/archive/index.html"
