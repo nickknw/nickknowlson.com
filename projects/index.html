@@ -2,7 +2,7 @@
 layout: base
 projects: selected
 title: Projects
-description: A listing of some of Nick Knowlson's side projects.
+description: A listing of some of my side projects.
 og_type: article
 ---
 
@@ -10,17 +10,16 @@ These are my side projects that are big or neat enough to warrant a nice writeup
 
 <div class="blockylist bigblockylist">
     <ul>
-        {% for page in site.pages %}
-            {% if page.is_project %}
-                <li class="test">
-                <a href="{{ page.url }}"> 
-                        <img src="{{ page.thumbnail }}" class="project_thumbnail">
-                        <h1>{{ page.title }}</h1>
-                        <div><strong>Languages: </strong>{{ page.languages }}</div>
-                        <div><strong>Summary: </strong>{{ page.summary }}</div>
+        {% assign projects = site.data.projects | get_projects_from_files | sort:'date' %}
+        {% for project in projects reversed %}
+            <li>
+                <a href="{{ project.url }}"> 
+                        <img src="{{ project.thumbnail }}" class="project_thumbnail">
+                        <h1>{{ project.title }}</h1>
+                        <div><strong>Languages: </strong>{{ project.languages }}</div>
+                        <div><strong>Summary: </strong>{{ project.summary }}</div>
                 </a>
-                </li>
-            {% endif %}
+            </li>
         {% endfor %}
     </ul>
 </div>

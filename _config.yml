@@ -1,15 +1,16 @@
-
-permalink: /blog/:year/:month/:day/:title/
-exclude: [README.markdown, refresh-post, push-site-live, make-post.sh]
-
 markdown: kramdown
-plugins:
-  - jekyll-feed
-
+permalink: /blog/:year/:month/:day/:title/
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - README.markdown
+  - refresh-post.sh
+  - push-site-live.sh
+  - make-posh.sh
+
+plugins:
+  - jekyll-feed
 
 # rss
 title: "Nick Knowlson"
@@ -28,3 +29,7 @@ sitemap:
         - "/index.html"
         - "/blog/index.html"
         - "/blog/archive/index.html"
+
+# portfolio plugin
+portfolio_dir: "projects"
+skip_related_projects: true

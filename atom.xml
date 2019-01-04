@@ -12,11 +12,11 @@ layout: null
         {% for post in site.posts %}
         <item>
             <description>
-                {{ post.content | escape | truncate: '400' }} <!-- do I want to truncate? -->
+                {{ post.content }}
             </description>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
             <guid>
-                {{ post.url | prepend: site.url }} <!-- is prepend correct here -->
+                {{ post.url | prepend: site.url }}
             </guid>
         </item>
         {% endfor %}

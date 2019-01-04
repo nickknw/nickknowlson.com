@@ -1,37 +1,37 @@
----
-layout: project
-date: 2011-04-04
-title: Proofreading Scripts
-languages: Ruby
-summary: An implementation of Matt Might's proofreading scripts
-github: proofreading_scripts 
-thumbnail: /img/projects/proofreading/thumb.png
-videos:
----
-
-I wanted to make use of Matt Might's [proofreading scripts](http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/), but I'm on a Windows machine most of the time and would rather not rely on cygwin, a so I rewrote them in Ruby and customized them a bit.
-
-I made sure to handle the case where a suspect phrase (e.g. 'is used', or 'the the') is split between two different lines.
-
-The output has line numbers, includes the suspect words at the beginning of the line, and is more or less readable in the windows command prompt. It uses &gt;angle brackets&lt; to mark the word instead of color and tries to stay within a fairly short width.
-
-When run, it automatically creates a file called `feedback-<filename>`. If it finds weasel words or passive voice, it adds a couple of short tips from Matt's original blog post after the list of them.
- 
-These scripts are finished and working, but if you find any bugs please let me know.
- 
-Usage
----
-
-{% highlight bash %}
-ruby proofread.rb [filename]
-{% endhighlight %}
-
-
-Example Output
----
-
-For a fun example, I ran this on Matt's original blog post. It acts as a pretty decent test because the blog post itself must contain examples of suspect phrases in order to explain them.
- 
+layout: "project"
+date: "2011-04-04"
+title: "Proofreading Scripts"
+url: "proofreading-scripts"
+languages: "Ruby"
+summary: "An implementation of Matt Might's proofreading scripts"
+github: "proofreading_scripts "
+thumbnail: "/img/projects/proofreading/thumb.png"
+render_with_liquid: true
+description: |
+    I wanted to make use of Matt Might's [proofreading scripts](http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/), but I'm on a Windows machine most of the time and would rather not rely on cygwin, a so I rewrote them in Ruby and customized them a bit.
+    
+    I made sure to handle the case where a suspect phrase (e.g. 'is used', or 'the the') is split between two different lines.
+    
+    The output has line numbers, includes the suspect words at the beginning of the line, and is more or less readable in the windows command prompt. It uses &gt;angle brackets&lt; to mark the word instead of color and tries to stay within a fairly short width.
+    
+    When run, it automatically creates a file called `feedback-<filename>`. If it finds weasel words or passive voice, it adds a couple of short tips from Matt's original blog post after the list of them.
+     
+    These scripts are finished and working, but if you find any bugs please let me know.
+     
+    Usage
+    ---
+    
+    {% highlight bash %}
+    ruby proofread.rb [filename]
+    {% endhighlight %}
+    
+    
+    Example Output
+    ---
+    
+    For a fun example, I ran this on Matt's original blog post. It acts as a pretty decent test because the blog post itself must contain examples of suspect phrases in order to explain them.
+     
+    ```
     Weasel words results:
 
      73: various - My favorite salt and pepper words/phrases are >various<, a number of, fairly, and 
@@ -81,3 +81,4 @@ For a fun example, I ran this on Matt's original blog post. It acts as a pretty 
      175: the the -  Many readers are not aware that >the the< brain will automatically ignore a 
      180: the the -  Many readers are not aware that >the the< brain will automatically ignore a 
      181: instance instance -  second >instance instance< of the word "the" when it starts a new line.  
+    ```
